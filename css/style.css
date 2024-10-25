@@ -271,25 +271,50 @@ background-color: #f9f9f9;
   justify-content: space-evenly;
   width: 80%;
   margin: 0 auto;
-  
 }
 
 .sponsor-card {
+  width: 300px; /* Largeur fixe */
+  height: 250px;
   background-color: white;
   border-radius: 8px;
   margin: 20px; 
-  max-width: 350px;
-  text-align: center;
+  text-align: center; /* Centre le texte */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+  display: flex; 
+  flex-direction: column; /* Aligne les éléments en colonne */
+  justify-content: center; /* Centre verticalement */
+  align-items: center; /* Centre horizontalement */
 }
-
 
 .img-sponsor {
-  width: 100%;
-  height: 200px; 
+  overflow: hidden;
   object-fit: cover; 
-  border-radius: 8px 8px 0 0; 
+  padding-top: 10px;
 }
+
+.sponsor-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0; 
+  text-align: center; 
+}
+
+.sponsor-card p {
+  font-size: 1.1rem; /* Taille de la police pour le texte */
+  color: #333;
+  line-height: 1.4;
+  text-align: center; /* Centre le texte */
+}
+
+.sponsor-card a {
+  color: #ff7b1f; /* Couleur du lien */
+  text-decoration: none; /* Pas de soulignement */
+  font-weight: bold; /* Met le lien en gras */
+  margin-top: 10px; 
+}
+
+
 
 .bouton {
   border: gainsboro solid 1px;
@@ -304,9 +329,6 @@ background-color: #f9f9f9;
   justify-content: center;
   margin: 15px auto; 
 }
-
-
-
 
 /*INSCRIPTION*/
 .inscription{
