@@ -19,9 +19,7 @@ html {
   font-size: 1.2rem;
 }
 main {
-  flex-grow: 1; /* L’espace restant est occupé par le contenu principal */
-  width: 95%;
-  margin: 0 auto;;
+  flex-grow: 1; 
 }
 a {
   text-decoration: none;
@@ -63,6 +61,7 @@ h3 {
 
 nav {
   background-color: orange;
+  height: 80px;
 }
 /* Affichage du sous-menu au survol du parent */
 nav > ul > li:hover .sous {
@@ -95,11 +94,11 @@ nav ul {
   display: flex;
   padding: 0;
   margin: 0;
-  list-style-type: none; /* Suppression des puces */
+  list-style-type: none; 
 }
 
 nav li {
-  position: relative; /* Permet de positionner les sous-menus */
+  position: relative; 
   margin: 0 auto;
 }
 
@@ -175,6 +174,139 @@ nav a {
   text-align: center;
 }
 
+/* TARIFS */
+.h2-tarifs{ 
+  padding-left: 20px;
+}
+.card-container-club{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-club{
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 320px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card-club:hover {
+  transform: scale(1.05);
+}
+
+.card-club h3 {
+  font-size: 1.5rem;
+  color: #ff9e40;
+  margin-bottom: 10px;
+}
+
+.card-club p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.card-club a {
+  color: #ff7b1f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-club a:hover {
+  color: #ff9e40;
+}
+/* Bloc Entrainement */
+.bloc-entrainement {
+  margin: 50px 0 10px 0;
+padding: 10px 0 10px 0;  text-align: center;
+background-color: #f9f9f9;
+}
+
+.bloc-entrainement h2 {
+  font-size: 2.5rem;
+}
+
+.entrainement-details {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.entrainement-details strong {
+  color: #ff7b1f;
+}
+.entrainement-details ul {
+  list-style-type: none; 
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.entrainement-details ul li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+/* PARTENAIRES */
+
+.h3-partenaire {
+
+  font-size: 1.5rem;
+}
+.h2-partenaires{ 
+  padding-left: 20px;
+}
+.bloc-sponsors {
+  padding: 20px;
+
+}
+
+.sponsor-cards {
+  filter: drop-shadow(0 0 0.25rem wheat);
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 0 auto;
+  
+}
+
+.sponsor-card {
+  background-color: white;
+  border-radius: 8px;
+  margin: 20px; 
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+.img-sponsor {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 8px 8px 0 0; 
+}
+
+.bouton {
+  border: gainsboro solid 1px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  text-decoration: none;
+  color: black;
+  width: 80px;
+  height: 35px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto; 
+}
+
+
+
 
 /*INSCRIPTION*/
 .inscription{
@@ -183,13 +315,10 @@ nav a {
 
 /* FOOTER */
 footer {
-  width: 100%;
   background-color: #ff9e40;
-  padding-top: 20px;
 }
 
 .content-footer-flex {
-  width: 90%;
   display: flex;
   margin: 0 auto;
   justify-content: space-evenly;
