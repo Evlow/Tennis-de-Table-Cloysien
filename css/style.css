@@ -3,16 +3,36 @@
 * {
   font-family: "Open Sans Condensed", sans-serif;
 }
-
 .logo {
   width: 150px;
 }
+/* Configuration de l’affichage pour maintenir le footer en bas */
+body,
+html {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
+}
+ p, li, ul, a {
+  font-size: 1.2rem;
+}
+main {
+  flex-grow: 1; /* L’espace restant est occupé par le contenu principal */
+  width: 95%;
+  margin: 0 auto;;
+}
 a {
   text-decoration: none;
   color: black;
 }
-
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
 .titre-logo {
   display: flex;
   background-color: orange;
@@ -41,6 +61,9 @@ a {
   margin-top: 3px;
 }
 
+nav {
+  background-color: orange;
+}
 /* Affichage du sous-menu au survol du parent */
 nav > ul > li:hover .sous {
   display: block;
@@ -100,4 +123,76 @@ nav a {
 /* Affichage du sous-sous-menu au survol du parent */
 .sous > li:hover .list-inner {
   display: block;
+}
+
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly; 
+  padding: 20px 0;
+}
+
+.card {
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  padding: 10px 80px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h4 {
+  font-size: 1.4rem;
+  color: #ff9e40;
+  margin: 20px 0;}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-content a {
+  color: #0d0d0d;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.card-content a:hover {
+  color: #ff7b1f;
+  font-weight: bold;
+}
+ .h3-championnat {
+  text-align: center;
+ }
+.h2-competitions{
+  text-align: center;
+}
+/* FOOTER */
+footer {
+  width: 100%;
+  background-color: #ff9e40;
+  padding-top: 20px;
+}
+
+.content-footer-flex {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+.h2-footer {
+  color: black;
+}
+
+.svg-footer {
+  width: 25px;
+  padding-right: 5px;
 }
