@@ -327,24 +327,24 @@ nav a {
 
 .sponsor-cards {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 80%;
-  margin: 0 auto;
+  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
+  justify-content: space-evenly; /* Espace égal entre les cartes */
+  width: 80%; /* Largeur du conteneur */
+  margin: 0 auto; /* Centre le conteneur */
 }
 
 .sponsor-card {
-  width: 300px; /* Largeur fixe */
-  height: 250px;
+  width: 240px; /* Largeur réduite des cartes */
+  height: 200px; /* Hauteur réduite des cartes */
   background-color: white;
   border-radius: 8px;
-  margin: 20px;
+  margin: 10px; /* Marges autour des cartes */
   text-align: center; /* Centre le texte */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   display: flex;
   flex-direction: column; /* Aligne les éléments en colonne */
-  justify-content: center; /* Centre verticalement */
+  justify-content: space-between; /* Espace entre les éléments */
   align-items: center; /* Centre horizontalement */
   transition: transform 0.2s ease;
 }
@@ -356,12 +356,12 @@ nav a {
 .img-sponsor {
   overflow: hidden;
   object-fit: cover;
-  padding-top: 10px;
+  padding-top: 10px; /* Espacement en haut de l'image */
 }
 
 .sponsor-card h3 {
   font-size: 1.2rem;
-  margin: 10px 0;
+  margin: 10px 0; /* Espacement autour du titre */
   text-align: center;
 }
 
@@ -370,6 +370,7 @@ nav a {
   color: #333;
   line-height: 1.4;
   text-align: center; /* Centre le texte */
+  margin: 0; /* Réinitialiser les marges */
 }
 
 .sponsor-card a {
@@ -383,12 +384,12 @@ nav a {
   font-size: 1.1em;
   text-decoration: none;
   color: black;
-  width: 80px;
-  height: 35px;
+  width: 80px; /* Largeur du bouton */
+  height: 35px; /* Hauteur du bouton */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 15px auto;
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  margin: 15px auto; /* Centre le bouton horizontalement */
 }
 
 /*INSCRIPTION*/
@@ -419,4 +420,21 @@ footer {
 .svg-footer {
   width: 25px;
   padding-right: 5px;
+}
+/* Pour les écrans de petite taille */
+@media (max-width: 768px) { 
+  .aides-container {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .article-aides {
+    width: 100%;
+    margin: 10px 0; 
+  }
+
+  .article-aides img {
+
+    width: 300px;
+  }
 }
