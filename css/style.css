@@ -65,6 +65,8 @@ h3 {
   border-radius: 5px;
   margin-top: 1px;
   padding: 0;
+  background: radial-gradient(circle, #ffcc80, #ff8c00);
+
 }
 
 nav {
@@ -101,6 +103,8 @@ nav > ul > li:hover .sous {
 .sous-equipe {
   text-align: center;
   width: 180px;
+  background: radial-gradient(circle, #ffcc80, #ff8c00);
+
 }
 
 .sous-equipe a {
@@ -138,7 +142,7 @@ nav a {
   left: 100%;
   top: 0;
   width: 190px;
-  background-color: #ffa659;
+  background: radial-gradient(circle, #ffcc80, #ff8c00);
   border-radius: 5px;
 }
 
@@ -476,93 +480,152 @@ footer .footer-copyright {
 }
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
+  /* Conteneur pour les aides */
   .aides-container {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Alignement en colonne */
+    align-items: center; /* Centrer les éléments */
   }
 
+  /* Styles pour les articles d'aides */
   .article-aides {
-    width: 100%;
-    margin: 10px 0;
+    width: 100%; /* Largeur complète */
+    margin: 10px 0; /* Espacement vertical */
   }
 
+  /* Images dans les articles d'aides */
   .article-aides img {
-    width: 300px;
+    width: 300px; /* Largeur fixée pour les images */
   }
 
+  /* Styles pour le footer et les paragraphes */
   .h2-footer,
   p {
-    text-align: center;
+    text-align: center; /* Centre le texte */
   }
 
-  /* Burger Menu */
+  /* Styles pour les titres de section */
   .h2-aides,
   .h2-competitions,
   .h2-cotisations,
   .h2-partenaires {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Taille de police pour les titres */
   }
 
-  /* Affiche le menu burger sur mobile */
+  /* Styles pour le menu burger */
   .menu-icon {
     display: flex; /* Affiche l'icône burger sur mobile */
   }
 
+  /* Styles du menu principal */
   #nav-menu {
-    display: none; /* Hide the menu by default */
-    flex-direction: column; /* Show items in column */
-    position: fixed; /* Fix position to screen */
-    top: 0; /* Align to top */
-    right: -250px; /* Hide off screen */
-    width: 250px; /* Menu width */
-    height: 100%; /* Full height */
-    background: radial-gradient(circle, #ffcc80, #ff8c00);
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow */
-    transition: right 0.3s ease; /* Animation */
-    z-index: 1000; /* Ensure menu is above other elements */
-    list-style: circle;
+    display: none; /* Masquer le menu par défaut */
+    flex-direction: column; /* Éléments en colonne */
+    position: fixed; /* Fixe la position */
+    top: 0; /* Aligne en haut */
+    right: -250px; /* Hors de l'écran */
+    width: 250px; /* Largeur du menu */
+    height: 100%; /* Hauteur complète */
+    background: radial-gradient(circle, #ffcc80, #ff8c00); /* Dégradé de couleur */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Ombre */
+    transition: right 0.3s ease; /* Animation d'apparition */
+    z-index: 1000; /* Assure que le menu soit au-dessus */
   }
 
+  /* Affiche le menu quand il a la classe active */
   #nav-menu.active {
-    display: flex; /* Affiche le menu lorsque la classe active est ajoutée */
+    display: flex; /* Affiche le menu */
     right: 0; /* Fait apparaître le menu */
   }
 
-  .dropdown {
-    display: flex; /* Affiche le menu déroulant lorsque actif */
+  /* Styles pour les sous-menus */
+  .sous {
+    display: none; /* Masquer les sous-menus par défaut */
+    flex-direction: column; /* Aligner les sous-éléments en colonne */
+    padding-left: 20px; /* Indentation pour les sous-menus */
+    background: rgba(255, 255, 255, 0.9); /* Couleur de fond */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour les sous-menus */
+    z-index: 1000; /* Assure que les sous-menus soient au-dessus des autres éléments */
   }
 
-  .dropdown.active {
-    display: flex; /* Affiche le menu déroulant lorsqu'il est actif */
+  /* Affiche les sous-menus lors du survol */
+  .deroulant:hover .sous {
+    display: block; /* Affiche le sous-menu lors du survol */
   }
 
+  /* Styles pour le sous-menu "sous sous-équipe" */
+  .sous-equipe {
+    display: none; /* Masquer par défaut */
+    flex-direction: column; /* Alignement vertical */
+    padding-left: 20px; /* Indentation pour les sous-sous-menus */
+    background: rgba(255, 255, 255, 0.9); /* Couleur de fond pour le sous-menu */
+    width: 200px; /* Largeur pour le sous-menu */
+    z-index: 1000; /* Assure que le sous-menu soit au-dessus des autres éléments */
+  }
+
+  /* Affiche le sous-menu lors du survol */
+  .deroulant:hover .sous-equipe {
+    display: block; /* Affiche le sous-menu lorsqu'il est actif */
+  }
+
+  /* Styles pour l'image de fond */
   .img-fond {
-    height: 200px;
+    height: 200px; /* Hauteur pour l'image de fond */
   }
 
+  /* Styles pour le logo */
   .logo {
-    width: 100px;
-    padding: 5px;
+    width: 100px; /* Largeur du logo */
+    padding: 5px; /* Espacement autour du logo */
   }
+
+  /* Styles pour le conteneur de logo et titre */
   .titre-logo {
     flex-direction: column; /* Empiler le logo et le menu verticalement */
     align-items: center; /* Aligner les éléments au centre */
-    height: auto; /* Permettre à la hauteur de s'ajuster en fonction du contenu */
+    height: auto; /* Ajustement de la hauteur */
   }
+
+  /* Styles pour le titre du logo */
   .titre-logo h1 {
-    font-size: 2.5rem; /* Adjust title font size */
-    text-align: center;
-    margin: 0; /* Remove default margin */
+    font-size: 2.5rem; /* Taille de police pour le titre */
+    text-align: center; /* Centre le titre */
+    margin: 0; /* Supprime la marge par défaut */
   }
 
   /* Animation pour le menu */
   .dropdown {
     transition: max-height 0.3s ease; /* Animation pour l'ouverture */
   }
+
+  /* Styles pour le menu */
   .menu {
-    display: flex;
-    align-items: center; /* Aligner les éléments au centre */
-    width: 100%;
-    justify-content: space-around;
+    display: flex; /* Affichage flexible */
+    align-items: center; /* Alignement au centre */
+    width: 100%; /* Largeur complète */
+    justify-content: space-around; /* Distribution des éléments */
+  }
+
+  /* Style pour les liens du menu */
+  #nav-menu ul {
+    padding: 0; /* Supprime le remplissage par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+    width: 100%; /* Assure que la liste utilise toute la largeur */
+  }
+
+  /* Espacement entre les éléments du menu */
+  #nav-menu li {
+    margin: 10px 0; /* Espacement vertical entre les éléments */
+  }
+
+  /* Styles pour les liens du menu */
+  #nav-menu a {
+    text-decoration: none; /* Pas de soulignement */
+    color: black; /* Couleur des liens */
+    font-size: 1.2rem; /* Taille de police pour les liens */
+    padding: 10px 20px; /* Remplissage autour des liens */
+    display: block; /* Affiche les liens en tant que blocs */
+    text-align: left; /* Aligne le texte à gauche */
   }
 }
+
+  

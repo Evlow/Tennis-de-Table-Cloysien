@@ -15,22 +15,20 @@
   <header>
     <!--LOGO-->
     <div class="titre-logo">
-      <div class="menu">  <img src="/img/LogoTTC.png" alt="Logo tennis de table" class="logo">
-       <div class="menu-icon" id="menu-toggle">
-         <div class="bar"></div>
-         <div class="bar"></div>
-         <div class="bar"></div>
-       </div></div>
-       
-         <h1>Tennis de Table Cloysien</h1>
-       </div>
+      <div class="menu"> <img src="/img/LogoTTC.png" alt="Logo tennis de table" class="logo">
+        <div class="menu-icon" id="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <h1>Tennis de Table Cloysien</h1>
+    </div>
+    <nav>
 
       <!-- Icône du menu hamburger -->
-      <div class="menu-icon" id="menu-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
+
       <ul id="nav-menu" class="dropdown">
         <li class="deroulant">
           <a href="/accueil.html">Le club</a>
@@ -67,7 +65,8 @@
           </ul>
         </li>
         <li><a href="/inscription.html" target="_blank">Inscriptions</a></li>
-        <li><a href="https://www.google.fr/maps/place/48%C2%B000'12.6%22N+1%C2%B014'08.8%22E/@48.002026,1.237721,1209m/data=!3m1!1e3!4m4!3m3!8m2!3d48.003505!4d1.23579?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D"
+        <li><a
+            href="https://www.google.fr/maps/place/48%C2%B000'12.6%22N+1%C2%B014'08.8%22E/@48.002026,1.237721,1209m/data=!3m1!1e3!4m4!3m3!8m2!3d48.003505!4d1.23579?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D"
             target="_blank">Plan d'accès</a></li>
         <li><a href="">Nous contacter</a></li>
         <li><a href="https://www.facebook.com/tt.cloysien" target="_blank"> <img src="/img/facebook.png"
@@ -117,6 +116,18 @@
         navMenu.classList.toggle('active');
       });
     }
+      // Gestion des sous-menus
+      const dropdowns = document.querySelectorAll('#nav-menu .dropdown');
+
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('click', (event) => {
+    const submenu = dropdown.nextElementSibling; // Sélectionne le sous-menu qui suit le lien cliqué
+    if (submenu) {
+      submenu.classList.toggle('active'); // Toggle de la classe active sur le sous-menu
+      event.preventDefault(); // Empêche le comportement par défaut du lien
+    }
+  });
+});
   </script>
 </body>
 
