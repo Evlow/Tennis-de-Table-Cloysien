@@ -53,12 +53,13 @@ h3 {
 
 .sous {
   display: none;
-  width: 200px;
-  background-color: #ff9e40;
-  position: absolute;
+  width: 200px; 
+  background-color: orange; 
+  position: absolute; 
   z-index: 1000;
-  border-radius: 5px;
-  margin-top: 3px;
+  border-radius: 5px; 
+  margin-top: 3px; 
+  padding: 0; 
 }
 
 nav {
@@ -73,6 +74,8 @@ nav > ul > li:hover .sous {
 /* Styles des liens dans le sous-menu */
 .sous a {
   border-bottom: none;
+  text-align: left; 
+  display: block; 
 }
 
 .sous a:hover {
@@ -96,7 +99,7 @@ nav ul {
 
 nav li {
   position: relative; 
-  margin: 0 10px; /* Ajuste cet espace pour rapprocher ou éloigner les éléments */
+  margin: 0 10px; 
 
 }
 
@@ -224,7 +227,7 @@ nav a {
   margin: 50px 0 10px 0;
   padding: 10px 0 10px 0;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #fdf7f3;
 }
 
 .bloc-entrainement h2 {
@@ -234,7 +237,6 @@ nav a {
 .entrainement-details {
   font-size: 1.2rem;
   color: #333;
-  line-height: 1.6;
 }
 
 .entrainement-details strong {
@@ -251,8 +253,43 @@ nav a {
   line-height: 1.6;
   margin-bottom: 5px;
 }
-/* PARTENAIRES */
 
+/*AIDES JEUNES*/
+
+.section-aides {
+  padding: 20px;
+}
+
+.h2-aides {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.h3-aides{
+  color: #ff7b1f;
+  font-size: 1.5rem;
+
+}
+
+.aides-container {
+  display: flex;
+  align-items: stretch; /* Assure que les articles ont la même hauteur */
+  justify-content: center;
+}
+
+.article-aides {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.article-aides img {
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+
+/* PARTENAIRES */
 .h3-partenaire {
   font-size: 1.5rem;
 }
