@@ -3,9 +3,11 @@
 * {
   font-family: "Open Sans Condensed", sans-serif;
 }
+
 .logo {
   width: 150px;
 }
+
 /* Configuration de l’affichage pour maintenir le footer en bas */
 body,
 html {
@@ -14,22 +16,26 @@ html {
   display: flex;
   flex-direction: column;
 }
+
 p,
 li,
 ul,
 a {
   font-size: 1.2rem;
 }
+
 main {
-  flex-grow: 1;
-}
+  flex-grow: 1;}
+
 a {
   text-decoration: none;
   color: black;
 }
+
 h2 {
   font-size: 2.5rem;
 }
+
 h3 {
   font-size: 2rem;
 }
@@ -40,13 +46,16 @@ h3 {
   align-items: center;
   height: 170px;
 }
+
 .logo-facebook {
   width: 50px;
 }
+
 .titre-logo h1 {
   margin: 0 auto;
   font-size: 4rem;
 }
+
 /* MENU DEROULANT */
 
 .deroulant {
@@ -67,8 +76,8 @@ h3 {
 nav {
   background: radial-gradient(circle, #ffcc80, #ff8c00);
   height: 80px;
-
 }
+
 /* Affichage du sous-menu au survol du parent */
 nav > ul > li:hover .sous {
   display: block;
@@ -90,11 +99,10 @@ nav > ul > li:hover .sous {
 
 .sous > li {
   position: relative;
-padding: 10px;
-padding-left: 2px;
-padding-right: 2px;
+  padding: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
-
 
 /* Styles pour le sous-menu des équipes */
 .sous-equipe {
@@ -106,12 +114,9 @@ padding-right: 2px;
   display: block;
   font-weight: normal;
   text-align: center;
-
-
 }
+
 /* MENU PRINCIPAL */
-
-
 nav ul {
   display: flex;
   margin: 0;
@@ -123,7 +128,6 @@ nav ul {
 nav li {
   position: relative; 
   margin: 0 10px; 
-
 }
 
 nav a {
@@ -132,7 +136,6 @@ nav a {
   font-size: 1.2em;
   padding: 0 10px 0 10px;
   font-weight: bold;
-
 }
 
 /* SOUS-SOUS-MENU (list-inner) */
@@ -151,7 +154,7 @@ nav a {
   display: block;
 }
 
-/*CARD*/
+/* CARD */
 .card-container {
   display: flex;
   gap: 20px;
@@ -164,9 +167,10 @@ nav a {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 600px;
-  padding: 10px 80px;
+  padding: 10px 20px; /* Ajustez les paddings */
   text-align: center;
   transition: transform 0.2s ease;
+  width: auto; /* Adaptable */
 }
 
 .card:hover {
@@ -195,17 +199,17 @@ nav a {
   color: #ff7b1f;
   font-weight: bold;
 }
-.h3-championnat {
-  text-align: center;
-}
+
+.h3-championnat,
 .h2-competitions {
   text-align: center;
 }
 
-/* cotisations */
+/* Cotisations */
 .h2-cotisations {
   padding-left: 20px;
 }
+
 .card-container-club {
   display: flex;
   gap: 20px;
@@ -234,12 +238,10 @@ nav a {
 
 .card-club p {
   font-size: 1.1rem;
-  color: #333;
   line-height: 1.4;
 }
 
 .card-club a {
-  color: #ff7b1f;
   text-decoration: none;
   font-weight: bold;
 }
@@ -247,10 +249,11 @@ nav a {
 .card-club a:hover {
   color: #ff9e40;
 }
+
 /* Bloc Entrainement */
 .bloc-entrainement {
   margin: 50px 0 10px 0;
-  padding: 10px 0 10px 0;
+  padding: 10px 0;
   text-align: center;
   background-color: #fdf7f3;
 }
@@ -267,6 +270,7 @@ nav a {
 .entrainement-details strong {
   color: #ff7b1f;
 }
+
 .entrainement-details ul {
   list-style-type: none;
   margin-left: 20px;
@@ -279,8 +283,7 @@ nav a {
   margin-bottom: 5px;
 }
 
-/*AIDES JEUNES*/
-
+/* AIDES JEUNES */
 .section-aides {
   padding: 20px;
 }
@@ -290,10 +293,10 @@ nav a {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
-.h3-aides{
+
+.h3-aides {
   color: #ff7b1f;
   font-size: 1.5rem;
-
 }
 
 .aides-container {
@@ -313,14 +316,15 @@ nav a {
   border-radius: 5px;
 }
 
-
 /* PARTENAIRES */
 .h3-partenaire {
   font-size: 1.5rem;
 }
+
 .h2-partenaires {
   padding-left: 20px;
 }
+
 .bloc-sponsors {
   padding: 20px;
 }
@@ -347,6 +351,8 @@ nav a {
   justify-content: space-between; /* Espace entre les éléments */
   align-items: center; /* Centre horizontalement */
   transition: transform 0.2s ease;
+  width: 90%; /* Ajustez pour éviter le débordement */
+  max-width: 240px; /* Limiter la taille maximale */
 }
 
 .sponsor-card:hover {
@@ -392,49 +398,69 @@ nav a {
   margin: 15px auto; /* Centre le bouton horizontalement */
 }
 
-/*INSCRIPTION*/
+/* INSCRIPTION */
 .inscription {
   text-align: center;
 }
 
-.img-fond
-{  width: 100%;
+.img-fond {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 80vh; 
   object-fit: cover;
-  height: 500px;
 }
+
 /* FOOTER */
 footer {
   background-color: #ff9e40;
+  padding: 20px 0; /* Ajout de padding pour espacer le contenu */
+  text-align: center;
 }
 
 .content-footer-flex {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px; /* Limite la largeur maximale pour une meilleure lisibilité */
   margin: 0 auto;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  gap: 20px; /* Ajoute de l’espace entre les sections */
+  padding: 20px;
+}
+
+.footer-lieu, .footer-contact {
+  max-width: 250px; /* Limite la largeur des sections pour l’alignement */
+  text-align: left;
 }
 
 .h2-footer {
   color: black;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.footer-lieu p, .footer-contact p {
+  margin: 5px 0; /* Un peu d’espace autour du texte */
 }
 
 .svg-footer {
-  width: 25px;
-  padding-right: 5px;
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
 }
-/* Pour les écrans de petite taille */
-@media (max-width: 768px) { 
-  .aides-container {
-    flex-direction: column; 
-    align-items: center;
-  }
 
-  .article-aides {
-    width: 100%;
-    margin: 10px 0; 
-  }
-
-  .article-aides img {
-
-    width: 300px;
-  }
+footer p, footer a {
+  color: black;
+  text-decoration: none;
 }
+
+footer a:hover {
+  text-decoration: underline; /* Soulignement au survol pour interactivité */
+}
+
+/* Style pour les droits réservés */
+footer .copyright {
+  margin-top: 20px;
+  font-size: 0.85em;
+}
+

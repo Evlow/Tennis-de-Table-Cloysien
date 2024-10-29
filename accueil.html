@@ -13,13 +13,18 @@
   <!-- HEADER -->
   <header>
     <!--LOGO-->
-    <div class="titre-logo">
-      <img src="/img/LogoTTC.png" alt="Logo tennis de table" class="logo">
-      <h1>Tennis de Table Cloysien</h1>
-    </div>
-    <!--MENU-->
-    <nav>
-      <ul class="dropdown">
+      <div class="titre-logo">
+        <img src="/img/LogoTTC.png" alt="Logo tennis de table" class="logo">
+        <h1>Tennis de Table Cloysien</h1>
+      </div>    <nav>
+
+      <!-- Icône du menu hamburger -->
+      <div class="menu-icon" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul id="nav-menu" class="dropdown">
         <li class="deroulant">
           <a href="/accueil.html">Le club</a>
         </li>
@@ -55,15 +60,14 @@
           </ul>
         </li>
         <li><a href="/inscription.html" target="_blank">Inscriptions</a></li>
-        <li><a href="https://www.google.fr/maps/place/48%C2%B000'12.6%22N+1%C2%B014'08.8%22E/@48.002026,1.237721,1209m/data=!3m1!1e3!4m4!3m3!8m2!3d48.003505!4d1.23579?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D
-            " target="_blank">Plan d'accès</a></li>
+        <li><a href="https://www.google.fr/maps/place/48%C2%B000'12.6%22N+1%C2%B014'08.8%22E/@48.002026,1.237721,1209m/data=!3m1!1e3!4m4!3m3!8m2!3d48.003505!4d1.23579?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank">Plan d'accès</a></li>
         <li><a href="">Nous contacter</a></li>
         <li><a href="https://www.facebook.com/tt.cloysien" target="_blank"> <img src="/img/facebook.png"
               class="logo-facebook" alt="Logo Facebook"></a></li>
       </ul>
     </nav>
   </header>
-
   <main>
     <img class="img-fond" src="/img/fond.jpg" alt="table tennis de table">
     <!-- SECTION COTISATIONS -->
@@ -86,7 +90,7 @@
           <p>Si inscription d'un <strong>deuxième membre</strong> de la famille, le montant de cette cotisation est de
             <strong>80€</strong>.
           </p>
-          <p>Contact : <strong>Alexis ROUGEAULT</strong> au <strong>06 84 70 87 75</strong> <br>ou <br>par <a
+          <p>Contact : <strong>Alexis ROUGEAULT</strong> au <a href="tel:+33684708775"><strong>06 84 70 87 75</strong></a> <br>ou <br>par <a
               href="mailto:alexis.rougeault@orange.fr">mail</a></p>
         </article>
 
@@ -98,7 +102,7 @@
           <p>Si inscription d'un <strong>deuxième membre</strong> de la famille, le montant de cette cotisation est de
             <strong>50€</strong>.
           </p>
-          <p>Contact : <strong>Christophe ROUGEAULT</strong> au <strong>06 03 58 63 61</strong>.</p>
+          <p>Contact : <strong>Christophe ROUGEAULT</strong> au <a href="tel:+33606586361"><strong>06 03 58 63 61</strong></a>.</p>
         </article>
       </div>
     </section>
@@ -206,25 +210,38 @@
       </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="content-footer-flex">
-      <!--LIEU-->
-      <section class="footer-lieu">
-        <h3 class="h2-footer">Nous trouver</h3>
+ <!-- FOOTER -->
+<footer>
+  <div class="content-footer-flex">
+    <!-- Lieu -->
+    <section class="footer-lieu">
+      <h3 class="h2-footer">Nous trouver</h3>
+      <address>
         <p>Gymnase des trois rivières</p>
         <p>9 route de Montigny</p>
-        <p>28220 CLOYES LES TROIS RIVIÈRES</p>
-      </section>
+        <p>28220 Cloyes-les-Trois-Rivières</p>
+      </address>
+    </section>
 
-      <!--CONTACT-->
-      <section class="footer-contact">
-        <h3 class="h2-footer">Nous contacter</h3>
-        <p><img class="svg-footer" src="img/email.svg" alt="icone téléphone"> tennisdetablecloysien@free.fr</p>
-        <p><img class="svg-footer" src="img/phone.svg" alt="icone téléphone">07 55 67 10 41</p>
-      </section>
-    </div>
-  </footer>
+    <!-- Contact -->
+    <section class="footer-contact">
+      <h3 class="h2-footer">Nous contacter</h3>
+      <p>
+        <img class="svg-footer" src="img/email.svg" alt="icone email"> 
+        <a href="mailto:tennisdetablecloysien@free.fr">tennisdetablecloysien@free.fr</a>
+      </p>
+      <p>
+        <img class="svg-footer" src="img/phone.svg" alt="icone téléphone"> 
+        <a href="tel:+33755671041">07 55 67 10 41</a>
+      </p>
+    </section>
+  </div>
+  <!-- Copyright -->
+  <div class="footer-copyright">
+    <p>&copy; Mathilde Peauger. Tous droits réservés.</p>
+  </div>
+</footer>
+
 
   <script src="js/script.js"></script>
 </body>
