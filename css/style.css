@@ -51,105 +51,7 @@ h3 {
   margin: 0 auto;
   font-size: 4rem;
 }
-/* MENU DEROULANT */
 
-.deroulant {
-  position: relative;
-}
-
-.sous {
-  display: none;
-  width: 210px;
-  position: absolute;
-  z-index: 1000;
-  border-radius: 5px;
-  margin-top: 1px;
-  padding: 0;
-  background: radial-gradient(circle, #ffcc80, #ff8c00);
-
-}
-
-nav {
-  background: radial-gradient(circle, #ffcc80, #ff8c00);
-  height: 80px;
-}
-/* Affichage du sous-menu au survol du parent */
-nav > ul > li:hover .sous {
-  display: block;
-}
-
-/* Styles des liens dans le sous-menu */
-.sous a {
-  border-bottom: none;
-  text-align: left;
-  display: block;
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
-}
-
-.sous a:hover {
-  border-bottom: none;
-}
-
-.sous > li {
-  position: relative;
-  padding: 10px;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-
-/* Styles pour le sous-menu des équipes */
-.sous-equipe {
-  text-align: center;
-  width: 180px;
-  background: radial-gradient(circle, #ffcc80, #ff8c00);
-
-}
-
-.sous-equipe a {
-  display: block;
-  font-weight: normal;
-  text-align: center;
-}
-/* MENU PRINCIPAL */
-
-nav ul {
-  display: flex;
-  margin: 0;
-  list-style-type: none;
-  justify-content: center;
-  align-items: center;
-}
-
-nav li {
-  position: relative;
-  margin: 0 10px;
-}
-
-nav a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.2em;
-  padding: 0 10px 0 10px;
-  font-weight: bold;
-}
-
-/* SOUS-SOUS-MENU (list-inner) */
-.deroulant .sous .list-inner {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  width: 190px;
-  background: radial-gradient(circle, #ffcc80, #ff8c00);
-  border-radius: 5px;
-}
-
-/* Affichage du sous-sous-menu au survol du parent */
-.sous > li:hover .list-inner {
-  display: block;
-}
 
 /*CARD*/
 .card-container {
@@ -223,7 +125,7 @@ nav a {
   padding: 20px;
   text-align: center;
   transition: transform 0.2s ease;
-}
+  background-color: rgba(255, 248, 220, 0.3); }
 
 .card-club:hover {
   transform: scale(1.05);
@@ -254,8 +156,7 @@ nav a {
 .bloc-entrainement {
   padding: 10px 0 10px 0;
   text-align: center;
-  background-color: #fdf7f3;
-}
+  background-color: rgba(255, 248, 220, 0.3);}
 
 .bloc-entrainement h2 {
   font-size: 2.5rem;
@@ -478,6 +379,109 @@ footer .footer-copyright {
   margin: 4px 0;
   transition: 0.3s; /* Smooth transition for the menu opening/closing */
 }
+
+
+
+
+/* MENU DEROULANT */
+
+.deroulant {
+  position: relative;
+}
+
+.sous {
+  display: none;
+  width: 210px;
+  position: absolute;
+  z-index: 1000;
+  border-radius: 5px;
+  margin-top: 1px;
+  padding: 0;
+  background: radial-gradient(circle, #ffcc80, #ff8c00);
+
+}
+
+nav {
+  background: radial-gradient(circle, #ffcc80, #ff8c00);
+  height: 80px;
+}
+/* Affichage du sous-menu au survol du parent */
+nav > ul > li:hover .sous {
+  display: block;
+}
+
+/* Styles des liens dans le sous-menu */
+.sous a {
+  border-bottom: none;
+  text-align: left;
+  display: block;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+.sous a:hover {
+  border-bottom: none;
+}
+
+.sous > li {
+  position: relative;
+  padding: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+/* Styles pour le sous-menu des équipes */
+.sous-equipe {
+  text-align: center;
+  width: 180px;
+  background: radial-gradient(circle, #ffcc80, #ff8c00);
+
+}
+
+.sous-equipe a {
+  display: block;
+  font-weight: normal;
+  text-align: center;
+}
+/* MENU PRINCIPAL */
+
+nav ul {
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  position: relative;
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  padding: 0 10px 0 10px;
+  font-weight: bold;
+}
+
+/* SOUS-SOUS-MENU (list-inner) */
+.deroulant .sous .list-inner {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 190px;
+  background: radial-gradient(circle, #ffcc80, #ff8c00);
+  border-radius: 5px;
+}
+
+/* Affichage du sous-sous-menu au survol du parent */
+.sous > li:hover .list-inner {
+  display: block;
+}
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
   /* Conteneur pour les aides */
@@ -539,7 +543,7 @@ footer .footer-copyright {
 
   /* Styles pour les sous-menus */
   .sous {
-    display: none; /* Masquer les sous-menus par défaut */
+    display: block; /* Les sous-menus sont affichés par défaut */
     flex-direction: column; /* Aligner les sous-éléments en colonne */
     padding-left: 20px; /* Indentation pour les sous-menus */
     background: rgba(255, 255, 255, 0.9); /* Couleur de fond */
@@ -554,9 +558,9 @@ footer .footer-copyright {
 
   /* Styles pour le sous-menu "sous sous-équipe" */
   .sous-equipe {
-    display: none; /* Masquer par défaut */
+    display: block; /* Change de none à block pour afficher par défaut */
     flex-direction: column; /* Alignement vertical */
-    padding-left: 20px; /* Indentation pour les sous-sous-menus */
+    padding-left: 20px; /* Indentation pour le sous-sous-menus */
     background: rgba(255, 255, 255, 0.9); /* Couleur de fond pour le sous-menu */
     width: 200px; /* Largeur pour le sous-menu */
     z-index: 1000; /* Assure que le sous-menu soit au-dessus des autres éléments */
@@ -629,3 +633,4 @@ footer .footer-copyright {
 }
 
   
+
