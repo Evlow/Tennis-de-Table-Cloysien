@@ -36,11 +36,13 @@ h3 {
 
 .titre-logo {
   display: flex;
-  background-color: orange;
+  background: radial-gradient(circle, #ffcc80, #ff8c00); /* Dégradé radial */
   align-items: center;
   height: 170px;
 }
-
+.logo-facebook {
+  width: 50px;
+}
 .titre-logo h1 {
   margin: 0 auto;
   font-size: 4rem;
@@ -53,18 +55,19 @@ h3 {
 
 .sous {
   display: none;
-  width: 200px; 
-  background-color: orange; 
+  width: 210px; 
+  background: radial-gradient(circle, #ffcc80, #ff8c00); 
   position: absolute; 
   z-index: 1000;
   border-radius: 5px; 
-  margin-top: 3px; 
+  margin-top: 1px; 
   padding: 0; 
 }
 
 nav {
-  background-color: orange;
+  background: radial-gradient(circle, #ffcc80, #ff8c00);
   height: 80px;
+
 }
 /* Affichage du sous-menu au survol du parent */
 nav > ul > li:hover .sous {
@@ -76,6 +79,9 @@ nav > ul > li:hover .sous {
   border-bottom: none;
   text-align: left; 
   display: block; 
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
 }
 
 .sous a:hover {
@@ -84,9 +90,25 @@ nav > ul > li:hover .sous {
 
 .sous > li {
   position: relative;
-  padding: 15px;
+padding: 10px;
+padding-left: 2px;
+padding-right: 2px;
 }
 
+
+/* Styles pour le sous-menu des équipes */
+.sous-equipe {
+  text-align: center;
+  width: 180px;
+}
+
+.sous-equipe a {
+  display: block;
+  font-weight: normal;
+  text-align: center;
+
+
+}
 /* MENU PRINCIPAL */
 
 
@@ -95,6 +117,7 @@ nav ul {
   margin: 0;
   list-style-type: none; 
   justify-content: center;
+  align-items: center;
 }
 
 nav li {
@@ -107,16 +130,18 @@ nav a {
   text-decoration: none;
   color: black;
   font-size: 1.2em;
-  padding: 0 20px 0 20px;
+  padding: 0 10px 0 10px;
+  font-weight: bold;
+
 }
 
 /* SOUS-SOUS-MENU (list-inner) */
 .deroulant .sous .list-inner {
-  display: none; /* Par défaut caché */
+  display: none; 
   position: absolute;
-  left: 100%; /* Décalage à droite de l’élément parent */
+  left: 100%; 
   top: 0;
-  width: 200px;
+  width: 190px;
   background-color: #ffa659;
   border-radius: 5px;
 }
