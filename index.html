@@ -25,7 +25,7 @@
     <nav>
       <ul id="nav-menu" class="dropdown">
         <li aria-haspopup="true" aria-expanded="false">
-          <a href="/accueil.html">Le club</a>
+          <a href="/index.html">Le club</a>
         </li>
         <li class="list" aria-haspopup="true" aria-expanded="false">
           <a href="#">Les équipes</a>
@@ -268,30 +268,64 @@
       });
     }
 
-    // Gestion des sous-menus
-    const dropdownItems = document.querySelectorAll('#nav-menu .deroulant'); // Sélection des items avec sous-menus
+    document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle'); // Sélection de l'icône du menu hamburger
+  const navMenu = document.getElementById('nav-menu'); // Sélection du menu principal
 
-    dropdownItems.forEach(item => {
-      const link = item.querySelector('a'); // Le lien du sous-menu
-      const submenu = item.querySelector('.list-inner'); // Sélectionne le sous-menu correspondant
+  // Ouverture/fermeture du menu principal
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', (event) => {
+      event.stopPropagation(); // Empêche le clic de se propager pour éviter la fermeture instantanée
+      navMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+  }
 
-      if (link && submenu) {
-        link.addEventListener('click', (event) => {
-          event.preventDefault(); // Empêche la navigation du lien
-          event.stopPropagation(); // Empêche la fermeture due au clic extérieur
+  // Gestion des clics sur les éléments de menu
+  const listItems = document.querySelectorAll('.list'); // Sélectionne tous les éléments avec la classe 'list'
 
-          // Fermer les autres sous-menus ouverts
-          document.querySelectorAll('#nav-menu .list-inner.active').forEach(openSubmenu => {
-            if (openSubmenu !== submenu) { // Si ce n'est pas le sous-menu actuel
-              openSubmenu.classList.remove('active');
-            }
-          });
+  listItems.forEach(item => {
+    const link = item.querySelector('a'); // Sélectionne le lien à l'intérieur de l'élément de liste
+    const submenu = item.querySelector('.list-inner'); // Sélectionne le sous-menu
 
-          // Toggle le sous-menu actuel
-          submenu.classList.toggle('active');
-        });
+    link.addEventListener('click', (event) => {
+      event.preventDefault(); // Empêche le lien de naviguer
+
+      // Fermez les autres sous-menus
+      listItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          const otherSubmenu = otherItem.querySelector('.list-inner');
+          if (otherSubmenu) {
+            otherSubmenu.classList.remove('active'); // Masquer les autres sous-menus
+          }
+        }
+      });
+
+      // Basculez l'affichage du sous-menu courant
+      if (submenu) {
+        submenu.classList.toggle('active'); // Ajoute ou enlève la classe 'active'
+        submenu.style.display = submenu.classList.contains('active') ? 'block' : 'none'; // Affiche ou masque le sous-menu
       }
     });
+  });
+
+  // Fermer sous-menus et menu principal si clic à l'extérieur
+  document.addEventListener('click', (event) => {
+    const isClickInside = navMenu.contains(event.target) || (menuToggle && menuToggle.contains(event.target));
+
+    if (!isClickInside) {
+      // Ferme tous les sous-menus
+      document.querySelectorAll('#nav-menu .list-inner.active').forEach(openSubmenu => {
+        openSubmenu.classList.remove('active');
+        openSubmenu.style.display = 'none'; // Masquer le sous-menu
+      });
+      // Ferme le menu principal
+      navMenu.classList.remove('active');
+      menuToggle.classList.remove('active');
+    }
+  });
+});
+
 
     // Fermer sous-menus et menu principal si clic à l'extérieur
     document.addEventListener('click', (event) => {

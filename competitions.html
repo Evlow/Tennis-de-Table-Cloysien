@@ -22,15 +22,15 @@
           <div class="bar"></div>
           <div class="bar"></div>
       </div>
-  </div>
+  </div>  
     <nav>
       <ul id="nav-menu" class="dropdown">
-        <li class="deroulant" aria-haspopup="true" aria-expanded="false">
-          <a href="/accueil.html">Le club</a>
+        <li aria-haspopup="true" aria-expanded="false">
+          <a href="/index.html">Le club</a>
         </li>
-        <li class="deroulant" aria-haspopup="true" aria-expanded="false">
+        <li class="list" aria-haspopup="true" aria-expanded="false">
           <a href="#">Les équipes</a>
-          <ul class="sous sous-equipe">
+          <ul class="list-inner">
             <li><a href="#" target="_blank" rel="noopener noreferrer">Équipe 1 - R3</a></li>
             <li><a href="#" target="_blank" rel="noopener noreferrer">Équipe 2 - D1</a></li>
             <li><a href="#" target="_blank" rel="noopener noreferrer">Équipe 3 - D2</a></li>
@@ -38,20 +38,20 @@
             <li><a href="#" target="_blank" rel="noopener noreferrer">Équipe 5 - D3</a></li>
           </ul>
         </li>
-        <li class="deroulant" aria-haspopup="true" aria-expanded="false">
+        <li class="list" aria-haspopup="true" aria-expanded="false">
           <a href="#">Sportifs</a>
-          <ul class="sous">
+          <ul class="list-inner">
             <li><a href="#" target="_blank" rel="noopener noreferrer">Classement joueurs</a></li>
             <li><a href="#" target="_blank" rel="noopener noreferrer">Progression</a></li>
             <li><a href="#" target="_blank" rel="noopener noreferrer">Date des compétitions</a></li>
           </ul>
         </li>
-        <li class="deroulant">
+        <li>
           <a href="/competitions.html">Les compétitions</a>
         </li>
-        <li class="deroulant" aria-haspopup="true" aria-expanded="false">
+        <li class="list" aria-haspopup="true" aria-expanded="false">
           <a href="#">Liens utiles</a>
-          <ul class="sous">
+          <ul class="list-inner">
             <li><a href="http://www.fftt.com/site/" target="_blank" rel="noopener noreferrer">FFTT</a></li>
             <li><a href="http://liguecentrett.com/" target="_blank" rel="noopener noreferrer">Ligue du Centre</a></li>
             <li><a href="http://www.comite28tt.fr/cd28tt/accueil.php" target="_blank" rel="noopener noreferrer">Comité
@@ -75,7 +75,6 @@
         </li>
       </ul>
     </nav>
-
   </header>
 
 
@@ -159,7 +158,7 @@
       });
 
       // Gestion des sous-menus lors du clic
-      const dropdownItems = document.querySelectorAll('#nav-menu .deroulant > a'); // Sélectionne les éléments du menu qui ont des sous-menus
+      const dropdownItems = document.querySelectorAll('#nav-menu .list > a'); // Sélectionne les éléments du menu qui ont des sous-menus
 
       dropdownItems.forEach(item => {
         item.addEventListener('click', (event) => {
@@ -168,7 +167,7 @@
           const submenu = item.nextElementSibling; // Sélectionne le sous-menu correspondant à l'élément cliqué
 
           // Fermer les autres sous-menus ouverts
-          document.querySelectorAll('#nav-menu .sous.active').forEach(openSubmenu => {
+          document.querySelectorAll('#nav-menu .list.active').forEach(openSubmenu => {
             if (openSubmenu !== submenu) { // Vérifie si le sous-menu ouvert n'est pas celui qui a été cliqué
               openSubmenu.classList.remove('active'); // Ferme le sous-menu
             }
