@@ -52,7 +52,6 @@ h3 {
   font-size: 4rem;
 }
 
-
 /*CARD*/
 .card-container {
   display: flex;
@@ -125,7 +124,8 @@ h3 {
   padding: 20px;
   text-align: center;
   transition: transform 0.2s ease;
-  background-color: rgba(255, 248, 220, 0.3); }
+  background-color: rgba(255, 248, 220, 0.3);
+}
 
 .card-club:hover {
   transform: scale(1.05);
@@ -156,7 +156,8 @@ h3 {
 .bloc-entrainement {
   padding: 10px 0 10px 0;
   text-align: center;
-  background-color: rgba(255, 248, 220, 0.3);}
+  background-color: rgba(255, 248, 220, 0.3);
+}
 
 .bloc-entrainement h2 {
   font-size: 2.5rem;
@@ -375,22 +376,18 @@ footer .footer-copyright {
 .menu-icon .bar {
   height: 4px;
   width: 30px;
-  background-color:black; /* Change to your preferred color */
+  background-color: black; /* Change to your preferred color */
   margin: 4px 0;
   transition: 0.3s; /* Smooth transition for the menu opening/closing */
 }
 
-
-
-
 /* MENU DEROULANT */
-
 .deroulant {
   position: relative;
 }
 
-.sous {
-  display: none;
+.list-inner {
+  display: none; /* Masque les sous-menus par défaut */
   width: 210px;
   position: absolute;
   z-index: 1000;
@@ -398,54 +395,41 @@ footer .footer-copyright {
   margin-top: 1px;
   padding: 0;
   background: radial-gradient(circle, #ffcc80, #ff8c00);
-
 }
 
 nav {
   background: radial-gradient(circle, #ffcc80, #ff8c00);
   height: 80px;
 }
+
 /* Affichage du sous-menu au survol du parent */
-nav > ul > li:hover .sous {
-  display: block;
+nav > ul > li:hover .list-inner {
+  display: block; /* Affiche le sous-menu au survol */
 }
 
-/* Styles des liens dans le sous-menu */
-.sous a {
-  border-bottom: none;
-  text-align: left;
-  display: block;
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
+.list-inner a:hover {
+  border-bottom: none; /* Retire la bordure en bas lors du survol */
 }
 
-.sous a:hover {
-  border-bottom: none;
-}
-
-.sous > li {
+.list {
   position: relative;
-  padding: 10px;
-  padding-left: 2px;
-  padding-right: 2px;
 }
 
 /* Styles pour le sous-menu des équipes */
-.sous-equipe {
-  text-align: center;
-  width: 180px;
-  background: radial-gradient(circle, #ffcc80, #ff8c00);
-
+.list-inner {
+  display: none; /* Masque les sous-menus par défaut */
 }
 
-.sous-equipe a {
-  display: block;
-  font-weight: normal;
-  text-align: center;
+/* Styles des liens dans le sous-menu */
+.list-inner a {
+  display: block; /* Affiche les liens en bloc */
+  font-weight: normal; /* Poids normal pour le texte */
+  text-align: left; /* Alignement à gauche */
+  padding: 10px; /* Padding autour du lien */
+  color: black; /* Couleur du texte */
 }
+
 /* MENU PRINCIPAL */
-
 nav ul {
   display: flex;
   margin: 0;
@@ -456,20 +440,19 @@ nav ul {
 
 nav li {
   position: relative;
-  margin: 0 10px;
 }
 
 nav a {
   text-decoration: none;
   color: black;
   font-size: 1.2em;
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
   font-weight: bold;
 }
 
 /* SOUS-SOUS-MENU (list-inner) */
-.deroulant .sous .list-inner {
-  display: none;
+.list-inner .list-inner {
+  display: none; /* Masque les sous-sous-menus par défaut */
   position: absolute;
   left: 100%;
   top: 0;
@@ -478,159 +461,141 @@ nav a {
   border-radius: 5px;
 }
 
-/* Affichage du sous-sous-menu au survol du parent */
-.sous > li:hover .list-inner {
-  display: block;
+.list-inner > li:hover .list-inner {
+  display: block; /* Affiche le sous-sous-menu au survol */
 }
+
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
-  /* Conteneur pour les aides */
+  /* Styles pour le conteneur de logo et titre */
+  .titre-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Logo */
+  .logo {
+    width: 80px;
+    padding: 5px;
+  }
+
+  /* Titre */
+  .titre-logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+  }
+
+  /* Conteneur global */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Conteneur des aides */
   .aides-container {
-    flex-direction: column; /* Alignement en colonne */
-    align-items: center; /* Centrer les éléments */
+    flex-direction: column;
+    align-items: center;
   }
 
-  /* Styles pour les articles d'aides */
+  /* Articles d'aide */
   .article-aides {
-    width: 100%; /* Largeur complète */
-    margin: 10px 0; /* Espacement vertical */
+    width: 100%;
+    margin: 10px 0;
   }
 
-  /* Images dans les articles d'aides */
+  /* Images dans les articles d'aide */
   .article-aides img {
-    width: 300px; /* Largeur fixée pour les images */
+    width: 300px;
   }
 
   /* Styles pour le footer et les paragraphes */
   .h2-footer,
   p {
-    text-align: center; /* Centre le texte */
+    text-align: center;
   }
 
-  /* Styles pour les titres de section */
+  /* Titres de section */
   .h2-aides,
   .h2-competitions,
   .h2-cotisations,
   .h2-partenaires {
-    font-size: 1.8rem; /* Taille de police pour les titres */
+    font-size: 1.6rem;
   }
 
-  /* Styles pour le menu burger */
+  /* Menu Burger */
   .menu-icon {
-    display: flex; /* Affiche l'icône burger sur mobile */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 10px;
   }
 
-  /* Styles du menu principal */
+  /* Barres du menu burger */
+  .menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    margin: 4px auto;
+    background-color: black;
+    transition: all 0.3s ease;
+  }
+
+  /* Transformation en croix pour le menu burger actif */
+  .menu-icon.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-icon.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  /* Barre de navigation */
+  nav {
+    position: relative;
+    height: 0;
+  }
+
+  /* Menu principal */
   #nav-menu {
-    display: none; /* Masquer le menu par défaut */
-    flex-direction: column; /* Éléments en colonne */
-    position: fixed; /* Fixe la position */
-    top: 0; /* Aligne en haut */
-    right: -250px; /* Hors de l'écran */
-    width: 250px; /* Largeur du menu */
-    height: 100%; /* Hauteur complète */
-    background: radial-gradient(circle, #ffcc80, #ff8c00); /* Dégradé de couleur */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Ombre */
-    transition: right 0.3s ease; /* Animation d'apparition */
-    z-index: 1000; /* Assure que le menu soit au-dessus */
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    background: radial-gradient(circle, #ffcc80, #ff8c00);
   }
 
-  /* Affiche le menu quand il a la classe active */
+  /* Affiche le menu au clic */
   #nav-menu.active {
-    display: flex; /* Affiche le menu */
-    right: 0; /* Fait apparaître le menu */
+    display: flex;
   }
 
-  /* Styles pour les sous-menus */
-  .sous {
-    display: block; /* Les sous-menus sont affichés par défaut */
-    flex-direction: column; /* Aligner les sous-éléments en colonne */
-    padding-left: 20px; /* Indentation pour les sous-menus */
-    background: rgba(255, 255, 255, 0.9); /* Couleur de fond */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour les sous-menus */
-    z-index: 1000; /* Assure que les sous-menus soient au-dessus des autres éléments */
-  }
-
-  /* Affiche les sous-menus lors du survol */
-  .deroulant:hover .sous {
-    display: block; /* Affiche le sous-menu lors du survol */
-  }
-
-  /* Styles pour le sous-menu "sous sous-équipe" */
-  .sous-equipe {
-    display: block; /* Change de none à block pour afficher par défaut */
-    flex-direction: column; /* Alignement vertical */
-    padding-left: 20px; /* Indentation pour le sous-sous-menus */
-    background: rgba(255, 255, 255, 0.9); /* Couleur de fond pour le sous-menu */
-    width: 200px; /* Largeur pour le sous-menu */
-    z-index: 1000; /* Assure que le sous-menu soit au-dessus des autres éléments */
-  }
-
-  /* Affiche le sous-menu lors du survol */
-  .deroulant:hover .sous-equipe {
-    display: block; /* Affiche le sous-menu lorsqu'il est actif */
-  }
-
-  /* Styles pour l'image de fond */
-  .img-fond {
-    height: 200px; /* Hauteur pour l'image de fond */
-  }
-
-  /* Styles pour le logo */
-  .logo {
-    width: 100px; /* Largeur du logo */
-    padding: 5px; /* Espacement autour du logo */
-  }
-
-  /* Styles pour le conteneur de logo et titre */
-  .titre-logo {
-    flex-direction: column; /* Empiler le logo et le menu verticalement */
-    align-items: center; /* Aligner les éléments au centre */
-    height: auto; /* Ajustement de la hauteur */
-  }
-
-  /* Styles pour le titre du logo */
-  .titre-logo h1 {
-    font-size: 2.5rem; /* Taille de police pour le titre */
-    text-align: center; /* Centre le titre */
-    margin: 0; /* Supprime la marge par défaut */
-  }
-
-  /* Animation pour le menu */
-  .dropdown {
-    transition: max-height 0.3s ease; /* Animation pour l'ouverture */
-  }
-
-  /* Styles pour le menu */
-  .menu {
-    display: flex; /* Affichage flexible */
-    align-items: center; /* Alignement au centre */
-    width: 100%; /* Largeur complète */
-    justify-content: space-around; /* Distribution des éléments */
-  }
-
-  /* Style pour les liens du menu */
-  #nav-menu ul {
-    padding: 0; /* Supprime le remplissage par défaut */
-    margin: 0; /* Supprime la marge par défaut */
-    width: 100%; /* Assure que la liste utilise toute la largeur */
-  }
-
-  /* Espacement entre les éléments du menu */
+  /* Liens du menu */
   #nav-menu li {
-    margin: 10px 0; /* Espacement vertical entre les éléments */
+    padding: 5px;
   }
 
-  /* Styles pour les liens du menu */
   #nav-menu a {
-    text-decoration: none; /* Pas de soulignement */
-    color: black; /* Couleur des liens */
-    font-size: 1.2rem; /* Taille de police pour les liens */
-    padding: 10px 20px; /* Remplissage autour des liens */
-    display: block; /* Affiche les liens en tant que blocs */
-    text-align: left; /* Aligne le texte à gauche */
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  /* Afficher le sous-menu actif */
+  .list.active {
+    display: block;
+  }
+
+  /* Affiche le sous-menu lorsqu'il a la classe active */
+  .list-inner.active {
+    display: block;
+  }
+  .list-inner {
+    background-color: transparent;
   }
 }
-
-  
 
