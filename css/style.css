@@ -472,6 +472,12 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
+  .img-fond {
+    width: 100%;
+    object-fit: cover;
+    height:  auto;
+  }
+  
   .titre-logo {
     display: flex;
     align-items: center;
@@ -568,19 +574,23 @@ nav a {
 
   /* Menu principal */
   #nav-menu {
-    display: none;
-    flex-direction: column;
+    display: none; /* Masqué par défaut */
+    flex-direction: column; /* Aligne les éléments en colonne */
     background: radial-gradient(circle, #ffcc80, #ff8c00);
+    padding-top: 20px; /* Espace supérieur pour le menu */
+    overflow-y: auto; /* Permet le défilement si le contenu déborde */
     padding-top: 20px;
   }
 
   /* Affiche le menu au clic */
   #nav-menu.active {
     display: flex;
+    
   }
 
   /* Liens du menu principal */
   #nav-menu a {
+    flex: 1; /* Prend la même quantité d'espace */
     text-align: center;
     color: black; /* Assurez-vous que la couleur du texte est visible */
     text-decoration: none; /* Supprime les soulignements */
