@@ -33,7 +33,6 @@ a {
   color: black;
 }
 
-
 .titre-logo {
   display: flex;
   align-items: center;
@@ -49,18 +48,18 @@ a {
 
 /*CARD COMPETITIONS*/
 
-
-.intro-text{
+.intro-text {
   padding-left: 20px;
 }
 .card-container {
   display: flex;
-justify-content: space-evenly;
-margin: 40px 0;
+  justify-content: space-evenly;
+  margin: 40px 0;
 }
 
 .card-competitions {
-  background-color: rgba(255, 248, 220, 0.3); border-radius: 10px; /* Arrondir les coins un peu plus */
+  background-color: rgba(255, 248, 220, 0.3);
+  border-radius: 10px; /* Arrondir les coins un peu plus */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ombre plus douce pour un effet flottant */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout de la transition pour l'ombre */
@@ -104,9 +103,8 @@ margin: 40px 0;
 .h3-championnat {
   text-align: center;
   font-size: 2.5rem;
-
 }
-.h2-competitions{
+.h2-competitions {
   padding-left: 20px;
   font-size: 3rem;
 }
@@ -114,7 +112,6 @@ margin: 40px 0;
 .h2-cotisations {
   padding-left: 20px;
   font-size: 3rem;
-
 }
 .card-container-club {
   display: flex;
@@ -229,7 +226,6 @@ margin: 40px 0;
 .h2-partenaires {
   padding-left: 20px;
   font-size: 3rem;
-
 }
 .bloc-sponsors {
   padding: 20px;
@@ -308,15 +304,20 @@ margin: 40px 0;
 
 .h2-inscription {
   font-size: 3rem;
-padding-left: 20px;}
+  padding-left: 20px;
+}
 
-.inscription{
+.inscription {
   text-align: center;
 }
 .img-fond {
   width: 100%;
   object-fit: cover;
   height: 500px;
+}
+.img-inscription {
+  width: 50%; /* Largeur de l'image d'inscription */
+  border-radius: 5px; /* Arrondi léger des coins */
 }
 
 /* FOOTER */
@@ -328,7 +329,6 @@ footer {
 
 .content-footer-flex {
   background: radial-gradient(circle, #ffcc80, #ff8c00); /* Dégradé radial */
-
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -337,21 +337,11 @@ footer {
   padding: 20px;
 }
 
-.footer-lieu,
-.footer-contact {
-  max-width: 250px;
-  text-align: left;
-}
-
 .h2-footer {
   font-size: 1.5em;
   margin-bottom: 10px;
 }
 
-.footer-lieu p,
-.footer-contact p {
-  margin: 5px 0;
-}
 
 .svg-footer {
   width: 20px;
@@ -406,7 +396,8 @@ footer .footer-copyright {
   border-radius: 5px;
   margin-top: 1px;
   padding: 0;
-  background: radial-gradient(circle, #ffcc80, #ff8c00);}
+  background: radial-gradient(circle, #ffcc80, #ff8c00);
+}
 
 nav {
   height: 80px;
@@ -456,7 +447,7 @@ nav a {
   text-decoration: none;
   color: black;
   font-size: 1.2em;
-  padding: 0 10px;
+  padding: 0 20px;
   font-weight: bold;
 }
 
@@ -464,32 +455,14 @@ nav a {
   display: block; /* Affiche le sous-sous-menu au survol */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
   .img-fond {
     width: 100%;
     object-fit: cover;
-    height:  auto;
+    height: auto;
   }
-  
+
   .titre-logo {
     display: flex;
     align-items: center;
@@ -539,12 +512,17 @@ nav a {
   .h2-footer {
     text-align: center;
   }
+.h3-championnat{
+  font-size: 2rem;
+
+}
 
   /* Titres de section */
   .h2-aides,
   .h2-competitions,
   .h2-cotisations,
-  .h2-partenaires {
+  .h2-partenaires,
+  .h2-inscription {
     font-size: 2rem;
   }
 
@@ -596,7 +574,6 @@ nav a {
   /* Affiche le menu au clic */
   #nav-menu.active {
     display: flex;
-    
   }
 
   /* Liens du menu principal */
@@ -637,16 +614,18 @@ nav a {
     list-style: none; /* Supprime les puces */
   }
 
-  .card-container{
-flex-direction: column;
-gap: 40px;
+  .card-container {
+    flex-direction: column;
+    gap: 40px;
   }
-.card-competitions{
-  margin: 0 auto;
-}
-  .intro-text{
+  .card-competitions {
+    margin: 0 auto;
+  }
+  .intro-text {
     padding: 20px;
-    text-align:  center;
+    text-align: center;
+  }
+  .img-inscription {
+    width: 100%;
   }
 }
-
