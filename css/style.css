@@ -452,12 +452,31 @@ nav a {
   display: block; /* Affiche le sous-sous-menu au survol */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
   .titre-logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100px;
   }
 
   /* Logo */
@@ -551,9 +570,8 @@ nav a {
   #nav-menu {
     display: none;
     flex-direction: column;
-    width: 100%;
-    padding: 0;
     background: radial-gradient(circle, #ffcc80, #ff8c00);
+    padding-top: 20px;
   }
 
   /* Affiche le menu au clic */
@@ -561,23 +579,41 @@ nav a {
     display: flex;
   }
 
-  /* Liens du menu */
-  #nav-menu li {
-    padding: 5px;
-  }
-
+  /* Liens du menu principal */
   #nav-menu a {
-    padding-top: 5px;
     text-align: center;
+    color: black; /* Assurez-vous que la couleur du texte est visible */
+    text-decoration: none; /* Supprime les soulignements */
   }
 
+  /* Liens du sous-menu */
+  .list-inner a {
+    text-align: center; /* Centre le texte */
+    display: block; /* Assure que chaque lien prend toute la largeur */
+    color: black; /* Assurez-vous que la couleur du texte est visible */
+    text-decoration: none; /* Supprime les soulignements */
+  }
 
   .list-inner {
     display: none; /* Affiche le sous-menu sur mobile */
     position: static; /* Enlève la position absolue pour un bon affichage */
     width: 100%; /* Ajuste la largeur pour le mobile */
-    ;
+    background: transparent;
   }
- 
+
+  /* Affiche le sous-menu quand le menu est actif */
+  #nav-menu li:hover .list-inner {
+    display: flex; /* Affiche le sous-menu au survol */
+    flex-direction: column; /* Aligne les sous-éléments en colonne */
+  }
+
+  #nav-menu li {
+    padding: 15px;
+  }
+
+  /* Style pour les éléments de la liste intérieure */
+  .list-inner li {
+    list-style: none; /* Supprime les puces */
+  }
 }
 
