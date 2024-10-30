@@ -32,12 +32,7 @@ a {
   text-decoration: none;
   color: black;
 }
-h2 {
-  font-size: 2.5rem;
-}
-h3 {
-  font-size: 2rem;
-}
+
 
 .titre-logo {
   display: flex;
@@ -52,38 +47,44 @@ h3 {
   font-size: 4rem;
 }
 
-/*CARD*/
+/*CARD COMPETITIONS*/
+
+
+.intro-text{
+  padding-left: 20px;
+}
 .card-container {
   display: flex;
-  gap: 20px;
-  justify-content: space-evenly;
-  padding: 20px 0;
+justify-content: space-evenly;
+margin: 40px 0;
 }
 
-.card-competitions{
-  background-color: rgba(255, 248, 220, 0.3);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.card-competitions {
+  background-color: rgba(255, 248, 220, 0.3); border-radius: 10px; /* Arrondir les coins un peu plus */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ombre plus douce pour un effet flottant */
   text-align: center;
-  transition: transform 0.2s ease;
-  width: 150px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout de la transition pour l'ombre */
+  width: 200px; /* Largeur légèrement augmentée */
   padding: 20px;
-  align-content: center;
+  cursor: pointer; /* Indique que la carte est interactive */
 }
 
-.card:hover {
+.card-competitions:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Ombre plus prononcée au survol */
 }
 
 .h4-phase {
-  font-size: 1.4rem;
+  font-size: 1.5rem; /* Taille de police légèrement augmentée */
   color: #ff9e40;
+  margin: 10px 0; /* Ajoute un espacement autour du titre */
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 10px 0; /* Espacement à l'intérieur de la carte */
 }
 
 .card-content a {
@@ -91,22 +92,29 @@ h3 {
   text-decoration: none;
   font-size: 1.2rem;
   padding: 10px;
+  border: 1px solid transparent; /* Ajoute une bordure invisible pour éviter un effet de saut */
+  border-radius: 5px; /* Arrondi léger des liens */
 }
 
 .card-content a:hover {
   color: #ff7b1f;
   font-weight: bold;
 }
+
 .h3-championnat {
   text-align: center;
-}
-.h2-competitions {
-  text-align: center;
-}
+  font-size: 2.5rem;
 
+}
+.h2-competitions{
+  padding-left: 20px;
+  font-size: 3rem;
+}
 /* cotisations */
 .h2-cotisations {
   padding-left: 20px;
+  font-size: 3rem;
+
 }
 .card-container-club {
   display: flex;
@@ -158,7 +166,7 @@ h3 {
 }
 
 .bloc-entrainement h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .entrainement-details {
@@ -189,12 +197,12 @@ h3 {
 
 .h2-aides {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 .h3-aides {
   color: #ff7b1f;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .aides-container {
@@ -216,10 +224,12 @@ h3 {
 
 /* PARTENAIRES */
 .h3-partenaire {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 .h2-partenaires {
   padding-left: 20px;
+  font-size: 3rem;
+
 }
 .bloc-sponsors {
   padding: 20px;
@@ -295,10 +305,14 @@ h3 {
 }
 
 /*INSCRIPTION*/
-.inscription {
+
+.h2-inscription {
+  font-size: 3rem;
+padding-left: 20px;}
+
+.inscription{
   text-align: center;
 }
-
 .img-fond {
   width: 100%;
   object-fit: cover;
@@ -522,8 +536,7 @@ nav a {
   }
 
   /* Styles pour le footer et les paragraphes */
-  .h2-footer,
-  p {
+  .h2-footer {
     text-align: center;
   }
 
@@ -532,7 +545,7 @@ nav a {
   .h2-competitions,
   .h2-cotisations,
   .h2-partenaires {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   /* Menu Burger */
@@ -622,6 +635,18 @@ nav a {
   /* Style pour les éléments de la liste intérieure */
   .list-inner li {
     list-style: none; /* Supprime les puces */
+  }
+
+  .card-container{
+flex-direction: column;
+gap: 40px;
+  }
+.card-competitions{
+  margin: 0 auto;
+}
+  .intro-text{
+    padding: 20px;
+    text-align:  center;
   }
 }
 
