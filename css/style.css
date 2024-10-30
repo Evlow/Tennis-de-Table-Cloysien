@@ -60,27 +60,24 @@ h3 {
   padding: 20px 0;
 }
 
-.card {
-  background-color: #fdfdfd;
+.card-competitions{
+  background-color: rgba(255, 248, 220, 0.3);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 600px;
-  padding: 10px 80px;
   text-align: center;
   transition: transform 0.2s ease;
-  max-width: 100%; /* Éviter les largeurs fixes */
-  width: auto; /* Adaptable */
-  padding: 10px 20px; /* Ajustez les paddings */
+  width: 150px;
+  padding: 20px;
+  align-content: center;
 }
 
 .card:hover {
   transform: scale(1.05);
 }
 
-.card h4 {
+.h4-phase {
   font-size: 1.4rem;
   color: #ff9e40;
-  margin: 20px 0;
 }
 
 .card-content {
@@ -93,6 +90,7 @@ h3 {
   color: #0d0d0d;
   text-decoration: none;
   font-size: 1.2rem;
+  padding: 10px;
 }
 
 .card-content a:hover {
