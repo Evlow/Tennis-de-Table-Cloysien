@@ -5,6 +5,8 @@
 }
 header {
   background: radial-gradient(circle, #ffcc80, #ff8c00); /* Dégradé radial */
+  display: flex;
+  align-items: center;
 }
 .logo {
   width: 150px;
@@ -310,7 +312,7 @@ a {
 .inscription {
   text-align: center;
 }
-.img-fond {
+.img-fond, .img-fond-competition{
   width: 100%;
   object-fit: cover;
   height: 500px;
@@ -400,6 +402,7 @@ footer .footer-copyright {
 }
 
 nav {
+  align-content: center;
   height: 80px;
 }
 
@@ -461,6 +464,7 @@ nav a {
     width: 100%;
     object-fit: cover;
     height: auto;
+    
   }
 
   .titre-logo {
@@ -485,10 +489,8 @@ nav a {
   }
 
   /* Conteneur global */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  header {
+    display: block;
   }
 
   /* Conteneur des aides */
@@ -559,6 +561,7 @@ nav a {
   nav {
     position: relative;
     height: 0;
+    justify-content: center;
   }
 
   /* Menu principal */
