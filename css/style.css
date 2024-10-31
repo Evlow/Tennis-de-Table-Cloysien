@@ -44,8 +44,7 @@ a {
   width: 50px;
 }
 .titre-logo h1 {
-  margin: 0 auto;
-  font-size: 4rem;
+ display: none;
 }
 
 /*CARD COMPETITIONS*/
@@ -315,7 +314,6 @@ a {
 .img-fond, .img-fond-competition{
   width: 100%;
   object-fit: cover;
-  height: 500px;
 }
 .img-inscription {
   width: 50%; /* Largeur de l'image d'inscription */
@@ -361,10 +359,10 @@ footer a:hover {
 }
 
 /* Style pour le copyright */
-footer .footer-copyright {
+ .footer-copyright {
   margin-top: 20px;
   font-size: 0.85em;
-  color: #333333;
+  color: black;
   text-align: center;
 }
 
@@ -482,10 +480,11 @@ nav a {
 
   /* Titre */
   .titre-logo h1 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     margin: 0;
     flex: 1;
     text-align: center;
+    display: block;
   }
 
   /* Conteneur global */
@@ -631,4 +630,172 @@ nav a {
   .img-inscription {
     width: 100%;
   }
+  
+}
+
+
+/* Requêtes de média pour les tablettes */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .titre-logo {
+    height: 120px; /* Ajustement de la hauteur du titre pour les tablettes */
+  }
+
+  /* Redimensionnement du logo */
+  .logo {
+    width: 80px;
+    padding: 10px;
+  }
+
+  /* Augmentation de la taille du titre */
+  .titre-logo h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Ajustement de la disposition des cartes dans les sections */
+  .card-container {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center; /* Centre les cartes */
+  }
+
+  .card-competitions {
+    width: 250px; /* Légère augmentation de la largeur */
+    margin: 10px;
+  }
+
+  /* Section aides */
+  .aides-container {
+    flex-direction: row; /* Aligne les articles en rangée */
+    gap: 20px;
+  }
+
+  /* Dimensions des articles d'aide */
+  .article-aides {
+    width: 45%; /* Occupe la moitié de l'écran en largeur */
+  }
+
+  /* Ajustement de la taille des titres */
+  .h2-aides,
+  .h2-competitions,
+  .h2-cotisations,
+  .h2-partenaires,
+  .h2-inscription {
+    font-size: 2.5rem;
+  }
+
+  /* Footer */
+  footer .content-footer-flex {
+    flex-direction: row; /* Affichage en rangée pour le footer */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Menu de navigation */
+  .menu-icon {
+    display: none; /* Masqué sur tablette */
+  }
+  /* Taille des liens de navigation */
+  nav ul li a {
+    font-size: 1rem; /* Taille réduite pour les liens */
+  }
+
+  /* Menu principal */
+  nav ul {
+    display: flex;
+    justify-content: space-evenly; /* Espacement des éléments */
+  }
+#nav-menu {
+  padding: 0;
+}
+  nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 0 5px;
+    font-size: 1rem;
+  }
+
+
+  /* Styles pour les cartes de partenaire */
+  .sponsor-card {
+    width: 180px; /* Largeur ajustée pour tablette */
+    height: 150px;
+  }
+
+  /* Section partenaires */
+  .sponsor-cards {
+    width: 90%; /* Largeur réduite du conteneur de sponsor */
+    justify-content: center;
+  }
+
+  /* Bouton */
+  .bouton {
+    width: 100px; /* Taille augmentée du bouton */
+    height: 40px;
+  }
+
+  /* Section cotisations et clubs */
+  .card-container-club {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .card-club {
+    max-width: 250px;
+  }
+
+  /* Bloc entrainement */
+  .bloc-entrainement h2 {
+    font-size: 2.5rem;
+  }
+  .deroulant {
+    position: relative;
+  }
+  
+  .list-inner {
+    display: none; /* Masque les sous-menus par défaut */
+    width: 210px;
+    position: absolute;
+    z-index: 1000;
+    border-radius: 5px;
+    margin-top: 1px;
+    padding: 0;
+    background: radial-gradient(circle, #ffcc80, #ff8c00);
+  }
+  
+  nav {
+    align-content: center;
+    height: 80px;
+  }
+  
+  /* Affichage du sous-menu au survol du parent */
+  nav > ul > li:hover .list-inner {
+    display: block; /* Affiche le sous-menu au survol */
+  }
+  
+  .list-inner a:hover {
+    border-bottom: none; /* Retire la bordure en bas lors du survol */
+  }
+  
+  .list {
+    position: relative;
+  }
+  
+  /* Styles pour le sous-menu des équipes */
+  .list-inner {
+    display: none; /* Masque les sous-menus par défaut */
+  }
+  
+  /* Styles des liens dans le sous-menu */
+  .list-inner a {
+    display: block; /* Affiche les liens en bloc */
+    font-weight: normal; /* Poids normal pour le texte */
+    text-align: left; /* Alignement à gauche */
+    padding: 10px; /* Padding autour du lien */
+    color: black; /* Couleur du texte */
+  }
+  .list-inner > li:hover .list-inner {
+  display: block; /* Affiche le sous-sous-menu au survol */
+}
+
 }
