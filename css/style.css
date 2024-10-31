@@ -44,10 +44,25 @@ a {
   width: 50px;
 }
 .titre-logo h1 {
- display: none;
+  display: none;
 }
 
 /*CARD COMPETITIONS*/
+
+.section-fond {
+  width: 100%;
+  height: 700px;
+}
+.img-index{
+  position: absolute;
+}
+ .h2-ttc{
+  position: relative;
+  margin: 0;
+  text-align: center;
+  font-size: 6rem;
+  padding: 50px ;
+ }
 
 .intro-text {
   padding-left: 20px;
@@ -311,7 +326,8 @@ a {
 .inscription {
   text-align: center;
 }
-.img-fond, .img-fond-competition{
+.img-index,
+.img-fond-competition {
   width: 100%;
   object-fit: cover;
 }
@@ -323,7 +339,6 @@ a {
 /* FOOTER */
 footer {
   background: radial-gradient(circle, #ffcc80, #ff8c00);
-  padding: 20px 0;
   text-align: center;
 }
 
@@ -333,15 +348,11 @@ footer {
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-around;
-  gap: 20px;
-  padding: 20px;
 }
 
 .h2-footer {
   font-size: 1.5em;
-  margin-bottom: 10px;
 }
-
 
 .svg-footer {
   width: 20px;
@@ -359,8 +370,7 @@ footer a:hover {
 }
 
 /* Style pour le copyright */
- .footer-copyright {
-  margin-top: 20px;
+.footer-copyright {
   font-size: 0.85em;
   color: black;
   text-align: center;
@@ -458,11 +468,19 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
+ .h2-ttc{
+display: none;
+ }
+.img-index{
+  position: inherit;
+}
+  .section-fond {
+    height: 145px;
+  }
   .img-fond {
     width: 100%;
     object-fit: cover;
     height: auto;
-    
   }
 
   .titre-logo {
@@ -513,10 +531,9 @@ nav a {
   .h2-footer {
     text-align: center;
   }
-.h3-championnat{
-  font-size: 2rem;
-
-}
+  .h3-championnat {
+    font-size: 2rem;
+  }
 
   /* Titres de section */
   .h2-aides,
@@ -630,12 +647,26 @@ nav a {
   .img-inscription {
     width: 100%;
   }
-  
 }
-
 
 /* Requêtes de média pour les tablettes */
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  .section-fond {
+    width: 100%;
+    height: 400px;
+  }
+
+  .img-index{
+    position: absolute;
+  }
+  .h2-ttc{
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;
+    padding: 30px ;
+   }
+  
   .titre-logo {
     height: 120px; /* Ajustement de la hauteur du titre pour les tablettes */
   }
@@ -704,9 +735,9 @@ nav a {
     display: flex;
     justify-content: space-evenly; /* Espacement des éléments */
   }
-#nav-menu {
-  padding: 0;
-}
+  #nav-menu {
+    padding: 0;
+  }
   nav a {
     text-decoration: none;
     color: black;
@@ -714,7 +745,6 @@ nav a {
     padding: 0 5px;
     font-size: 1rem;
   }
-
 
   /* Styles pour les cartes de partenaire */
   .sponsor-card {
@@ -751,7 +781,7 @@ nav a {
   .deroulant {
     position: relative;
   }
-  
+
   .list-inner {
     display: none; /* Masque les sous-menus par défaut */
     width: 210px;
@@ -762,30 +792,30 @@ nav a {
     padding: 0;
     background: radial-gradient(circle, #ffcc80, #ff8c00);
   }
-  
+
   nav {
     align-content: center;
     height: 80px;
   }
-  
+
   /* Affichage du sous-menu au survol du parent */
   nav > ul > li:hover .list-inner {
     display: block; /* Affiche le sous-menu au survol */
   }
-  
+
   .list-inner a:hover {
     border-bottom: none; /* Retire la bordure en bas lors du survol */
   }
-  
+
   .list {
     position: relative;
   }
-  
+
   /* Styles pour le sous-menu des équipes */
   .list-inner {
     display: none; /* Masque les sous-menus par défaut */
   }
-  
+
   /* Styles des liens dans le sous-menu */
   .list-inner a {
     display: block; /* Affiche les liens en bloc */
@@ -795,7 +825,6 @@ nav a {
     color: black; /* Couleur du texte */
   }
   .list-inner > li:hover .list-inner {
-  display: block; /* Affiche le sous-sous-menu au survol */
-}
-
+    display: block; /* Affiche le sous-sous-menu au survol */
+  }
 }
