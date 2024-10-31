@@ -453,9 +453,6 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
-  .img-index{
-    height: 25vh;
-  }
 
   .titre-logo {
     display: flex;
