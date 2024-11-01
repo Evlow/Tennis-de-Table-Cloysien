@@ -361,6 +361,13 @@ footer a:hover {
   text-align: center;
 }
 
+/*BUREAU*/
+
+.img-bureau{
+  padding:50px;
+  width: 60%;
+  margin: 0 auto;
+display: flex;}
 /* Hamburger Menu Icon */
 .menu-icon {
   display: none; /* Hidden by default */
