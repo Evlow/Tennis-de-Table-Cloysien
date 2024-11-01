@@ -49,6 +49,10 @@ a {
 
 /*CARD COMPETITIONS*/
 
+.main-competition {
+background-color:rgba(255, 236, 64, 0.1);
+}
+
 .intro-text {
   padding-left: 20px;
 }
@@ -363,11 +367,12 @@ footer a:hover {
 
 /*BUREAU*/
 
-.img-bureau{
-  padding:50px;
+.img-bureau {
+  padding: 50px;
   width: 60%;
-  margin: 0 auto;
-display: flex;}
+  margin: auto;
+  display: flex;
+}
 /* Hamburger Menu Icon */
 .menu-icon {
   display: none; /* Hidden by default */
@@ -459,8 +464,15 @@ nav a {
 }
 
 /* Pour les écrans de petite taille */
+
+
+
 @media (max-width: 768px) {
 
+  .img-bureau {
+    padding: 0;
+    width: 100%;
+  }
   .titre-logo {
     display: flex;
     align-items: center;
@@ -629,7 +641,6 @@ nav a {
 
 /* Requêtes de média pour les tablettes */
 @media (min-width: 768px) and (max-width: 1024px) {
-
   .titre-logo {
     height: 120px; /* Ajustement de la hauteur du titre pour les tablettes */
   }
@@ -789,5 +800,9 @@ nav a {
   }
   .list-inner > li:hover .list-inner {
     display: block; /* Affiche le sous-sous-menu au survol */
+  }
+  .img-bureau {
+    width: 100%;
+    padding: 0;
   }
 }
