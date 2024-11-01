@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis de Table Cloysien</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <!--LOGO-->
+        <a  href="/index.html"> <img src="/img/LogoTTC.png" alt="Logo tennis de table" class="logo">
+        </a>
+        <div class="titre-logo">
+            <h1>Tennis de Table Cloysien</h1>
+            <div class="menu-icon" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <nav>
+            <ul id="nav-menu" class="dropdown">
+                <li aria-haspopup="true" aria-expanded="false">
+                    <a href="/index.html">Accueil</a>
+                </li>
+                <li class="list" aria-haspopup="true" aria-expanded="false">
+                    <a href="#">Le club</a>
+                    <ul class="list-inner">
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Historique</a></li>
+                        <li><a href="/bureau.html" target="_blank" rel="noopener noreferrer">Bureau</a></li>
+                    </ul>
+                <li class="list" aria-haspopup="true" aria-expanded="false">
+                    <a href="#">Les équipes</a>
+                    <ul class="list-inner">
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Équipe 1 - R3</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Équipe 2 - D1</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Équipe 3 - D2</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Équipe 4 - D3</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Équipe 5 - D3</a></li>
+                    </ul>
+                </li>
+                <li class="list" aria-haspopup="true" aria-expanded="false">
+                    <a href="#">Sportifs</a>
+                    <ul class="list-inner">
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Classement joueurs</a></li>
+                        <li><a href="/img/progression.pdf" target="_blank" rel="noopener noreferrer">Progression</a>
+                        </li>
+                        <li><a href="/date-competitions.html" rel="noopener noreferrer">Date des compétitions</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/competitions.html">Les compétitions</a>
+                </li>
+                <li class="list" aria-haspopup="true" aria-expanded="false">
+                    <a href="#">Liens utiles</a>
+                    <ul class="list-inner">
+                        <li><a href="http://www.fftt.com/site/" target="_blank" rel="noopener noreferrer">FFTT</a></li>
+                        <li><a href="http://liguecentrett.com/" target="_blank" rel="noopener noreferrer">Ligue du
+                                Centre</a></li>
+                        <li><a href="http://www.comite28tt.fr/cd28tt/index.php" target="_blank"
+                                rel="noopener noreferrer">Comité
+                                du 28</a></li>
+                        <li><a href="https://www.cloyeslestroisrivieres.fr/" target="_blank"
+                                rel="noopener noreferrer">Cloyes Les
+                                Trois Rivières</a></li>
+                        <li><a href="https://www.wsport.com/accueil_ind.php" target="_blank"
+                                rel="noopener noreferrer">Wack
+                                Sport</a></li>
+                    </ul>
+                </li>
+                <li><a href="/inscription.html" rel="noopener noreferrer">Inscriptions</a></li>
+                <li>
+                    <a href="https://www.google.fr/maps/place/48%C2%B000'12.6%22N+1%C2%B014'08.8%22E/@48.002026,1.237721,1209m/data=!3m1!1e3!4m4!3m3!8m2!3d48.003505!4d1.23579?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank" rel="noopener noreferrer">Plan d'accès</a>
+                </li>
+                <li><a href="">Nous contacter</a></li>
+                <li>
+                    <a href="https://www.facebook.com/tt.cloysien" target="_blank" rel="noopener noreferrer">
+                        <img src="/img/facebook.png" class="logo-facebook" alt="Logo Facebook">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="content-footer-flex">
+            <!-- Lieu -->
+            <section class="footer-lieu">
+                <h3 class="h2-footer">Nous trouver</h3>
+                <p>Gymnase des trois rivières</p>
+                <p>9 route de Montigny</p>
+                <p>28220 Cloyes-les-Trois-Rivières</p>
+            </section>
+
+            <!-- Contact -->
+            <section class="footer-contact">
+                <h3 class="h2-footer">Nous contacter</h3>
+                <p>
+                    <img class="svg-footer" src="img/email.svg" alt="icone email">
+                    <a href="mailto:tennisdetablecloysien@free.fr">tennisdetablecloysien@free.fr</a>
+                </p>
+                <p>
+                    <img class="svg-footer" src="img/phone.svg" alt="icone téléphone">
+                    <a href="tel:+33755671041">07 55 67 10 41</a>
+                </p>
+            </section>
+        </div>
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <p>&copy; Mathilde Peauger. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle'); // Sélection de l'icône du menu hamburger
+            const navMenu = document.getElementById('nav-menu'); // Sélection du menu principal
+
+            // Ouverture/fermeture du menu principal
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Empêche le clic de se propager pour éviter la fermeture instantanée
+                    navMenu.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                });
+            }
+
+            // Gestion des clics sur les éléments de menu
+            const listItems = document.querySelectorAll('.list'); // Sélectionne tous les éléments avec la classe 'list'
+
+            listItems.forEach(item => {
+                const link = item.querySelector('a'); // Sélectionne le lien à l'intérieur de l'élément de liste
+                const submenu = item.querySelector('.list-inner'); // Sélectionne le sous-menu
+
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); // Empêche le lien de naviguer
+
+                    // Fermez les autres sous-menus
+                    listItems.forEach(otherItem => {
+                        const otherSubmenu = otherItem.querySelector('.list-inner');
+                        if (otherSubmenu && otherItem !== item) {
+                            otherSubmenu.classList.remove('active'); // Masquer les autres sous-menus
+                            otherSubmenu.style.display = 'none'; // Masquer les autres sous-menus
+                        }
+                    });
+
+                    // Basculez l'affichage du sous-menu courant
+                    if (submenu) {
+                        const isActive = submenu.classList.contains('active');
+                        submenu.classList.toggle('active'); // Ajoute ou enlève la classe 'active'
+                        submenu.style.display = isActive ? 'none' : 'block'; // Affiche ou masque le sous-menu
+                    }
+                });
+
+                // Fermer le sous-menu si un élément à l'intérieur est cliqué
+                const submenuLinks = submenu ? submenu.querySelectorAll('a') : []; // Sélectionner tous les liens à l'intérieur du sous-menu
+                submenuLinks.forEach(subLink => {
+                    subLink.addEventListener('click', (event) => {
+                        navMenu.classList.remove('active'); // Ferme le menu principal si un lien du sous-menu est cliqué
+                        menuToggle.classList.remove('active'); // Ferme l'icône du menu hamburger
+                        if (submenu) {
+                            submenu.classList.remove('active'); // Masque le sous-menu
+                            submenu.style.display = 'none'; // Masque le sous-menu
+                        }
+                    });
+                });
+            });
+
+            // Fermer sous-menus et menu principal si clic à l'extérieur
+            document.addEventListener('click', (event) => {
+                const isClickInside = navMenu.contains(event.target) || (menuToggle && menuToggle.contains(event.target));
+
+                if (!isClickInside) {
+                    // Ferme tous les sous-menus
+                    document.querySelectorAll('#nav-menu .list-inner.active').forEach(openSubmenu => {
+                        openSubmenu.classList.remove('active');
+                        openSubmenu.style.display = 'none'; // Masquer le sous-menu
+                    });
+                    // Ferme le menu principal
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
