@@ -59,8 +59,8 @@ a {
 }
 .section-competition {
   background-color: rgba(255, 235, 210, 0.5); /* Fond très pâle avec un léger ton orange */  border-radius: 10px; /* Arrondir les coins un peu plus */
-  padding: 10px 0 50px 0;
-  margin-bottom: 70px;
+  padding: 20px 0 50px 0;
+  margin-bottom: 50px;
 }
 
 .card-competitions {
@@ -464,10 +464,30 @@ nav a {
   display: block; /* Affiche le sous-sous-menu au survol */
 }
 
-/* Pour les écrans de petite taille */
 
+
+/*DATES COMPETITIONS*/
+.section-date {
+  text-align: center;
+}
+.hr-date{
+  border: none;
+  height: 1px; /* Épaisseur de la ligne */
+  background-color: grey; /* Couleur de la ligne */
+  width: 70%;
+  margin: 0 auto;
+}
+.img-date{
+  padding: 30px;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  
+}
+
+/* Pour les écrans de petite taille */
 @media (max-width: 768px) {
-  .img-bureau {
+  .img-bureau, .img-date{
     padding: 0;
     width: 100%;
   }
