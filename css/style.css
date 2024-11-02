@@ -3,14 +3,20 @@
 * {
   font-family: "Open Sans Condensed", sans-serif;
 }
+.header-fixed {
+  position: fixed;
+  top: 0;  z-index: 100;
+  width: 100%;
+}
+
 header {
   background: radial-gradient(circle, #ffcc80, #ff8c00); /* Dégradé radial */
   display: flex;
   align-items: center;
 }
 .logo {
-  width: 150px;
-  padding: 20px;
+  width: 100px;
+  padding: 5px 0 5px 5px;
 }
 /* Configuration de l’affichage pour maintenir le footer en bas */
 body,
@@ -19,7 +25,7 @@ html {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin: 0;
+  padding: 0;
 }
 p,
 li,
@@ -38,7 +44,7 @@ a {
 .titre-logo {
   display: flex;
   align-items: center;
-  height: 170px;
+  gap: 10px;
 }
 .logo-facebook {
   width: 50px;
@@ -58,13 +64,20 @@ a {
   justify-content: center;
 }
 .section-competition {
-  background-color: rgba(255, 235, 210, 0.5); /* Fond très pâle avec un léger ton orange */  border-radius: 10px; /* Arrondir les coins un peu plus */
+  background-color: rgba(
+    255,
+    235,
+    210,
+    0.5
+  ); /* Fond très pâle avec un léger ton orange */
+  border-radius: 10px; /* Arrondir les coins un peu plus */
   padding: 20px 0 50px 0;
   margin-bottom: 50px;
 }
 
 .card-competitions {
-  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc avec opacité */  border-radius: 10px; /* Arrondir les coins un peu plus */
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc avec opacité */
+  border-radius: 10px; /* Arrondir les coins un peu plus */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Ombre plus douce pour un effet flottant */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout de la transition pour l'ombre */
@@ -111,7 +124,6 @@ a {
   font-size: 2rem;
   margin: 5px;
   padding-bottom: 20px;
-
 }
 .h2-competitions {
   padding-left: 20px;
@@ -136,7 +148,8 @@ a {
   padding: 20px;
   text-align: center;
   transition: transform 0.2s ease;
-  background-color: rgba(255, 235, 210, 0.5);}
+  background-color: rgba(255, 235, 210, 0.5);
+}
 
 .card-club:hover {
   transform: scale(1.05);
@@ -167,7 +180,8 @@ a {
 .bloc-entrainement {
   padding: 10px 0 10px 0;
   text-align: center;
-  background-color: rgba(255, 235, 210, 0.5);}
+  background-color: rgba(255, 235, 210, 0.5);
+}
 
 .bloc-entrainement h2 {
   font-size: 3rem;
@@ -338,6 +352,7 @@ footer {
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-around;
+
 }
 
 .h2-footer {
@@ -364,6 +379,7 @@ footer a:hover {
   font-size: 0.85em;
   color: black;
   text-align: center;
+  padding: 5px;
 }
 
 /*BUREAU*/
@@ -380,6 +396,46 @@ footer a:hover {
   flex-direction: column;
   cursor: pointer;
   margin: 10px;
+}
+
+/*BOUTONS ACCUEIL*/
+
+.section-button {
+  position: relative;
+  display: inline-block; /* Ensures image behaves like a block element */
+  width: 100%; /* Optional: make the container full width if desired */
+  text-align: center; /* Center-aligns content */
+}
+
+.img-index {
+  width: 100%; /* Ensures image fills the width of the container */
+  display: block; /* Removes any gap under the image */
+}
+
+.button-container {
+  position: absolute;
+  top: 20px; /* Positions buttons at the top of the image */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the buttons horizontally */
+  display: flex;
+  gap: 20px; /* Space between buttons */
+  z-index: 10; /* Places buttons above the image */
+}
+.button-container a {
+  font-size: 1.2em;
+}
+.button {
+  background-color: rgba(255, 235, 210, 0.5);
+  color: #000; /* Text color */
+  padding: 10px 20px; /* Padding for the buttons */
+  text-decoration: none; /* Removes underline */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Makes text bold */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 1); /* Solid white on hover */
 }
 
 /* Bars of the hamburger icon */
@@ -408,6 +464,10 @@ footer a:hover {
 }
 
 nav {
+  position: sticky; /* Ajoutez cette ligne */
+  top: 0; /* Reste en haut */
+  z-index: 1000; /* Assurez-vous qu'il est au-dessus des autres éléments */
+  flex: 1;
   align-content: center;
   height: 80px;
 }
@@ -441,11 +501,13 @@ nav > ul > li:hover .list-inner {
 
 /* MENU PRINCIPAL */
 nav ul {
+  align-items: center;
   display: flex;
   margin: 0;
+  padding: 0;
   list-style-type: none;
+  gap: 20px;
   justify-content: center;
-  align-items: center;
 }
 
 nav li {
@@ -456,7 +518,7 @@ nav a {
   text-decoration: none;
   color: black;
   font-size: 1.2em;
-  padding: 0 20px;
+  padding-right: 20px;
   font-weight: bold;
 }
 
@@ -464,30 +526,41 @@ nav a {
   display: block; /* Affiche le sous-sous-menu au survol */
 }
 
-
-
 /*DATES COMPETITIONS*/
 .section-date {
   text-align: center;
 }
-.hr-date{
+.hr-date {
   border: none;
   height: 1px; /* Épaisseur de la ligne */
   background-color: grey; /* Couleur de la ligne */
   width: 70%;
   margin: 0 auto;
 }
-.img-date{
+.img-date {
   padding: 30px;
   width: 60%;
   margin: auto;
   display: flex;
-  
 }
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
-  .img-bureau, .img-date{
+  .button-container {
+    top: 5px; /* Positions buttons at the top of the image */
+    gap: 10px;
+  }
+  .button-container a {
+    font-size: 1.2em;
+  }
+
+  .button {
+    width: 80%; /* Make buttons occupy 80% of the container width */
+    margin: 0 auto; /* Center-align buttons in the mobile layout */
+    padding: 5px; /* Padding for the buttons */
+  }
+  .img-bureau,
+  .img-date {
     padding: 0;
     width: 100%;
   }
@@ -501,12 +574,12 @@ nav a {
   /* Logo */
   .logo {
     width: 80px;
-    padding: 5px;
+    padding: 5px 0 5px 5px;
   }
 
   /* Titre */
   .titre-logo h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 0;
     flex: 1;
     text-align: center;
@@ -593,6 +666,8 @@ nav a {
     padding-top: 20px; /* Espace supérieur pour le menu */
     overflow-y: auto; /* Permet le défilement si le contenu déborde */
     padding-top: 20px;
+    z-index: 20; /* Higher than buttons */
+    position: inherit; /* Ensure menu stays fixed on screen */
   }
 
   /* Affiche le menu au clic */
@@ -606,6 +681,7 @@ nav a {
     text-align: center;
     color: black; /* Assurez-vous que la couleur du texte est visible */
     text-decoration: none; /* Supprime les soulignements */
+    padding: 0;
   }
 
   /* Liens du sous-menu */
