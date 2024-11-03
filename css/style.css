@@ -139,12 +139,12 @@ a {
 }
 .h2-competitions {
   padding-left: 20px;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 /* cotisations */
 .h2-cotisations {
   padding-left: 20px;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .card-container-club {
   display: flex;
@@ -196,7 +196,7 @@ a {
 }
 
 .bloc-entrainement h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .entrainement-details {
@@ -226,12 +226,12 @@ a {
 
 .h2-aides {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 .h3-aides {
   color: #ff7b1f;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .aides-container {
@@ -253,11 +253,11 @@ a {
 
 /* PARTENAIRES */
 .h3-partenaire {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 .h2-partenaires {
   padding-left: 20px;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .bloc-sponsors {
   padding: 20px;
@@ -335,7 +335,7 @@ a {
 /*INSCRIPTION*/
 
 .h2-inscription {
-  font-size: 3rem;
+  font-size: 2rem;
   padding-left: 20px;
 }
 
@@ -554,6 +554,70 @@ nav a {
   width: 60%;
   margin: auto;
   display: flex;
+}
+
+/*ACTUALITÉ*/
+
+/* Styles de la section d'actualités */
+.actualite-section {
+
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.h2-actualite {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro-text {
+  margin-bottom: 20px;
+}
+
+/* Style de la carte d'actualité */
+.article-actualite {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.actualite:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Lien contenant l'image et le texte */
+.actualite a {
+  display: block;
+  text-decoration: none;
+}
+
+/* Image de l'actualité */
+.img-actualite {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.actualite:hover .img-actualite {
+  transform: scale(1.05);
+}
+
+/* Titre de l'actualité */
+.h3-actualite {
+  font-size: 1.5rem;
+  padding: 15px;
+  margin: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+  transition: color 0.3s ease;
 }
 
 /* Pour les écrans de petite taille */
