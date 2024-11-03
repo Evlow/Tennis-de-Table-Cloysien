@@ -567,7 +567,6 @@ nav a {
 
 .h2-actualite {
   font-size: 2rem;
-  margin-bottom: 10px;
 }
 
 .intro-text {
@@ -617,7 +616,6 @@ nav a {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   text-align: center;
-  transition: color 0.3s ease;
 }
 
 /* Pour les écrans de petite taille */
