@@ -3,6 +3,18 @@
 * {
   font-family: "Open Sans Condensed", sans-serif;
 }
+
+ .view-counter {
+  position: absolute; /* Position it absolutely within the relative container */
+  top: 63%; /* Move it to the center vertically */
+  left: 50%; /* Move it to the center horizontally */
+  transform: translate(-50%, -50%); /* Adjust its position to be centered */
+  padding: 10px; /* Optional: add some padding */
+  border-radius: 5px; /* Optional: add rounded corners */
+  z-index: 10; /* Ensure it is above the image */
+  background-color: rgba(255, 235, 210, 0.5);
+  color: #000; /* Text color */
+}
 .header-fixed {
   position: fixed;
   top: 0;  z-index: 100;
@@ -546,6 +558,12 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
+  .view-counter {
+    font-size: 8px;
+    padding: 1px;
+    border-radius: 10px;
+
+  }
   .button-container {
     top: 5px; /* Positions buttons at the top of the image */
     gap: 10px;
@@ -732,6 +750,12 @@ nav a {
 
 /* Requêtes de média pour les tablettes */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .view-counter {
+    
+    padding: 5px;
+    border-radius: 3px;
+
+  }
   .titre-logo {
     height: 120px; /* Ajustement de la hauteur du titre pour les tablettes */
   }
