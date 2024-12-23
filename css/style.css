@@ -66,65 +66,59 @@ a {
 }
 
 /*CARD COMPETITIONS*/
-
+.h3-competition {
+  text-align: left;
+  font-size: 2rem;
+  margin: 5px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
 .intro-text {
   padding-left: 20px;
 }
-.card-container {
-  display: flex;
-  gap: 70px;
-  justify-content: center;
+.team-column ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
 }
+.team-column h5{
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
+}
+ .team-column li {
+
+  padding: 10px 0;
+ }
+
+ .team-column{
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  padding: 20px 40px 20px 40px;
+  transition: transform 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc translucide */ }
 .section-competition {
-  background-color: rgba(
-    255,
-    235,
-    210,
-    0.5
-  ); /* Fond très pâle avec un léger ton orange */
-  border-radius: 10px; /* Arrondir les coins un peu plus */
+  background-color: rgba(255, 235, 210, 0.5); /* Fond très pâle avec un léger ton orange */
+  border-radius: 10px; /* Arrondir les coins */
   padding: 20px 0 50px 0;
   margin-bottom: 50px;
-}
-
-.card-competitions {
-  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc avec opacité */
-  border-radius: 10px; /* Arrondir les coins un peu plus */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Ombre plus douce pour un effet flottant */
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout de la transition pour l'ombre */
-  width: 200px; /* Largeur légèrement augmentée */
-  padding: 20px;
-  cursor: pointer; /* Indique que la carte est interactive */
 }
 
-.card-competitions:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Ombre plus prononcée au survol */
+.card-content{
+  display: flex;
+  justify-content: center;
 }
-
 .h4-phase {
   font-size: 1.5rem; /* Taille de police légèrement augmentée */
-  margin: 10px 0; /* Ajoute un espacement autour du titre */
-  font-weight: bold;
   color: #ff7b1f;
 }
 
 .card-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px 0; /* Espacement à l'intérieur de la carte */
+  gap: 40px;
 }
 
-.card-content a {
-  color: #0d0d0d;
-  text-decoration: none;
-  font-size: 1.2rem;
-  padding: 10px;
-  border: 1px solid transparent; /* Ajoute une bordure invisible pour éviter un effet de saut */
-  border-radius: 5px; /* Arrondi léger des liens */
-}
 
 .card-content a:hover {
   color: #ff7b1f;
@@ -410,7 +404,37 @@ footer a:hover {
   margin: 10px;
 }
 
+/*BOUTONS COMPETITION*/
+
+.section-button-competition {
+  width: 100%; /* Optional: make the container full width if desired */
+}
+
+
+.button-container-competition {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px; /* Space between buttons */
+}
+.button-container a {
+  font-size: 1.2em;
+}
+.button-competition {
+  background-color: rgba(255, 235, 210, 0.5);
+  color: #000; /* Text color */
+  padding: 10px 20px; /* Padding for the buttons */
+  text-decoration: none; /* Removes underline */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Makes text bold */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.button-competition:hover {
+  background-color: rgba(255, 235, 210, 0.5);
+}
 /*BOUTONS ACCUEIL*/
+
 
 .section-button {
   position: relative;
@@ -418,6 +442,7 @@ footer a:hover {
   width: 100%; /* Optional: make the container full width if desired */
   text-align: center; /* Center-aligns content */
 }
+
 
 .img-index {
   width: 100%; /* Ensures image fills the width of the container */
