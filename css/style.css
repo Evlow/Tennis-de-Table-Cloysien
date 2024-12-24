@@ -78,18 +78,25 @@ a {
   padding-left: 20px;
 }
 .team-column ul {
-  padding: 0;
+  padding: 0px;
   margin: 0;
   list-style-type: none;
   text-align: center;
+  
 }
 .team-column h5 {
   font-size: 1.2rem;
   margin: 0 0 20px 0;
 }
 .team-column li {
-  padding: 10px 0;
+  display: flex;
+  justify-content: center;
 }
+
+.pdf1{
+  width: 30px;
+  height: 25px;
+padding-left: 10px ;}
 .team-column {
   background-color: rgba(255, 255, 255, 0.8); /* Fond translucide */
   border-radius: 8px;
@@ -641,6 +648,8 @@ nav a {
   border-bottom-right-radius: 10px;
   text-align: center;
 }
+
+
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
