@@ -654,7 +654,22 @@ nav a {
 }
 
 
+/*EQUIPE 1 - R 3*/
+ .h2-equipe{
+  text-align: center;
+ }
 
+ .phase1, .phase2 {
+  text-align: center;
+  font-size: 2rem;
+ }
+.phases{
+  display: flex;
+justify-content: space-evenly;}
+
+.img-equipe{
+  width: 70%;
+}
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
   .team-column {
@@ -1036,3 +1051,4 @@ nav a {
     padding: 0;
   }
 }
+
