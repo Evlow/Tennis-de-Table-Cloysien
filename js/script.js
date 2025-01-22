@@ -67,4 +67,28 @@ document.addEventListener('DOMContentLoaded', () => {
       menuToggle.classList.remove('active');
     }
   });
-});
+}
+
+);
+
+       // Clé utilisée pour stocker le compteur dans LocalStorage
+       const storageKey = 'pageViewCount';
+
+       // Récupérer le compteur de vues actuel
+       let viewCount = localStorage.getItem(storageKey);
+
+       // Si aucun compteur n'existe encore, initialisez-le à 0
+       if (!viewCount) {
+           viewCount = 0;
+       } else {
+           viewCount = parseInt(viewCount);
+       }
+
+       // Incrémenter le compteur
+       viewCount++;
+
+       // Enregistrer le nouveau compteur dans LocalStorage
+       localStorage.setItem(storageKey, viewCount);
+
+       // Mettre à jour l'affichage dans la page
+       document.getElementById('view-count').textContent = viewCount;
