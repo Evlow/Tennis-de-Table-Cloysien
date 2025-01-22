@@ -31,15 +31,15 @@
           <ul class="list-inner">
             <li><a href="/bureau.html" rel="noopener noreferrer">Bureau</a></li>
           </ul>
-          <li class="list" aria-haspopup="true" aria-expanded="false">
-            <a href="#">Les équipes</a>
-            <ul class="list-inner">
-                <li><a href="/equipe1.html" target="_blank" rel="noopener noreferrer">Équipe 1 - R3</a></li>
-                <li><a href="/equipe2.html" target="_blank" rel="noopener noreferrer">Équipe 2 - D1</a></li>
-                <li><a href="/equipe3.html" target="_blank" rel="noopener noreferrer">Équipe 3 - D2</a></li>
-                <li><a href="/equipe4.html" target="_blank" rel="noopener noreferrer">Équipe 4 - D3</a></li>
-                <li><a href="/equipe5.html" target="_blank" rel="noopener noreferrer">Équipe 5 - D3</a></li>
-            </ul>
+        <li class="list" aria-haspopup="true" aria-expanded="false">
+          <a href="#">Les équipes</a>
+          <ul class="list-inner">
+            <li><a href="/equipe1.html" target="_blank" rel="noopener noreferrer">Équipe 1 - R3</a></li>
+            <li><a href="/equipe2.html" target="_blank" rel="noopener noreferrer">Équipe 2 - D1</a></li>
+            <li><a href="/equipe3.html" target="_blank" rel="noopener noreferrer">Équipe 3 - D2</a></li>
+            <li><a href="/equipe4.html" target="_blank" rel="noopener noreferrer">Équipe 4 - D3</a></li>
+            <li><a href="/equipe5.html" target="_blank" rel="noopener noreferrer">Équipe 5 - D3</a></li>
+          </ul>
         </li>
         <li class="list" aria-haspopup="true" aria-expanded="false">
           <a href="#">Sportifs</a>
@@ -72,7 +72,7 @@
         </li>
         <li>
           <a href="/actualite.html" rel="noopener noreferrer">Actualités</a>
-      </li>
+        </li>
         <li>
           <a href="https://www.facebook.com/tt.cloysien" target="_blank" rel="noopener noreferrer">
             <img src="/img/facebook.png" class="logo-facebook" alt="Logo Facebook">
@@ -88,15 +88,15 @@
       <p class="intro-text">Vous retrouverez ci-dessous la composition des équipes :</p>
 
       <section class="phases">
-      <article class="phase1">
-        <p> Phase 1</p>
+        <article class="phase1">
+          <p> Phase 1</p>
           <img src="/img/equipe4-p1.png" alt="composition Équipe 4 - D3 phase 1" class="img-equipe">
-      </article>
+        </article>
 
-      <article class="phase2">
-        <p> Phase 2</p>
-        <img src="/img/equipe4-p2.png" alt="composition Équipe 4 - D3 phase 2" class="img-equipe">
-    </article>
+        <article class="phase2">
+          <p> Phase 2</p>
+          <img src="/img/equipe4-p2.png" alt="composition Équipe 4 - D3 phase 2" class="img-equipe">
+        </article>
       </section>
     </section>
   </main>
@@ -133,98 +133,5 @@
   </footer>
   <!-- Script JavaScript -->
   <script src="js/script.js"></script>
-  <!-- phpmyvisites -->
-  <a href="http://st.free.fr/" title="phpMyVisites | Open source web analytics"
-    onclick="window.open(this.href);return(false);">
-    <script type="text/javascript">
-      <!--
-      var a_vars = Array();
-      var pagename='';
-      
-      var phpmyvisitesSite = 336121;
-      var phpmyvisitesURL = "http://st.free.fr/phpmyvisites.php";
-      //-->
-    </script>
-    <script language="javascript" src="http://st.free.fr/phpmyvisites.js" type="text/javascript"></script>
-    <object><noscript>
-        <p>phpMyVisites | Open source web analytics
-          <img src="http://st.free.fr/phpmyvisites.php" alt="Statistics" style="border:0" />
-        </p>
-      </noscript></object>
-  </a>
-  <!-- /phpmyvisites -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const menuToggle = document.getElementById('menu-toggle'); // Sélection de l'icône du menu hamburger
-      const navMenu = document.getElementById('nav-menu'); // Sélection du menu principal
-
-      // Ouverture/fermeture du menu principal
-      if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', (event) => {
-          event.stopPropagation(); // Empêche le clic de se propager pour éviter la fermeture instantanée
-          navMenu.classList.toggle('active');
-          menuToggle.classList.toggle('active');
-        });
-      }
-
-      // Gestion des clics sur les éléments de menu
-      const listItems = document.querySelectorAll('.list'); // Sélectionne tous les éléments avec la classe 'list'
-
-      listItems.forEach(item => {
-        const link = item.querySelector('a'); // Sélectionne le lien à l'intérieur de l'élément de liste
-        const submenu = item.querySelector('.list-inner'); // Sélectionne le sous-menu
-
-        link.addEventListener('click', (event) => {
-          event.preventDefault(); // Empêche le lien de naviguer
-
-          // Fermez les autres sous-menus
-          listItems.forEach(otherItem => {
-            const otherSubmenu = otherItem.querySelector('.list-inner');
-            if (otherSubmenu && otherItem !== item) {
-              otherSubmenu.classList.remove('active'); // Masquer les autres sous-menus
-              otherSubmenu.style.display = 'none'; // Masquer les autres sous-menus
-            }
-          });
-
-          // Basculez l'affichage du sous-menu courant
-          if (submenu) {
-            const isActive = submenu.classList.contains('active');
-            submenu.classList.toggle('active'); // Ajoute ou enlève la classe 'active'
-            submenu.style.display = isActive ? 'none' : 'block'; // Affiche ou masque le sous-menu
-          }
-        });
-
-        // Fermer le sous-menu si un élément à l'intérieur est cliqué
-        const submenuLinks = submenu ? submenu.querySelectorAll('a') : []; // Sélectionner tous les liens à l'intérieur du sous-menu
-        submenuLinks.forEach(subLink => {
-          subLink.addEventListener('click', (event) => {
-            navMenu.classList.remove('active'); // Ferme le menu principal si un lien du sous-menu est cliqué
-            menuToggle.classList.remove('active'); // Ferme l'icône du menu hamburger
-            if (submenu) {
-              submenu.classList.remove('active'); // Masque le sous-menu
-              submenu.style.display = 'none'; // Masque le sous-menu
-            }
-          });
-        });
-      });
-
-      // Fermer sous-menus et menu principal si clic à l'extérieur
-      document.addEventListener('click', (event) => {
-        const isClickInside = navMenu.contains(event.target) || (menuToggle && menuToggle.contains(event.target));
-
-        if (!isClickInside) {
-          // Ferme tous les sous-menus
-          document.querySelectorAll('#nav-menu .list-inner.active').forEach(openSubmenu => {
-            openSubmenu.classList.remove('active');
-            openSubmenu.style.display = 'none'; // Masquer le sous-menu
-          });
-          // Ferme le menu principal
-          navMenu.classList.remove('active');
-          menuToggle.classList.remove('active');
-        }
-      });
-    });
-  </script>
 </body>
-
 </html>
