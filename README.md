@@ -1,6 +1,6 @@
 "🏓 Site Web Tennis de Table Cloysien
 
-Ce projet est développé en HTML et CSS pour promouvoir les activités, les équipes et les événements du club. Le site est hébergé gratuitement sur les serveurs Free.
+Ce projet est développé en HTML et CSS pour promouvoir les activités, les équipes et les événements du club. Le site est hébergé sur un VPS et est disponible à l'adresse suivante : https://tennisdetablecloysien.fr
 
 ✨ Fonctionnalités
 
