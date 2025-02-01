@@ -82,7 +82,6 @@ a {
   margin: 0;
   list-style-type: none;
   text-align: center;
-  
 }
 .team-column h5 {
   font-size: 1.2rem;
@@ -93,10 +92,11 @@ a {
   justify-content: center;
 }
 
-.pdf1{
+.pdf1 {
   width: 30px;
   height: 25px;
-padding-left: 10px ;}
+  padding-left: 10px;
+}
 .team-column {
   background-color: rgba(255, 255, 255, 0.8); /* Fond translucide */
   border-radius: 8px;
@@ -153,9 +153,9 @@ padding-left: 10px ;}
 }
 .card-container-club {
   display: flex;
-  gap: 50px;  flex-wrap: wrap;
+  gap: 50px;
+  flex-wrap: wrap;
   justify-content: space-around;
-
 }
 
 .card-club {
@@ -391,8 +391,8 @@ footer a:hover {
 }
 
 /* Style pour le copyright */
-.footer-copyright  {
-  font-size: 0.70em;
+.footer-copyright {
+  font-size: 0.7em;
   color: black;
   text-align: center;
   padding: 5px;
@@ -511,6 +511,21 @@ footer a:hover {
   background: radial-gradient(circle, #ffcc80, #ff8c00);
 }
 
+/* Masque les sous-menus par défaut */
+.submenu {
+  display: none; /* Caché par défaut */
+  position: relative; /* Position relative pour ne pas sortir du flux */
+  width: 100%;
+  margin-top: 5px; /* Ajoute un léger espacement */
+  border-radius: 5px;
+  padding-left: 20px;
+}
+/* Affichage des sous-menus quand actifs */
+.submenu.active {
+  display: block; /* Affiche le sous-menu au clic */
+  width: 100%; /* Ajuste la largeur pour le mobile */
+}
+
 nav {
   position: sticky; /* Ajoutez cette ligne */
   top: 0; /* Reste en haut */
@@ -524,7 +539,6 @@ nav {
 nav > ul > li:hover .list-inner {
   display: block; /* Affiche le sous-menu au survol */
 }
-
 .list-inner a:hover {
   border-bottom: none; /* Retire la bordure en bas lors du survol */
 }
@@ -533,15 +547,9 @@ nav > ul > li:hover .list-inner {
   position: relative;
 }
 
-/* Styles pour le sous-menu des équipes */
-.list-inner {
-  display: none; /* Masque les sous-menus par défaut */
-}
-
 /* Styles des liens dans le sous-menu */
 .list-inner a {
   display: block; /* Affiche les liens en bloc */
-  font-weight: normal; /* Poids normal pour le texte */
   text-align: left; /* Alignement à gauche */
   padding: 10px; /* Padding autour du lien */
   color: black; /* Couleur du texte */
@@ -653,21 +661,22 @@ nav a {
   text-align: center;
 }
 
-
 /*EQUIPE 1 - R 3*/
- .h2-equipe{
+.h2-equipe {
   text-align: center;
- }
+}
 
- .phase1, .phase2 {
+.phase1,
+.phase2 {
   text-align: center;
   font-size: 2rem;
- }
-.phases{
+}
+.phases {
   display: flex;
-justify-content: space-evenly;}
+  justify-content: space-evenly;
+}
 
-.img-equipe{
+.img-equipe {
   width: 70%;
 }
 /* Pour les écrans de petite taille */
@@ -845,7 +854,7 @@ justify-content: space-evenly;}
     width: 100%; /* Ajuste la largeur pour le mobile */
     background: transparent;
   }
-
+  
   /* Affiche le sous-menu quand le menu est actif */
   #nav-menu li:hover .list-inner {
     display: flex; /* Affiche le sous-menu au survol */
@@ -989,8 +998,6 @@ justify-content: space-evenly;}
     justify-content: space-around;
   }
 
-
-
   .card-club {
     width: 280px;
     margin: 10px;
@@ -1054,4 +1061,3 @@ justify-content: space-evenly;}
     padding: 0;
   }
 }
-

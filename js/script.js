@@ -1,96 +1,76 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menu-toggle"); // Sélection de l'icône du menu hamburger
-  const navMenu = document.getElementById("nav-menu"); // Sélection du menu principal
+  const menuToggle = document.getElementById("menu-toggle"); // Icône menu burger
+  const navMenu = document.getElementById("nav-menu"); // Menu principal
+  const phaseToggles = document.querySelectorAll(".phase-toggle"); // Boutons Phase 1 et 2
+  const listItems = document.querySelectorAll(".list"); // Éléments de liste avec sous-menus
 
-  // Ouverture/fermeture du menu principal
+  // ✅ Toggle du menu principal (si menu burger présent)
   if (menuToggle && navMenu) {
     menuToggle.addEventListener("click", (event) => {
-      event.stopPropagation(); // Empêche le clic de se propager pour éviter la fermeture instantanée
+      event.stopPropagation();
       navMenu.classList.toggle("active");
       menuToggle.classList.toggle("active");
     });
   }
 
-  // Gestion des clics sur les éléments de menu
-  const listItems = document.querySelectorAll(".list"); // Sélectionne tous les éléments avec la classe 'list'
+  phaseToggles.forEach((toggle) => {
+    toggle.addEventListener("click", (event) => {
+      event.preventDefault(); // Empêche le comportement par défaut du lien
 
-  listItems.forEach((item) => {
-    const link = item.querySelector("a"); // Sélectionne le lien à l'intérieur de l'élément de liste
-    const submenu = item.querySelector(".list-inner"); // Sélectionne le sous-menu
+      const submenu = toggle.nextElementSibling; // Récupère le sous-menu associé
 
-    link.addEventListener("click", (event) => {
-      event.preventDefault(); // Empêche le lien de naviguer
-
-      // Fermez les autres sous-menus
-      listItems.forEach((otherItem) => {
-        const otherSubmenu = otherItem.querySelector(".list-inner");
-        if (otherSubmenu && otherItem !== item) {
-          otherSubmenu.classList.remove("active"); // Masquer les autres sous-menus
-          otherSubmenu.style.display = "none"; // Masquer les autres sous-menus
+      // Ferme uniquement les autres sous-menus
+      document.querySelectorAll(".submenu").forEach((otherSubmenu) => {
+        if (otherSubmenu !== submenu) {
+          otherSubmenu.classList.remove("active");
         }
       });
 
-      // Basculez l'affichage du sous-menu courant
-      if (submenu) {
-        const isActive = submenu.classList.contains("active");
-        submenu.classList.toggle("active"); // Ajoute ou enlève la classe 'active'
-        submenu.style.display = isActive ? "none" : "block"; // Affiche ou masque le sous-menu
-      }
-    });
+      // Basculer l'affichage du sous-menu sélectionné
+      submenu.classList.toggle("active");
 
-    // Fermer le sous-menu si un élément à l'intérieur est cliqué
-    const submenuLinks = submenu ? submenu.querySelectorAll("a") : []; // Sélectionner tous les liens à l'intérieur du sous-menu
-    submenuLinks.forEach((subLink) => {
-      subLink.addEventListener("click", (event) => {
-        navMenu.classList.remove("active"); // Ferme le menu principal si un lien du sous-menu est cliqué
-        menuToggle.classList.remove("active"); // Ferme l'icône du menu hamburger
-        if (submenu) {
-          submenu.classList.remove("active"); // Masque le sous-menu
-          submenu.style.display = "none"; // Masque le sous-menu
-        }
-      });
+      // Basculer la classe active sur le bouton Phase
+      toggle.classList.toggle("active");
     });
   });
 
-  // Fermer sous-menus et menu principal si clic à l'extérieur
-  document.addEventListener("click", (event) => {
-    const isClickInside =
-      navMenu.contains(event.target) ||
-      (menuToggle && menuToggle.contains(event.target));
+  // ✅ Gestion des sous-menus généraux
+  listItems.forEach((item) => {
+    const link = item.querySelector("a");
+    const submenu = item.querySelector(".list-inner");
 
-    if (!isClickInside) {
-      // Ferme tous les sous-menus
-      document
-        .querySelectorAll("#nav-menu .list-inner.active")
-        .forEach((openSubmenu) => {
-          openSubmenu.classList.remove("active");
-          openSubmenu.style.display = "none"; // Masquer le sous-menu
+    if (submenu) {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        // Fermer tous les autres sous-menus sauf celui cliqué
+        document.querySelectorAll(".list-inner.active").forEach((otherSubmenu) => {
+          if (otherSubmenu !== submenu) otherSubmenu.classList.remove("active");
         });
-      // Ferme le menu principal
+
+        submenu.classList.toggle("active");
+      });
+
+      // Fermer le sous-menu si un lien interne est cliqué
+      submenu.querySelectorAll("a").forEach((subLink) => {
+        subLink.addEventListener("click", () => {
+          submenu.classList.remove("active");
+          navMenu.classList.remove("active");
+          if (menuToggle) menuToggle.classList.remove("active");
+        });
+      });
+    }
+  });
+
+  // ✅ Fermer les menus si on clique à l'extérieur
+  document.addEventListener("click", (event) => {
+    if (!navMenu.contains(event.target) && (!menuToggle || !menuToggle.contains(event.target))) {
+      document.querySelectorAll(".list-inner.active, .submenu.active").forEach((menu) => {
+        menu.classList.remove("active");
+      });
       navMenu.classList.remove("active");
-      menuToggle.classList.remove("active");
+      if (menuToggle) menuToggle.classList.remove("active");
     }
   });
 });
-
-// Clé utilisée pour stocker le compteur dans LocalStorage
-const storageKey = "pageViewCount";
-
-// Récupérer le compteur de vues actuel
-let viewCount = localStorage.getItem(storageKey);
-
-// Si aucun compteur n'existe encore, initialisez-le à 0
-if (!viewCount) {
-  viewCount = 0;
-} else {
-  viewCount = parseInt(viewCount);
-}
-
-// Incrémenter le compteur
-viewCount++;
-
-// Enregistrer le nouveau compteur dans LocalStorage
-localStorage.setItem(storageKey, viewCount);
-
-// Mettre à jour l'affichage dans la page
-document.getElementById("view-count").textContent = viewCount;
