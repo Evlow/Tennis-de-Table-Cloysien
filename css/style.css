@@ -31,7 +31,6 @@ header {
   width: 100px;
   padding: 5px 0 5px 5px;
 }
-/* Configuration de l’affichage pour maintenir le footer en bas */
 body,
 html {
   margin: 0;
@@ -46,7 +45,6 @@ ul,
 a {
   font-size: 1.2rem;
   list-style-type: none;
-
 }
 main {
   flex-grow: 1;
@@ -79,7 +77,7 @@ a {
 .intro-text {
   padding-left: 20px;
 }
- ul {
+ul {
   padding: 0px;
   margin: 0;
   list-style-type: none;
@@ -174,7 +172,8 @@ a {
   transform: scale(1.05);
 }
 
-.card-club h3, .card-phases h3 {
+.card-club h3,
+.card-phases h3 {
   font-size: 1.5rem;
   color: #ff9e40;
   margin-bottom: 30px;
@@ -366,7 +365,6 @@ footer {
 }
 
 .content-footer-flex {
-  background: radial-gradient(circle, #ffcc80, #ff8c00); /* Dégradé radial */
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -383,25 +381,11 @@ footer {
   margin-right: 8px;
 }
 
-footer p,
-footer a {
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
 /* Style pour le copyright */
 .footer-copyright {
   font-size: 0.7em;
   color: black;
   text-align: center;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: flex;
 }
 
 /*BUREAU*/
@@ -564,7 +548,7 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  gap: 20px;
+  gap: 60px;
   justify-content: center;
 }
 
@@ -576,7 +560,6 @@ nav a {
   text-decoration: none;
   color: black;
   font-size: 1.2em;
-  padding-right: 20px;
   font-weight: bold;
 }
 
@@ -682,36 +665,63 @@ nav a {
   width: 70%;
 }
 
-
 /* phases */
-.card-container-phases {
-  display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 50px 0;
-}
-
-.card-phases {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 200px;
-  text-align: center;
-  transition: transform 0.2s ease;
-  background-color: rgba(255, 235, 210, 0.5);
-  padding: 0 20px 0 20px;
-}
 
 .h2-phase {
-text-align: center;  font-size: 2rem;
+  font-size: 2rem;
 }
 
 .card-phases li {
-padding-bottom: 10px ;
+  padding: 10px 0;
 }
-.card-phases ul{margin-bottom: 30px}
+
+.phases h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ff9e40;
+  margin-bottom: 30px 0 10px 0;
+}
+/* Conteneur des cartes des journées */
+.card-phases {
+  display: flex;
+  gap: 45px;
+  margin-bottom: 80px;
+}
+
+/* Chaque carte de journée */
+.card-journee {
+  width: 170px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease;
+  background-color: rgba(255, 235, 210, 0.5);
+  padding: 10px;
+}
+
+.card-journee h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 15px;
+}
+
+
+
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
+
+  .card-phases {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .card-journee {
+    width: 200px;
+  }
+  
+  
+
+
   .team-column {
     width: 60%;
   }
@@ -809,7 +819,7 @@ padding-bottom: 10px ;
   .h2-phase {
     font-size: 1.8rem;
   }
- 
+
   /* Menu Burger */
   .menu-icon {
     display: flex;
@@ -886,15 +896,11 @@ padding-bottom: 10px ;
     width: 100%; /* Ajuste la largeur pour le mobile */
     background: transparent;
   }
-  
+
   /* Affiche le sous-menu quand le menu est actif */
   #nav-menu li:hover .list-inner {
     display: flex; /* Affiche le sous-menu au survol */
     flex-direction: column; /* Aligne les sous-éléments en colonne */
-  }
-
-  #nav-menu li {
-    padding: 15px;
   }
 
   /* Style pour les éléments de la liste intérieure */
@@ -920,13 +926,13 @@ padding-bottom: 10px ;
 
 /* Requêtes de média pour les tablettes */
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  .card-phases{  flex-wrap: wrap;
+    justify-content: center;}
   .button-competition a {
     font-family: 1.2rem;
   }
-  .view-counter {
-    padding: 5px;
-    border-radius: 3px;
-  }
+
   .titre-logo {
     height: 120px; /* Ajustement de la hauteur du titre pour les tablettes */
   }
@@ -993,17 +999,15 @@ padding-bottom: 10px ;
   /* Menu principal */
   nav ul {
     display: flex;
-    justify-content: space-evenly; /* Espacement des éléments */
+    gap : 15px
   }
   #nav-menu {
     padding: 0;
   }
   nav a {
-    text-decoration: none;
+    text-align: center;
     color: black;
     font-weight: bold;
-    padding: 0 5px;
-    font-size: 1rem;
   }
 
   /* Styles pour les cartes de partenaire */
@@ -1091,5 +1095,14 @@ padding-bottom: 10px ;
   .img-bureau {
     width: 100%;
     padding: 0;
+  }
+
+  .team-column {
+    width: 100%;
+  }
+
+  .card-container{
+display: flex;
+justify-content: space-around;
   }
 }
