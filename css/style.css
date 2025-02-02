@@ -45,6 +45,8 @@ li,
 ul,
 a {
   font-size: 1.2rem;
+  list-style-type: none;
+
 }
 main {
   flex-grow: 1;
@@ -77,7 +79,7 @@ a {
 .intro-text {
   padding-left: 20px;
 }
-.team-column ul {
+ ul {
   padding: 0px;
   margin: 0;
   list-style-type: none;
@@ -172,7 +174,7 @@ a {
   transform: scale(1.05);
 }
 
-.card-club h3 {
+.card-club h3, .card-phases h3 {
   font-size: 1.5rem;
   color: #ff9e40;
   margin-bottom: 30px;
@@ -679,6 +681,35 @@ nav a {
 .img-equipe {
   width: 70%;
 }
+
+
+/* phases */
+.card-container-phases {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.card-phases {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  text-align: center;
+  transition: transform 0.2s ease;
+  background-color: rgba(255, 235, 210, 0.5);
+  padding: 0 20px 0 20px;
+}
+
+.h2-phase {
+text-align: center;  font-size: 2rem;
+}
+
+.card-phases li {
+padding-bottom: 10px ;
+}
+.card-phases ul{margin-bottom: 30px}
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
   .team-column {
@@ -774,10 +805,11 @@ nav a {
   .h2-competitions,
   .h2-cotisations,
   .h2-partenaires,
-  .h2-inscription {
-    font-size: 2rem;
+  .h2-inscription,
+  .h2-phase {
+    font-size: 1.8rem;
   }
-
+ 
   /* Menu Burger */
   .menu-icon {
     display: flex;
