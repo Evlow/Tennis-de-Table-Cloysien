@@ -231,7 +231,6 @@ ul {
 }
 
 .h2-aides {
-  text-align: center;
   font-size: 2rem;
   margin-bottom: 10px;
 }
@@ -653,13 +652,9 @@ nav a {
 
 .phase1,
 .phase2 {
-  text-align: center;
   font-size: 2rem;
 }
-.phases {
-  display: flex;
-  justify-content: space-evenly;
-}
+.container-phases {}
 
 .img-equipe {
   width: 70%;
@@ -669,23 +664,27 @@ nav a {
 
 .h2-phase {
   font-size: 2rem;
+  padding-left: 20px;
+
 }
 
 .card-phases li {
   padding: 10px 0;
 }
 
-.phases h3 {
+.container-phases h3 {
   text-align: center;
-  font-size: 1.5rem;
   color: #ff9e40;
+
+  font-size: 1.5rem;
   margin-bottom: 30px 0 10px 0;
 }
 /* Conteneur des cartes des journées */
 .card-phases {
   display: flex;
-  gap: 45px;
+  justify-content: center;
   margin-bottom: 80px;
+  gap: 70px;
 }
 
 /* Chaque carte de journée */
