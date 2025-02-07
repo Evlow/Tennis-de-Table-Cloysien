@@ -874,11 +874,8 @@ nav a {
 
   /* Liens du menu principal */
   #nav-menu a {
-    flex: 1; /* Prend la même quantité d'espace */
     text-align: center;
-    color: black; /* Assurez-vous que la couleur du texte est visible */
-    text-decoration: none; /* Supprime les soulignements */
-    padding: 0;
+    padding: 20px;
   }
 
   /* Liens du sous-menu */
