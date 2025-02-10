@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  tennis-de-table:
+    build: .
+    container_name: tennis-de-table-cloysien_tennis-de-table_1
+    ports:
+      - "8000:80"
+    networks:
+      - tennis-de-table-cloysien_default
+networks:
+  tennis-de-table-cloysien_default:
+    external: true
