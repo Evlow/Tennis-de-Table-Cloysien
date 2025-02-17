@@ -5,16 +5,25 @@
 }
 
 .view-counter {
-  position: absolute; /* Position it absolutely within the relative container */
-  top: 63%; /* Move it to the center vertically */
-  left: 50%; /* Move it to the center horizontally */
-  transform: translate(-50%, -50%); /* Adjust its position to be centered */
-  padding: 10px; /* Optional: add some padding */
-  border-radius: 5px; /* Optional: add rounded corners */
-  z-index: 10; /* Ensure it is above the image */
+  position: absolute;
+  /* Position it absolutely within the relative container */
+  top: 63%;
+  /* Move it to the center vertically */
+  left: 50%;
+  /* Move it to the center horizontally */
+  transform: translate(-50%, -50%);
+  /* Adjust its position to be centered */
+  padding: 10px;
+  /* Optional: add some padding */
+  border-radius: 5px;
+  /* Optional: add rounded corners */
+  z-index: 10;
+  /* Ensure it is above the image */
   background-color: rgba(255, 235, 210, 0.5);
-  color: #000; /* Text color */
+  color: #000;
+  /* Text color */
 }
+
 .header-fixed {
   position: fixed;
   top: 0;
@@ -23,14 +32,17 @@
 }
 
 header {
-  background: radial-gradient(circle, #ffcc80, #ff8c00); /* Dégradé radial */
+  background: radial-gradient(circle, #ffcc80, #ff8c00);
+  /* Dégradé radial */
   display: flex;
   align-items: center;
 }
+
 .logo {
   width: 100px;
   padding: 5px 0 5px 5px;
 }
+
 body,
 html {
   margin: 0;
@@ -39,6 +51,7 @@ html {
   flex-direction: column;
   padding: 0;
 }
+
 p,
 li,
 ul,
@@ -46,9 +59,11 @@ a {
   font-size: 1.2rem;
   list-style-type: none;
 }
+
 main {
   flex-grow: 1;
 }
+
 a {
   text-decoration: none;
   color: black;
@@ -59,9 +74,11 @@ a {
   align-items: center;
   gap: 10px;
 }
+
 .logo-facebook {
   width: 50px;
 }
+
 .titre-logo h1 {
   display: none;
 }
@@ -74,19 +91,23 @@ a {
   padding-bottom: 20px;
   padding-left: 20px;
 }
+
 .intro-text {
   padding-left: 20px;
 }
+
 ul {
   padding: 0px;
   margin: 0;
   list-style-type: none;
   text-align: center;
 }
+
 .team-column h5 {
   font-size: 1.2rem;
   margin: 0 0 20px 0;
 }
+
 .team-column li {
   display: flex;
   justify-content: center;
@@ -97,8 +118,10 @@ ul {
   height: 25px;
   padding-left: 10px;
 }
+
 .team-column {
-  background-color: rgba(255, 255, 255, 0.8); /* Fond translucide */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Fond translucide */
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -108,13 +131,13 @@ ul {
 }
 
 .section-competition {
-  background-color: rgba(
-    255,
-    235,
-    210,
-    0.5
-  ); /* Fond très pâle avec un léger ton orange */
-  border-radius: 10px; /* Arrondir les coins */
+  background-color: rgba(255,
+      235,
+      210,
+      0.5);
+  /* Fond très pâle avec un léger ton orange */
+  border-radius: 10px;
+  /* Arrondir les coins */
   padding: 20px 0 50px 0;
   margin-bottom: 50px;
   text-align: center;
@@ -126,8 +149,10 @@ ul {
   gap: 40px;
   justify-content: center;
 }
+
 .h4-phase {
-  font-size: 1.5rem; /* Taille de police légèrement augmentée */
+  font-size: 1.5rem;
+  /* Taille de police légèrement augmentée */
   color: #ff7b1f;
 }
 
@@ -142,15 +167,18 @@ ul {
   margin: 5px;
   padding-bottom: 20px;
 }
+
 .h2-competitions {
   padding-left: 20px;
   font-size: 2rem;
 }
+
 /* cotisations */
 .h2-cotisations {
   padding-left: 20px;
   font-size: 2rem;
 }
+
 .card-container-club {
   display: flex;
   gap: 50px;
@@ -194,6 +222,7 @@ ul {
 .card-club a:hover {
   color: #ff9e40;
 }
+
 /* Bloc Entrainement */
 .bloc-entrainement {
   padding: 10px 0 10px 0;
@@ -212,6 +241,7 @@ ul {
 .entrainement-details strong {
   color: #ff7b1f;
 }
+
 .entrainement-details ul {
   list-style-type: none;
   margin-left: 20px;
@@ -234,6 +264,7 @@ ul {
   font-size: 2rem;
   margin-bottom: 10px;
 }
+
 .h3-aides {
   color: #ff7b1f;
   font-size: 1.5rem;
@@ -241,7 +272,8 @@ ul {
 
 .aides-container {
   display: flex;
-  align-items: stretch; /* Assure que les articles ont la même hauteur */
+  align-items: stretch;
+  /* Assure que les articles ont la même hauteur */
   justify-content: center;
 }
 
@@ -260,38 +292,53 @@ ul {
 .h3-partenaire {
   font-size: 1.5rem;
 }
+
 .h2-partenaires {
   padding-left: 20px;
   font-size: 2rem;
 }
+
 .bloc-sponsors {
   padding: 20px;
 }
 
 .sponsor-cards {
   display: flex;
-  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
-  justify-content: space-evenly; /* Espace égal entre les cartes */
-  width: 80%; /* Largeur du conteneur */
-  margin: 0 auto; /* Centre le conteneur */
+  flex-wrap: wrap;
+  /* Permet aux cartes de passer à la ligne */
+  justify-content: space-evenly;
+  /* Espace égal entre les cartes */
+  width: 80%;
+  /* Largeur du conteneur */
+  margin: 0 auto;
+  /* Centre le conteneur */
 }
 
 .sponsor-card {
-  width: 240px; /* Largeur réduite des cartes */
-  height: 200px; /* Hauteur réduite des cartes */
+  width: 240px;
+  /* Largeur réduite des cartes */
+  height: 200px;
+  /* Hauteur réduite des cartes */
   background-color: white;
   border-radius: 8px;
-  margin: 10px; /* Marges autour des cartes */
-  text-align: center; /* Centre le texte */
+  margin: 10px;
+  /* Marges autour des cartes */
+  text-align: center;
+  /* Centre le texte */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Aligne les éléments en colonne */
-  justify-content: space-between; /* Espace entre les éléments */
-  align-items: center; /* Centre horizontalement */
+  flex-direction: column;
+  /* Aligne les éléments en colonne */
+  justify-content: space-between;
+  /* Espace entre les éléments */
+  align-items: center;
+  /* Centre horizontalement */
   transition: transform 0.2s ease;
-  width: 90%; /* Ajustez pour éviter le débordement */
-  max-width: 240px; /* Limiter la taille maximale */
+  width: 90%;
+  /* Ajustez pour éviter le débordement */
+  max-width: 240px;
+  /* Limiter la taille maximale */
 }
 
 .sponsor-card:hover {
@@ -301,25 +348,31 @@ ul {
 .img-sponsor {
   overflow: hidden;
   object-fit: cover;
-  padding-top: 10px; /* Espacement en haut de l'image */
+  padding-top: 10px;
+  /* Espacement en haut de l'image */
 }
 
 .sponsor-card h3 {
   font-size: 1.2rem;
-  margin: 10px 0; /* Espacement autour du titre */
+  margin: 10px 0;
+  /* Espacement autour du titre */
   text-align: center;
 }
 
 .sponsor-card p {
-  font-size: 1.1rem; /* Taille de la police pour le texte */
+  font-size: 1.1rem;
+  /* Taille de la police pour le texte */
   color: #333;
   line-height: 1.4;
-  text-align: center; /* Centre le texte */
-  margin: 0; /* Réinitialiser les marges */
+  text-align: center;
+  /* Centre le texte */
+  margin: 0;
+  /* Réinitialiser les marges */
 }
 
 .sponsor-card a {
-  text-decoration: none; /* Pas de soulignement */
+  text-decoration: none;
+  /* Pas de soulignement */
   margin-top: 10px;
 }
 
@@ -329,12 +382,17 @@ ul {
   font-size: 1.1em;
   text-decoration: none;
   color: black;
-  width: 80px; /* Largeur du bouton */
-  height: 35px; /* Hauteur du bouton */
+  width: 80px;
+  /* Largeur du bouton */
+  height: 35px;
+  /* Hauteur du bouton */
   display: flex;
-  align-items: center; /* Centre verticalement */
-  justify-content: center; /* Centre horizontalement */
-  margin: 15px auto; /* Centre le bouton horizontalement */
+  align-items: center;
+  /* Centre verticalement */
+  justify-content: center;
+  /* Centre horizontalement */
+  margin: 15px auto;
+  /* Centre le bouton horizontalement */
 }
 
 /*INSCRIPTION*/
@@ -347,14 +405,18 @@ ul {
 .inscription {
   text-align: center;
 }
+
 .img-index,
 .img-fond-competition {
   width: 100vw;
   object-fit: cover;
 }
+
 .img-inscription {
-  width: 50%; /* Largeur de l'image d'inscription */
-  border-radius: 5px; /* Arrondi léger des coins */
+  width: 50%;
+  /* Largeur de l'image d'inscription */
+  border-radius: 5px;
+  /* Arrondi léger des coins */
 }
 
 /* FOOTER */
@@ -395,9 +457,11 @@ footer {
   margin: auto;
   display: flex;
 }
+
 /* Hamburger Menu Icon */
 .menu-icon {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   flex-direction: column;
   cursor: pointer;
   margin: 10px;
@@ -406,78 +470,109 @@ footer {
 /*BOUTONS COMPETITION*/
 
 .section-button-competition {
-  width: 100%; /* Optional: make the container full width if desired */
+  width: 100%;
+  /* Optional: make the container full width if desired */
 }
 
 .button-container-competition {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  gap: 20px; /* Space between buttons */
+  gap: 20px;
+  /* Space between buttons */
 }
+
 .button-container a {
   font-size: 1.2em;
 }
+
 .button-competition {
   background-color: rgba(255, 235, 210, 0.5);
-  color: #000; /* Text color */
-  padding: 10px 20px; /* Padding for the buttons */
-  text-decoration: none; /* Removes underline */
-  border-radius: 5px; /* Rounded corners */
-  font-weight: bold; /* Makes text bold */
-  transition: background-color 0.3s ease; /* Smooth transition */
+  color: #000;
+  /* Text color */
+  padding: 10px 20px;
+  /* Padding for the buttons */
+  text-decoration: none;
+  /* Removes underline */
+  border-radius: 5px;
+  /* Rounded corners */
+  font-weight: bold;
+  /* Makes text bold */
+  transition: background-color 0.3s ease;
+  /* Smooth transition */
 }
 
 .button-competition:hover {
   background-color: rgba(255, 235, 210, 0.5);
 }
+
 /*BOUTONS ACCUEIL*/
 
 .section-button {
   position: relative;
-  display: inline-block; /* Ensures image behaves like a block element */
-  width: 100%; /* Optional: make the container full width if desired */
-  text-align: center; /* Center-aligns content */
+  display: inline-block;
+  /* Ensures image behaves like a block element */
+  width: 100%;
+  /* Optional: make the container full width if desired */
+  text-align: center;
+  /* Center-aligns content */
 }
 
 .img-index {
-  width: 100%; /* Ensures image fills the width of the container */
-  display: block; /* Removes any gap under the image */
+  width: 100%;
+  /* Ensures image fills the width of the container */
+  display: block;
+  /* Removes any gap under the image */
 }
 
 .button-container {
   position: absolute;
-  top: 20px; /* Positions buttons at the top of the image */
+  top: 20px;
+  /* Positions buttons at the top of the image */
   left: 50%;
-  transform: translateX(-50%); /* Centers the buttons horizontally */
+  transform: translateX(-50%);
+  /* Centers the buttons horizontally */
   display: flex;
-  gap: 20px; /* Space between buttons */
-  z-index: 10; /* Places buttons above the image */
+  gap: 20px;
+  /* Space between buttons */
+  z-index: 10;
+  /* Places buttons above the image */
 }
+
 .button-container a {
   font-size: 1.2em;
 }
+
 .button {
   background-color: rgba(255, 235, 210, 0.5);
-  color: #000; /* Text color */
-  padding: 10px 20px; /* Padding for the buttons */
-  text-decoration: none; /* Removes underline */
-  border-radius: 5px; /* Rounded corners */
-  font-weight: bold; /* Makes text bold */
-  transition: background-color 0.3s ease; /* Smooth transition */
+  color: #000;
+  /* Text color */
+  padding: 10px 20px;
+  /* Padding for the buttons */
+  text-decoration: none;
+  /* Removes underline */
+  border-radius: 5px;
+  /* Rounded corners */
+  font-weight: bold;
+  /* Makes text bold */
+  transition: background-color 0.3s ease;
+  /* Smooth transition */
 }
 
 .button:hover {
-  background-color: rgba(255, 255, 255, 1); /* Solid white on hover */
+  background-color: rgba(255, 255, 255, 1);
+  /* Solid white on hover */
 }
 
 /* Bars of the hamburger icon */
 .menu-icon .bar {
   height: 4px;
   width: 30px;
-  background-color: black; /* Change to your preferred color */
+  background-color: black;
+  /* Change to your preferred color */
   margin: 4px 0;
-  transition: 0.3s; /* Smooth transition for the menu opening/closing */
+  transition: 0.3s;
+  /* Smooth transition for the menu opening/closing */
 }
 
 /* MENU DEROULANT */
@@ -486,7 +581,8 @@ footer {
 }
 
 .list-inner {
-  display: none; /* Masque les sous-menus par défaut */
+  display: none;
+  /* Masque les sous-menus par défaut */
   width: 210px;
   position: absolute;
   z-index: 1000;
@@ -498,34 +594,46 @@ footer {
 
 /* Masque les sous-menus par défaut */
 .submenu {
-  display: none; /* Caché par défaut */
-  position: relative; /* Position relative pour ne pas sortir du flux */
+  display: none;
+  /* Caché par défaut */
+  position: relative;
+  /* Position relative pour ne pas sortir du flux */
   width: 100%;
-  margin-top: 5px; /* Ajoute un léger espacement */
+  margin-top: 5px;
+  /* Ajoute un léger espacement */
   border-radius: 5px;
   padding-left: 20px;
 }
+
 /* Affichage des sous-menus quand actifs */
 .submenu.active {
-  display: block; /* Affiche le sous-menu au clic */
-  width: 100%; /* Ajuste la largeur pour le mobile */
+  display: block;
+  /* Affiche le sous-menu au clic */
+  width: 100%;
+  /* Ajuste la largeur pour le mobile */
 }
 
 nav {
-  position: sticky; /* Ajoutez cette ligne */
-  top: 0; /* Reste en haut */
-  z-index: 1000; /* Assurez-vous qu'il est au-dessus des autres éléments */
+  position: sticky;
+  /* Ajoutez cette ligne */
+  top: 0;
+  /* Reste en haut */
+  z-index: 1000;
+  /* Assurez-vous qu'il est au-dessus des autres éléments */
   flex: 1;
   align-content: center;
   height: 80px;
 }
 
 /* Affichage du sous-menu au survol du parent */
-nav > ul > li:hover .list-inner {
-  display: block; /* Affiche le sous-menu au survol */
+nav>ul>li:hover .list-inner {
+  display: block;
+  /* Affiche le sous-menu au survol */
 }
+
 .list-inner a:hover {
-  border-bottom: none; /* Retire la bordure en bas lors du survol */
+  border-bottom: none;
+  /* Retire la bordure en bas lors du survol */
 }
 
 .list {
@@ -534,10 +642,14 @@ nav > ul > li:hover .list-inner {
 
 /* Styles des liens dans le sous-menu */
 .list-inner a {
-  display: block; /* Affiche les liens en bloc */
-  text-align: left; /* Alignement à gauche */
-  padding: 10px; /* Padding autour du lien */
-  color: black; /* Couleur du texte */
+  display: block;
+  /* Affiche les liens en bloc */
+  text-align: left;
+  /* Alignement à gauche */
+  padding: 10px;
+  /* Padding autour du lien */
+  color: black;
+  /* Couleur du texte */
 }
 
 /* MENU PRINCIPAL */
@@ -562,21 +674,26 @@ nav a {
   font-weight: bold;
 }
 
-.list-inner > li:hover .list-inner {
-  display: block; /* Affiche le sous-sous-menu au survol */
+.list-inner>li:hover .list-inner {
+  display: block;
+  /* Affiche le sous-sous-menu au survol */
 }
 
 /*DATES COMPETITIONS*/
 .section-date {
   text-align: center;
 }
+
 .hr-date {
   border: none;
-  height: 1px; /* Épaisseur de la ligne */
-  background-color: grey; /* Couleur de la ligne */
+  height: 1px;
+  /* Épaisseur de la ligne */
+  background-color: grey;
+  /* Couleur de la ligne */
   width: 70%;
   margin: 0 auto;
 }
+
 .img-date {
   padding: 30px;
   width: 60%;
@@ -654,7 +771,6 @@ nav a {
 .phase2 {
   font-size: 2rem;
 }
-.container-phases {}
 
 .img-equipe {
   width: 70%;
@@ -679,6 +795,7 @@ nav a {
   font-size: 1.5rem;
   margin-bottom: 30px 0 10px 0;
 }
+
 /* Conteneur des cartes des journées */
 .card-phases {
   display: flex;
@@ -688,13 +805,64 @@ nav a {
 }
 
 /* Chaque carte de journée */
-.card-journee {
+/* .card-journee {
   width: 170px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: transform 0.2s ease;
   background-color: rgba(255, 235, 210, 0.5);
+  padding: 10px;
+} */
+
+
+.card-journee1 {
+  width: 170px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease;
+  background-color: rgba(180, 167, 242, 0.5);
+  padding: 10px;
+}
+
+.card-journee2 {
+  width: 170px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease;
+  background-color: rgba(169, 248, 255, 0.5);
+  padding: 10px;
+}
+
+.card-journee3 {
+  width: 170px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease;
+  background-color: rgba(240, 249, 173, 0.5);
+  padding: 10px;
+}
+
+.card-journee4 {
+  width: 170px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease;
+  background-color: rgba(243, 194, 148, 0.5);
+  padding: 10px;
+}
+
+.card-journee5 {
+  width: 170px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease;
+  background-color: rgba(176, 247, 157, 0.5);
   padding: 10px;
 }
 
@@ -714,11 +882,28 @@ nav a {
     gap: 20px;
     align-items: center;
   }
-  .card-journee {
+
+  .card-journee1 {
     width: 200px;
   }
-  
-  
+
+  .card-journee2 {
+    width: 200px;
+  }
+
+  .card-journee3 {
+    width: 200px;
+  }
+
+  .card-journee4 {
+    width: 200px;
+  }
+
+  .card-journee5 {
+    width: 200px;
+  }
+
+
 
 
   .team-column {
@@ -728,38 +913,49 @@ nav a {
   .button-competition {
     padding: 10px;
   }
+
   .button-container-competition {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     flex-wrap: wrap;
   }
+
   .button-competition a {
     font-family: 1.2rem;
   }
+
   .view-counter {
     font-size: 8px;
     padding: 1px;
     border-radius: 10px;
   }
+
   .button-container {
-    top: 5px; /* Positions buttons at the top of the image */
+    top: 5px;
+    /* Positions buttons at the top of the image */
     gap: 10px;
   }
+
   .button-container a {
     font-size: 1.2em;
   }
 
   .button {
-    width: 80%; /* Make buttons occupy 80% of the container width */
-    margin: 0 auto; /* Center-align buttons in the mobile layout */
-    padding: 5px; /* Padding for the buttons */
+    width: 80%;
+    /* Make buttons occupy 80% of the container width */
+    margin: 0 auto;
+    /* Center-align buttons in the mobile layout */
+    padding: 5px;
+    /* Padding for the buttons */
   }
+
   .img-bureau,
   .img-date {
     padding: 0;
     width: 100%;
   }
+
   .titre-logo {
     display: flex;
     align-items: center;
@@ -841,9 +1037,11 @@ nav a {
   .menu-icon.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
+
   .menu-icon.active .bar:nth-child(2) {
     opacity: 0;
   }
+
   .menu-icon.active .bar:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
   }
@@ -857,14 +1055,20 @@ nav a {
 
   /* Menu principal */
   #nav-menu {
-    display: none; /* Masqué par défaut */
-    flex-direction: column; /* Aligne les éléments en colonne */
+    display: none;
+    /* Masqué par défaut */
+    flex-direction: column;
+    /* Aligne les éléments en colonne */
     background: radial-gradient(circle, #ffcc80, #ff8c00);
-    padding-top: 20px; /* Espace supérieur pour le menu */
-    overflow-y: auto; /* Permet le défilement si le contenu déborde */
     padding-top: 20px;
-    z-index: 20; /* Higher than buttons */
-    position: inherit; /* Ensure menu stays fixed on screen */
+    /* Espace supérieur pour le menu */
+    overflow-y: auto;
+    /* Permet le défilement si le contenu déborde */
+    padding-top: 20px;
+    z-index: 20;
+    /* Higher than buttons */
+    position: inherit;
+    /* Ensure menu stays fixed on screen */
   }
 
   /* Affiche le menu au clic */
@@ -880,41 +1084,54 @@ nav a {
 
   /* Liens du sous-menu */
   .list-inner a {
-    text-align: center; /* Centre le texte */
-    display: block; /* Assure que chaque lien prend toute la largeur */
-    color: black; /* Assurez-vous que la couleur du texte est visible */
-    text-decoration: none; /* Supprime les soulignements */
+    text-align: center;
+    /* Centre le texte */
+    display: block;
+    /* Assure que chaque lien prend toute la largeur */
+    color: black;
+    /* Assurez-vous que la couleur du texte est visible */
+    text-decoration: none;
+    /* Supprime les soulignements */
   }
 
   .list-inner {
-    display: none; /* Affiche le sous-menu sur mobile */
-    position: static; /* Enlève la position absolue pour un bon affichage */
-    width: 100%; /* Ajuste la largeur pour le mobile */
+    display: none;
+    /* Affiche le sous-menu sur mobile */
+    position: static;
+    /* Enlève la position absolue pour un bon affichage */
+    width: 100%;
+    /* Ajuste la largeur pour le mobile */
     background: transparent;
   }
 
   /* Affiche le sous-menu quand le menu est actif */
   #nav-menu li:hover .list-inner {
-    display: flex; /* Affiche le sous-menu au survol */
-    flex-direction: column; /* Aligne les sous-éléments en colonne */
+    display: flex;
+    /* Affiche le sous-menu au survol */
+    flex-direction: column;
+    /* Aligne les sous-éléments en colonne */
   }
 
   /* Style pour les éléments de la liste intérieure */
   .list-inner li {
-    list-style: none; /* Supprime les puces */
+    list-style: none;
+    /* Supprime les puces */
   }
 
   .card-container {
     flex-direction: column;
     gap: 40px;
   }
+
   .card-competitions {
     margin: 0 auto;
   }
+
   .intro-text {
     padding: 20px;
     text-align: center;
   }
+
   .img-inscription {
     width: 100%;
   }
@@ -923,14 +1140,18 @@ nav a {
 /* Requêtes de média pour les tablettes */
 @media (min-width: 768px) and (max-width: 1024px) {
 
-  .card-phases{  flex-wrap: wrap;
-    justify-content: center;}
+  .card-phases {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .button-competition a {
     font-family: 1.2rem;
   }
 
   .titre-logo {
-    height: 120px; /* Ajustement de la hauteur du titre pour les tablettes */
+    height: 120px;
+    /* Ajustement de la hauteur du titre pour les tablettes */
   }
 
   /* Redimensionnement du logo */
@@ -948,23 +1169,27 @@ nav a {
   .card-container {
     flex-direction: row;
     gap: 20px;
-    justify-content: center; /* Centre les cartes */
+    justify-content: center;
+    /* Centre les cartes */
   }
 
   .card-competitions {
-    width: 250px; /* Légère augmentation de la largeur */
+    width: 250px;
+    /* Légère augmentation de la largeur */
     margin: 10px;
   }
 
   /* Section aides */
   .aides-container {
-    flex-direction: row; /* Aligne les articles en rangée */
+    flex-direction: row;
+    /* Aligne les articles en rangée */
     gap: 20px;
   }
 
   /* Dimensions des articles d'aide */
   .article-aides {
-    width: 45%; /* Occupe la moitié de l'écran en largeur */
+    width: 45%;
+    /* Occupe la moitié de l'écran en largeur */
   }
 
   /* Ajustement de la taille des titres */
@@ -978,28 +1203,34 @@ nav a {
 
   /* Footer */
   footer .content-footer-flex {
-    flex-direction: row; /* Affichage en rangée pour le footer */
+    flex-direction: row;
+    /* Affichage en rangée pour le footer */
     justify-content: center;
     gap: 20px;
   }
 
   /* Menu de navigation */
   .menu-icon {
-    display: none; /* Masqué sur tablette */
+    display: none;
+    /* Masqué sur tablette */
   }
+
   /* Taille des liens de navigation */
   nav ul li a {
-    font-size: 1rem; /* Taille réduite pour les liens */
+    font-size: 1rem;
+    /* Taille réduite pour les liens */
   }
 
   /* Menu principal */
   nav ul {
     display: flex;
-    gap : 15px
+    gap: 15px
   }
+
   #nav-menu {
     padding: 0;
   }
+
   nav a {
     text-align: center;
     color: black;
@@ -1008,19 +1239,22 @@ nav a {
 
   /* Styles pour les cartes de partenaire */
   .sponsor-card {
-    width: 180px; /* Largeur ajustée pour tablette */
+    width: 180px;
+    /* Largeur ajustée pour tablette */
     height: 150px;
   }
 
   /* Section partenaires */
   .sponsor-cards {
-    width: 90%; /* Largeur réduite du conteneur de sponsor */
+    width: 90%;
+    /* Largeur réduite du conteneur de sponsor */
     justify-content: center;
   }
 
   /* Bouton */
   .bouton {
-    width: 100px; /* Taille augmentée du bouton */
+    width: 100px;
+    /* Taille augmentée du bouton */
     height: 40px;
   }
 
@@ -1039,12 +1273,14 @@ nav a {
   .bloc-entrainement h2 {
     font-size: 2.5rem;
   }
+
   .deroulant {
     position: relative;
   }
 
   .list-inner {
-    display: none; /* Masque les sous-menus par défaut */
+    display: none;
+    /* Masque les sous-menus par défaut */
     width: 210px;
     position: absolute;
     z-index: 1000;
@@ -1060,12 +1296,14 @@ nav a {
   }
 
   /* Affichage du sous-menu au survol du parent */
-  nav > ul > li:hover .list-inner {
-    display: block; /* Affiche le sous-menu au survol */
+  nav>ul>li:hover .list-inner {
+    display: block;
+    /* Affiche le sous-menu au survol */
   }
 
   .list-inner a:hover {
-    border-bottom: none; /* Retire la bordure en bas lors du survol */
+    border-bottom: none;
+    /* Retire la bordure en bas lors du survol */
   }
 
   .list {
@@ -1074,20 +1312,29 @@ nav a {
 
   /* Styles pour le sous-menu des équipes */
   .list-inner {
-    display: none; /* Masque les sous-menus par défaut */
+    display: none;
+    /* Masque les sous-menus par défaut */
   }
 
   /* Styles des liens dans le sous-menu */
   .list-inner a {
-    display: block; /* Affiche les liens en bloc */
-    font-weight: normal; /* Poids normal pour le texte */
-    text-align: left; /* Alignement à gauche */
-    padding: 10px; /* Padding autour du lien */
-    color: black; /* Couleur du texte */
+    display: block;
+    /* Affiche les liens en bloc */
+    font-weight: normal;
+    /* Poids normal pour le texte */
+    text-align: left;
+    /* Alignement à gauche */
+    padding: 10px;
+    /* Padding autour du lien */
+    color: black;
+    /* Couleur du texte */
   }
-  .list-inner > li:hover .list-inner {
-    display: block; /* Affiche le sous-sous-menu au survol */
+
+  .list-inner>li:hover .list-inner {
+    display: block;
+    /* Affiche le sous-sous-menu au survol */
   }
+
   .img-bureau {
     width: 100%;
     padding: 0;
@@ -1097,8 +1344,8 @@ nav a {
     width: 100%;
   }
 
-  .card-container{
-display: flex;
-justify-content: space-around;
+  .card-container {
+    display: flex;
+    justify-content: space-around;
   }
 }
