@@ -458,6 +458,12 @@ footer {
   display: flex;
 }
 
+.img-planning {
+  padding: 50px;
+  width: 70%;
+  margin: auto;
+  display: flex;
+}
 /* Hamburger Menu Icon */
 .menu-icon {
   display: none;
@@ -951,7 +957,9 @@ nav a {
   }
 
   .img-bureau,
-  .img-date {
+  .img-date,
+  .img-planning
+ {
     padding: 0;
     width: 100%;
   }
@@ -1339,7 +1347,10 @@ nav a {
     width: 100%;
     padding: 0;
   }
-
+  .img-planning {
+    width: 100%;
+    padding: 0;
+  }
   .team-column {
     width: 100%;
   }
