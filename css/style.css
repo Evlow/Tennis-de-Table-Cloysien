@@ -287,7 +287,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   /* Permet aux cartes de passer à la ligne */
-  justify-content: space-evenly;
+  justify-content: center;
   /* Espace égal entre les cartes */
   width: 80%;
   /* Largeur du conteneur */
