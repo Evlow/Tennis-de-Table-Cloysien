@@ -889,11 +889,34 @@ nav a {
   margin: 15px;
 }
 
+/*PHOTOS*/
+.article-photos {
+width: 80%;
+margin: 0 auto;}
+hr {
+  width: 90%;
+  height: 2px;
+  border: none;
+  background: linear-gradient(to right, transparent, #ffcc80, transparent);
+  margin: 30px auto;
+}
+.photos {
+  margin:50px 0;
+}
+.photos img {
+  width: 300px; /* Largeur fixe */
+    height: 250px; /* Hauteur fixe */
+    object-fit: cover;}
 
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
-
+  .footer-copyright {
+padding : 0 5px;
+  }
+  .content-footer-flex{
+    flex-direction: column;
+  }
   .inscription-flex{flex-direction: column;
 
 }
