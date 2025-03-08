@@ -4,26 +4,6 @@
   font-family: "Open Sans Condensed", sans-serif;
 }
 
-.view-counter {
-  position: absolute;
-  /* Position it absolutely within the relative container */
-  top: 63%;
-  /* Move it to the center vertically */
-  left: 50%;
-  /* Move it to the center horizontally */
-  transform: translate(-50%, -50%);
-  /* Adjust its position to be centered */
-  padding: 10px;
-  /* Optional: add some padding */
-  border-radius: 5px;
-  /* Optional: add rounded corners */
-  z-index: 10;
-  /* Ensure it is above the image */
-  background-color: rgba(255, 235, 210, 0.5);
-  color: #000;
-  /* Text color */
-}
-
 .header-fixed {
   position: fixed;
   top: 0;
@@ -395,29 +375,58 @@ ul {
   /* Centre le bouton horizontalement */
 }
 
+
+/*MENTIONS LEGALES*/
+.mentions-legales {
+  padding: 20px;
+}
+
+.h2-mentions {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+
+.h3-mentions {
+  text-align: left;
+  font-size: 1.8rem;
+  margin: 5px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+section .section-mentions {
+
+  width: 60%;
+  margin: 50px auto;
+  background-color: rgba(255, 235, 210, 0.5);
+  padding: 40px;
+}
+
 /*INSCRIPTION*/
+
+.inscription-flex{
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+
+}
 
 .h2-inscription {
   font-size: 2rem;
   padding-left: 20px;
 }
 
-.inscription {
-  text-align: center;
+.intro-text-documents{
+  padding-left: 20px;
 }
-
 .img-index,
 .img-fond-competition {
   width: 100vw;
   object-fit: cover;
 }
 
-.img-inscription {
-  width: 50%;
-  /* Largeur de l'image d'inscription */
-  border-radius: 5px;
-  /* Arrondi léger des coins */
-}
 
 /* FOOTER */
 footer {
@@ -458,12 +467,13 @@ footer {
   display: flex;
 }
 
-.img-planning {
+p .img-planning {
   padding: 50px;
   width: 70%;
   margin: auto;
   display: flex;
 }
+
 /* Hamburger Menu Icon */
 .menu-icon {
   display: none;
@@ -883,6 +893,12 @@ nav a {
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
 
+  .inscription-flex{flex-direction: column;
+
+}
+
+.intro-text-documents{    padding: 10px;
+}
   .card-phases {
     flex-direction: column;
     gap: 20px;
@@ -931,12 +947,6 @@ nav a {
     font-family: 1.2rem;
   }
 
-  .view-counter {
-    font-size: 8px;
-    padding: 1px;
-    border-radius: 10px;
-  }
-
   .button-container {
     top: 5px;
     /* Positions buttons at the top of the image */
@@ -957,11 +967,14 @@ nav a {
   }
 
   .img-bureau,
-  .img-date,
-  .img-planning
- {
+  .img-date {
     padding: 0;
     width: 100%;
+  }
+
+  .img-planning {
+    padding: 0;
+    width: 90%;
   }
 
   .titre-logo {
@@ -1140,9 +1153,6 @@ nav a {
     text-align: center;
   }
 
-  .img-inscription {
-    width: 100%;
-  }
 }
 
 /* Requêtes de média pour les tablettes */
@@ -1347,10 +1357,12 @@ nav a {
     width: 100%;
     padding: 0;
   }
+
   .img-planning {
-    width: 100%;
+    width: 90%;
     padding: 0;
   }
+
   .team-column {
     width: 100%;
   }
