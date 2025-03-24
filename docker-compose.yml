@@ -6,8 +6,11 @@ services:
     container_name: tennis-de-table-cloysien_tennis-de-table_1
     ports:
       - "8000:80"
+    volumes:
+      - ./sitemap.xml:/usr/share/nginx/html/sitemap.xml  # Cette ligne monte ton fichier sitemap.xml
     networks:
       - tennis-de-table-cloysien_default
+
 networks:
   tennis-de-table-cloysien_default:
     external: true

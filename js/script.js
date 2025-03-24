@@ -58,5 +58,53 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", closeMenuOnClickOutside);
 });
 
+// Récupère les éléments de la bannière et des boutons
+const cookieBanner = document.getElementById("cookie-banner");
+const acceptButton = document.getElementById("accept-cookies");
+const refuseButton = document.getElementById("refuse-cookies");
+
+// Vérifie si l'utilisateur a déjà pris une décision
+if (localStorage.getItem("cookiesAccepted") === "true") {
+  // Si accepté, cache la bannière
+  cookieBanner.classList.add("hidden");
+} else if (localStorage.getItem("cookiesAccepted") === "false") {
+  // Si refusé, cache aussi la bannière
+  cookieBanner.classList.add("hidden");
+} else {
+  // Si aucune décision n'a été prise, afficher la bannière
+  cookieBanner.classList.remove("hidden");
+}
+
+// Fonction pour cacher la bannière après acceptation
+acceptButton.addEventListener("click", () => {
+  localStorage.setItem("cookiesAccepted", "true");
+  cookieBanner.classList.add("hidden");
+});
+
+// Fonction pour cacher la bannière après refus
+refuseButton.addEventListener("click", () => {
+  localStorage.setItem("cookiesAccepted", "false");
+  cookieBanner.classList.add("hidden");
+});
+
+
+// Fonction pour charger Google Analytics uniquement si l'utilisateur a accepté les cookies
+function loadGoogleAnalytics() {
+  // Vérifie si le script Google Analytics n'est pas déjà ajouté
+  if (!document.querySelector('script[src="https://www.googletagmanager.com/gtag/js?id=G-BY9X1TRKZ7"]')) {
+    const script = document.createElement("script");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-BY9X1TRKZ7";  
+    script.async = true;
+    document.head.appendChild(script);
+
+    script.onload = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BY9X1TRKZ7'); 
+    };
+  }
+}
+
 
 
