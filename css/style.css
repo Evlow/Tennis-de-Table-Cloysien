@@ -7,81 +7,76 @@
 
 /* COOKIES */
 
-/* style.css */
 
 body {
   font-family: Arial, sans-serif;
 }
-
+/* Style pour le pop-up */
 .cookie-banner {
   position: fixed;
-  bottom: 0;  /* Positionne la bannière en bas */
-  left: 50%;  /* Centrer horizontalement */
-  transform: translateX(-50%); /* Ajuste la position pour un vrai centrage horizontal */
-  width: 100%;  /* La bannière occupe toute la largeur */
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-size: 16px;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Ombre pour créer l'effet de pop-up */
+  display: none; /* Caché par défaut */
+  justify-content: center;
   align-items: center;
-  border-radius: 10px 10px 0 0;  /* Coins arrondis seulement en haut */
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease, display 0s ease 0.3s; /* Animation de la visibilité */
 }
 
-.cookie-banner p {
-  margin: 0;
-  font-size: 14px;
-  color: #f1f1f1;
+/* Style pour le contenu du pop-up */
+.popup-content {
+  background: white;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 10px;
+  text-align: center;
 }
 
-.cookie-banner a {
-  color: #f1f1f1;
-  text-decoration: underline;
+/* Styles des boutons */
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
-.cookie-banner a:hover {
-  color: #f1f1f1;
+.btn-accept, .btn-refuse {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 .btn-accept {
   background-color: #4CAF50;
   color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  width: 10%;
-}
-
-.btn-refuse {
-  background-color: rgb(242, 14, 14);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  width: 10%;
-}
-
-.btn-refuse:hover {
-  background-color: rgb(242, 14, 14);
 }
 
 .btn-accept:hover {
   background-color: #45a049;
 }
 
-/* Classe pour cacher la bannière de cookies après l'acceptation ou le refus */
-.hidden {
-  display: none;
+.btn-refuse {
+  background-color: #f44336;
+  color: white;
 }
 
+.btn-refuse:hover {
+  background-color: #e53935;
+}
+
+/* Apparition du pop-up */
+.cookie-banner.show {
+  display: flex; /* Affiche la bannière */
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Animation de l'apparition */
+}
 
 
 

@@ -2,11 +2,46 @@
 <html lang="fr">
 
 <head>
+    <!-- Meta Charset et Viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tennis de Table Cloysien</title>
+
+    <!-- Titre de la page spécifique -->
+    <title>Mentions Légales - Tennis de Table Cloysien</title>
+
+    <!-- Meta Description : concise et optimisée SEO -->
+    <meta name="description"
+        content="Découvrez les mentions légales du site Tennis de Table Cloysien : éditeur, hébergement, propriété intellectuelle et protection des données.">
+
+    <!-- Robots : noindex pour éviter l'indexation par Google (optionnel) -->
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Open Graph (OG) pour les réseaux sociaux -->
+    <meta property="og:title" content="Mentions Légales - Tennis de Table Cloysien">
+    <meta property="og:description"
+        content="Informations légales sur le Tennis de Table Cloysien : hébergeur, éditeur, droits et protection des données.">
+    <meta property="og:image" content="https://tennisdetablecloysien.fr/img/og-image.png">
+    <meta property="og:url" content="https://tennisdetablecloysien.fr/mentions-legales.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tennis de Table Cloysien">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+    <!-- Préchargement du fichier CSS -->
+    <link rel="preload" href="css/style.css" as="style">
+
+    <!-- Préchargement du fichier JavaScript -->
+    <link rel="preload" href="js/script.js" as="script">
+
+    <!-- Lien vers la feuille de style principale -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="/img/favicon.ico" as="image">
+
 </head>
+
+
+
 
 <body>
 
@@ -86,8 +121,31 @@
             </ul>
         </nav>
     </header>
-
+       <!-- Bannière Cookie -->
+<div id="cookie-banner" class="cookie-banner">
+    <div class="popup-content">
+      <p>En cliquant sur « Accepter tous les cookies », vous acceptez le stockage de cookies sur votre appareil pour
+        améliorer la navigation sur le site, analyser son utilisation avec <strong>Google Analytics</strong>.</p>
+      <p>Ces cookies nous permettent de déterminer le nombre de visites, les sources du trafic et la performance de notre
+        site. Cela nous aide à améliorer l'expérience utilisateur. Toutes les informations collectées par ces cookies sont
+        agrégées et anonymisées.</p>
+      <p>Nous utilisons également des cookies provenant de <strong>Facebook</strong> pour activer le partage de contenu avec votre
+        réseau et personnaliser l'expérience sur les plateformes sociales. Ces cookies peuvent suivre votre navigation et
+        établir un profil de vos intérêts. Cela peut influencer le contenu et les publicités que vous voyez sur d'autres
+        sites.</p>
+      <p>Si vous n'acceptez pas ces cookies, nous ne serons pas informés de votre visite et certaines fonctionnalités
+        peuvent ne pas être disponibles, comme le partage sur les réseaux sociaux.</p>
+      <p>Pour plus d'informations sur la gestion des cookies et des données collectées, consultez notre <a href="/mentions-legales.html">Politique de
+        Confidentialité</a>.</p>
+      
+      <div class="button-container">
+        <button id="accept-cookies" class="btn-accept">Accepter</button>
+        <button id="refuse-cookies" class="btn-refuse">Refuser</button>
+      </div>
+    </div>
+  </div>
     <main>
+           
         <section class="mentions-legales">
             <h2 class="h2-mentions">Mentions Légales</h2>
 
@@ -136,10 +194,30 @@
 
                 <section class="section-mentions">
                     <h3 class="h3-mentions">6. Cookies</h3>
-                    <p>Ce site utilise aucun cookie (à l'exception de ceux nécessaires au bon fonctionnement du site,
-                        comme les cookies de session pour garantir une navigation correcte). <br /> Aucune collecte de
-                        données
-                        personnelles n'est effectuée par des cookies ou des outils d’analyse.</p>
+                    <p>Ce site utilise des cookies afin d'améliorer votre expérience utilisateur et d’analyser la
+                        navigation.</p>
+
+                    <h4>Cookies strictement nécessaires</h4>
+                    <p>Ces cookies sont indispensables au bon fonctionnement du site (exemple : cookies de session). Ils
+                        ne peuvent pas être désactivés.</p>
+
+                    <h4>Cookies analytiques</h4>
+                    <p>Nous utilisons <strong>Google Analytics</strong> pour analyser le trafic et améliorer le site.
+                        Ces cookies nous aident à comprendre comment les visiteurs interagissent avec le site.</p>
+                    <p>Vous pouvez consulter la politique de confidentialité de Google ici : <a
+                            href="https://policies.google.com/privacy"
+                            target="_blank">https://policies.google.com/privacy</a></p>
+
+                    <h4>Cookies de réseaux sociaux</h4>
+                    <p>Nous intégrons des liens vers notre page <strong>Facebook</strong>. Ce réseau social peut déposer
+                        des cookies pour suivre votre navigation sur d'autres sites.</p>
+                    <p>Consultez la politique de confidentialité de Facebook ici : <a
+                            href="https://www.facebook.com/policy.php"
+                            target="_blank">https://www.facebook.com/policy.php</a></p>
+
+                    <h4>Gestion des cookies</h4>
+                    <p>Vous pouvez à tout moment modifier vos préférences en matière de cookies via le bouton prévu à
+                        cet effet sur le site.</p>
                 </section>
 
                 <section class="section-mentions">
@@ -186,7 +264,7 @@
         </div>
     </footer>
     <!-- Script JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>

@@ -58,33 +58,62 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", closeMenuOnClickOutside);
 });
 
-// Récupère les éléments de la bannière et des boutons
-const cookieBanner = document.getElementById("cookie-banner");
-const acceptButton = document.getElementById("accept-cookies");
-const refuseButton = document.getElementById("refuse-cookies");
+// // Récupère les éléments de la bannière et des boutons
+// const cookieBanner = document.getElementById("cookie-banner");
+// const acceptButton = document.getElementById("accept-cookies");
+// const refuseButton = document.getElementById("refuse-cookies");
+
+// // Vérifie si l'utilisateur a déjà pris une décision
+// if (localStorage.getItem("cookiesAccepted") === "true") {
+//   // Si accepté, cache la bannière
+//   cookieBanner.classList.add("hidden");
+// } else if (localStorage.getItem("cookiesAccepted") === "false") {
+//   // Si refusé, cache aussi la bannière
+//   cookieBanner.classList.add("hidden");
+// } else {
+//   // Si aucune décision n'a été prise, afficher la bannière
+//   cookieBanner.classList.remove("hidden");
+// }
+
+// // Fonction pour cacher la bannière après acceptation
+// acceptButton.addEventListener("click", () => {
+//   localStorage.setItem("cookiesAccepted", "true");
+//   cookieBanner.classList.add("hidden");
+// });
+
+// // Fonction pour cacher la bannière après refus
+// refuseButton.addEventListener("click", () => {
+//   localStorage.setItem("cookiesAccepted", "false");
+//   cookieBanner.classList.add("hidden");
+// });
+
+/// Récupère les éléments de la bannière et des boutons
+const cookieBanner = document.getElementById('cookie-banner');
+const acceptButton = document.getElementById('accept-cookies');
+const refuseButton = document.getElementById('refuse-cookies');
 
 // Vérifie si l'utilisateur a déjà pris une décision
-if (localStorage.getItem("cookiesAccepted") === "true") {
+if (localStorage.getItem('cookiesAccepted') === 'true') {
   // Si accepté, cache la bannière
-  cookieBanner.classList.add("hidden");
-} else if (localStorage.getItem("cookiesAccepted") === "false") {
+  cookieBanner.classList.add('hidden');
+} else if (localStorage.getItem('cookiesAccepted') === 'false') {
   // Si refusé, cache aussi la bannière
-  cookieBanner.classList.add("hidden");
+  cookieBanner.classList.add('hidden');
 } else {
   // Si aucune décision n'a été prise, afficher la bannière
-  cookieBanner.classList.remove("hidden");
+  cookieBanner.classList.add('show'); // Affiche le pop-up
 }
 
-// Fonction pour cacher la bannière après acceptation
-acceptButton.addEventListener("click", () => {
-  localStorage.setItem("cookiesAccepted", "true");
-  cookieBanner.classList.add("hidden");
+// Lorsque l'utilisateur accepte les cookies
+acceptButton.addEventListener('click', function() {
+  localStorage.setItem('cookiesAccepted', 'true'); // Enregistre l'acceptation des cookies
+  cookieBanner.classList.remove('show'); // Cache le pop-up
 });
 
-// Fonction pour cacher la bannière après refus
-refuseButton.addEventListener("click", () => {
-  localStorage.setItem("cookiesAccepted", "false");
-  cookieBanner.classList.add("hidden");
+// Lorsque l'utilisateur refuse les cookies
+refuseButton.addEventListener('click', function() {
+  localStorage.setItem('cookiesAccepted', 'false'); // Enregistre le refus des cookies
+  cookieBanner.classList.remove('show'); // Cache le pop-up
 });
 
 

@@ -2,11 +2,47 @@
 <html lang="fr">
 
 <head>
+  <!-- Meta Charset et Viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tennis de Table Cloysien</title>
+
+  <!-- Titre de la page spécifique -->
+  <title>Documents - Tennis de Table Cloysien | Inscription et Téléchargements</title>
+
+  <!-- Meta Description : courte, précise et incluant des mots-clés pour SEO -->
+  <meta name="description"
+    content="Téléchargez les documents essentiels pour l'inscription au Tennis de Table Cloysien : demande de licence, attestation majeur, attestation mineur. Téléchargez maintenant !">
+  <!-- Auteur du site ou de la page -->
+  <meta name="author" content="Tennis de Table Cloysien">
+
+  <!-- Robots : directive pour les moteurs de recherche -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (OG) pour le partage sur les réseaux sociaux -->
+  <meta property="og:title" content="Documents - Tennis de Table Cloysien | Inscription et Téléchargements">
+  <meta property="og:description"
+    content="Téléchargez les documents nécessaires pour l'inscription au Tennis de Table Cloysien : demande de licence, attestation majeur, attestation mineur.">
+  <meta property="og:image" content="https://tennisdetablecloysien.fr/img/og-image.png">
+  <meta property="og:url" content="https://tennisdetablecloysien.fr/inscription.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tennis de Table Cloysien">
+
+  <!-- Icone Favicon -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+  <!-- Préchargement du fichier CSS -->
+  <link rel="preload" href="css/style.css" as="style">
+
+  <!-- Préchargement du fichier JavaScript -->
+  <link rel="preload" href="js/script.js" as="script">
+
+  <!-- Lien vers la feuille de style principale -->
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preload" href="/img/favicon.ico" as="image">
+
 </head>
+
 
 <body>
   <!-- HEADER -->
@@ -84,8 +120,31 @@
       </ul>
     </nav>
   </header>
-
+       <!-- Bannière Cookie -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="popup-content">
+    <p>En cliquant sur « Accepter tous les cookies », vous acceptez le stockage de cookies sur votre appareil pour
+      améliorer la navigation sur le site, analyser son utilisation avec <strong>Google Analytics</strong>.</p>
+    <p>Ces cookies nous permettent de déterminer le nombre de visites, les sources du trafic et la performance de notre
+      site. Cela nous aide à améliorer l'expérience utilisateur. Toutes les informations collectées par ces cookies sont
+      agrégées et anonymisées.</p>
+    <p>Nous utilisons également des cookies provenant de <strong>Facebook</strong> pour activer le partage de contenu avec votre
+      réseau et personnaliser l'expérience sur les plateformes sociales. Ces cookies peuvent suivre votre navigation et
+      établir un profil de vos intérêts. Cela peut influencer le contenu et les publicités que vous voyez sur d'autres
+      sites.</p>
+    <p>Si vous n'acceptez pas ces cookies, nous ne serons pas informés de votre visite et certaines fonctionnalités
+      peuvent ne pas être disponibles, comme le partage sur les réseaux sociaux.</p>
+    <p>Pour plus d'informations sur la gestion des cookies et des données collectées, consultez notre <a href="/mentions-legales.html">Politique de
+      Confidentialité</a>.</p>
+    
+    <div class="button-container">
+      <button id="accept-cookies" class="btn-accept">Accepter</button>
+      <button id="refuse-cookies" class="btn-refuse">Refuser</button>
+    </div>
+  </div>
+</div>
   <main>
+ 
     <section class="inscription-section">
       <h2 class="h2-inscription">Documents</h2>
       <p class="intro-text-documents">Vous pouvez télécharger les documents en cliquant sur les liens
@@ -151,7 +210,7 @@
     </div>
   </footer>
   <!-- Script JavaScript -->
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
 
 </body>
 
