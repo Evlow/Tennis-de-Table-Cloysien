@@ -105,7 +105,7 @@
           </ul>
         </li>
 
-        <li><a href="/inscription.html" target="_blank" rel="noopener noreferrer">Documents</a></li>
+        <li><a href="/inscription.html" rel="noopener noreferrer">Documents</a></li>
         <li><a
             href="https://www.google.fr/maps/place/48%C2%B000'12.6%22N+1%C2%B014'08.8%22E/@48.002026,1.237721,1209m/data=!3m1!1e3!4m4!3m3!8m2!3d48.003505!4d1.23579?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D"
             target="_blank" rel="noopener noreferrer">Plan d'accès</a></li>
@@ -138,35 +138,51 @@
   </div>
   <main>
 
-    <section class="inscription-section">
-      <h2 class="h2-inscription">Documents</h2>
-      <p class="intro-text-documents">Vous pouvez télécharger les documents en cliquant sur les liens ci-dessous :</p>
-
+    <section class="documents-section">
+      <h2 class="section-title">Vous souhaitez rejoindre le club de Tennis de Table Cloysien ?
+      </h2>
+      <h3 class="section-subtitle">
+        Téléchargez et remplissez les documents nécessaires :
+      </h3>
       <section class="inscription-flex">
         <article class="inscription">
           <a href="/img/16-2-licence.pdf" target="_blank" class="pdf-link"
             aria-label="Télécharger le bordereau de demande de licence">
-            <img src="./img/pdf_1_.svg" alt="Icône PDF" class="pdf1" />
-            <span>Bordereau demande licence</span>
+            <div class="pdf-container">
+              <img src="./img/pdf_1_.svg" alt="Icône PDF" class="pdf2" />
+              <p>Bordereau demande licence</p>
+            </div>
           </a>
         </article>
-
         <article class="inscription">
           <a href="/img/majeur.pdf" target="_blank" class="pdf-link" aria-label="Télécharger l'attestation pour majeur">
-            <img src="./img/pdf_1_.svg" alt="Icône PDF" class="pdf1" />
-            <span>Attestation majeur</span>
+            <div class="pdf-container">
+              <img src="./img/pdf_1_.svg" alt="Icône PDF" class="pdf2" />
+              <p>Attestation majeur</p>
+            </div>
           </a>
         </article>
-
         <article class="inscription">
           <a href="/img/mineur.pdf" target="_blank" class="pdf-link" aria-label="Télécharger l'attestation pour mineur">
-            <img src="./img/pdf_1_.svg" alt="Icône PDF" class="pdf1" />
-            <span>Attestation mineur</span>
+            <div class="pdf-container">
+              <img src="./img/pdf_1_.svg" alt="Icône PDF" class="pdf2" />
+              <p>Attestation mineur</p>
+            </div>
           </a>
         </article>
       </section>
 
+      <h3 class="section-subtitle">
+        Venez ensuite les déposer en main propre au club ou envoyez-les par e-mail.
+      </h3>
+
+      <div class="btn-container">
+        <button class="btn-horaires" onclick="window.open('/planning.html', '_blank')">Horaires d'ouverture</button>
+        <button class="btn-horaires" onclick="window.location.href='mailto:tt.cloysien@gmail.com'">Envoyer par
+          e-mail</button>
+      </div>
     </section>
+
 
   </main>
 
