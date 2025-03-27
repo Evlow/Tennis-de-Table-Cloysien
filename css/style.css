@@ -139,14 +139,13 @@ a {
 }
 
 header {
-  background-color: #f4f7f9;
   /* Dégradé radial */
   display: flex;
   align-items: center;
 }
 
 .logo {
-  width: 100px;
+  width: 80px;
   padding: 5px 0 5px 5px;
 }
 
@@ -263,7 +262,7 @@ ul {
 }
 
 .bloc-licence {
-  width: 90%;
+  width:80%;
   margin: 50px auto;
 
 }
@@ -436,7 +435,7 @@ border-bottom: 2px solid #ED5D0E;}
 }
 .container-training {
   width: 80%;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .card-training {
@@ -489,8 +488,7 @@ border-bottom: 2px solid #ED5D0E;}
   background-color: #ffe6e6;
   padding: 10px;
   border-radius: 8px;
-  width: 100%;
-  width: 480px;  
+  width:400px;
   margin: 20px  auto;  
 }
 
@@ -501,11 +499,14 @@ border-bottom: 2px solid #ED5D0E;}
 /*AIDES JEUNES*/
 
 .section-aides {
-  padding: 20px;
+  width: 80%;
+  margin: 50px auto;
+
 }
 
 .h2-aides {
-  margin-bottom: 10px;
+  border-bottom: 2px solid #ff7b1f;
+
 }
 
 .h3-aides {
@@ -514,12 +515,10 @@ border-bottom: 2px solid #ED5D0E;}
 
 .aides-container {
   display: flex;
-  align-items: stretch;
   justify-content: center;
 }
 
 .article-aides {
-  flex: 1;
   padding: 20px;
   text-align: center;
 }
@@ -740,12 +739,12 @@ section .section-mentions {
 footer {
   background: radial-gradient(circle, #ffcc80, #ff8c00);
   text-align: center;
-}
+margin-top: 50px;}
 
 .content-footer-flex {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 20px auto;
   justify-content: space-around;
 }
 
@@ -1140,15 +1139,13 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
-
+.warning{
+  width: 300px;}
   .container-training {
     flex-direction: column;
     align-items: center;
   }
-  
-  .card-training {
-    width: 90%;
-  }
+ 
 
   .bloc-licence {
     margin: 20px auto;
@@ -1290,13 +1287,15 @@ nav a {
 
   /* Logo */
   .logo {
-    width: 80px;
+    width: 60px;
     padding: 5px 0 5px 5px;
   }
 
   /* Titre */
   .titre-logo h1 {
     font-size: 1.4rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+
     margin: 0;
     flex: 1;
     text-align: center;
@@ -1335,6 +1334,7 @@ nav a {
   .h2-competitions,
   .h2-cotisations,
   .h2-partenaires,
+  .h2-entrainements,
   .h2-inscription,
   .h2-phase {
     font-size: 1.8rem;
@@ -1346,7 +1346,7 @@ nav a {
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 5px;
   }
 
   /* Barres du menu burger */
@@ -1384,7 +1384,7 @@ nav a {
     /* Masqué par défaut */
     flex-direction: column;
     /* Aligne les éléments en colonne */
-    background: radial-gradient(circle, #ffcc80, #ff8c00);
+    background-color: #f4f7f9;
     padding-top: 20px;
     /* Espace supérieur pour le menu */
     overflow-y: auto;
@@ -1484,6 +1484,8 @@ nav a {
 
   /* Augmentation de la taille du titre */
   .titre-logo h1 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+
     font-size: 1.5rem;
   }
 
