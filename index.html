@@ -35,6 +35,8 @@
 
   <!-- Lien vers la feuille de style principale -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
   <link rel="preload" href="/img/favicon.ico" as="image">
 
@@ -105,7 +107,7 @@
           </ul>
         </li>
 
-        <li><a href="/inscription.html"  rel="noopener noreferrer">Documents</a></li>
+        <li><a href="/inscription.html" rel="noopener noreferrer">Documents</a></li>
         <li><a
             href="https://www.google.fr/maps/place/48%C2%B000'12.6%22N+1%C2%B014'08.8%22E/@48.002026,1.237721,1209m/data=!3m1!1e3!4m4!3m3!8m2!3d48.003505!4d1.23579?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D"
             target="_blank" rel="noopener noreferrer">Plan d'accès</a></li>
@@ -153,44 +155,94 @@
     <section id="tarifs" class="bloc-licence">
       <h2 class="h2-cotisations">Tarif des licences</h2>
       <div class="card-container-club">
-        <!-- Article Carte Licence Sénior Loisirs -->
-        <article class="card-club">
-          <h3>Licence sénior loisir</h3>
-          <p><span><strong>Initiation avec 3 séances gratuites !</strong></span></p>
-
-          <p>Le montant de la cotisation est de <strong>60€</strong>.</p>
-          <p>Si inscription d'un <strong>deuxième membre</strong> de la famille, le montant de cette cotisation est
-            de
-            <strong>50€</strong>.
-          </p>
-        </article>
-
-        <!-- Article Carte Licence Sénior Compétition -->
-        <article class="card-club">
-          <h3>Licence sénior compétition</h3>
-          <p><span><strong>Initiation avec 3 séances gratuites !</strong></span></p>
-
-          <p>Le montant de la cotisation est de <strong>90€</strong>.</p>
-          <p>Si inscription d'un <strong>deuxième membre</strong> de la famille, le montant de cette cotisation est
-            de
-            <strong>80€</strong>.
-          </p>
-          <p>Contact : <strong>Lorem IPSUM</strong> <br> au <br> <a href="tel:+33684708775"><strong>06 00 00 00
-                00</strong></a> <br>ou <br>par <a href="mailto:alexis.rougeault@orange.fr">mail</a></p>
-        </article>
-
         <!-- Article Carte Licence Jeune Loisirs -->
         <article class="card-club">
-          <h3>Licence jeune loisir</h3>
-          <p><span><strong>Initiation avec 3 séances gratuites !</strong></span></p>
-          <p>Le montant de la cotisation est de <strong>60€</strong>.</p>
-          <p>Si inscription d'un <strong>deuxième membre</strong> de la famille, le montant de cette cotisation est
-            de
-            <strong>50€</strong>.
-          </p>
-          <p>Contact : <strong>Lorem IPSUM</strong> <br> au <br> <a href="tel:+33606586361"><strong>06 00 00 00
-                00</strong></a></p>
+          <div class="title">
+            <h3 class="h3-licence">Jeune loisir</h3>
+          </div>
+          <div class="card-promo">
+            <p> 🏓 Découverte : 3 séances d'initiation gratuites !</p>
+          </div>
+          <div class="pricing">
+            <p>Cotisation annuelle : <strong>60€</strong></p>
+            <p>Deuxième membre de la famille : <strong>50€</strong></p>
+          </div>
+          <div class="contact-info">
+            <div>
+              <p><strong>Christophe ROUGEAULT</strong> <br> Contact principal
+              </p>
+            </div>
+          </div>
+
+          <div class="btn-container-licences">
+            <button class="btn-licences" onclick="window.location.href='tel:+33603586361'"
+              aria-label="Appeler Christophe ROUGEAULT"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
+              06 03 58 63 61</button>
+            <button class="btn-licences" onclick="window.location.href='mailto:christopherougeault@gmail.com'"
+              aria-label="Envoyer un e-mail à Christophe ROUGEAULT"> <img class="svg-licences" src="img/mail1.svg"
+                alt="icone email">
+                christopherougeault@gmail.com</button>
+          </div>
         </article>
+        <article class="card-club">
+          <div class="title">
+            <h3 class="h3-licence">Sénior loisir</h3>
+          </div>
+          <div class="card-promo">
+            <p> 🏓 Découverte : 3 séances d'initiation gratuites !</p>
+          </div>
+          <div class="pricing">
+            <p>Cotisation annuelle : <strong>60€</strong></p>
+            <p>Deuxième membre de la famille : <strong>50€</strong></p>
+          </div>
+          <div class="contact-info">
+            <div>
+              <p><strong>Alexis ROUGEAULT</strong> <br> Contact principal
+              </p>
+            </div>
+          </div>
+
+          <div class="btn-container-licences">
+            <button class="btn-licences" onclick="window.location.href='tel:+33684708775'"
+              aria-label="Appeler Alexis ROUGEAULT"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
+              06 84 70 87 75</button>
+            <button class="btn-licences" onclick="window.location.href='mailto:alexis.rougeault@orange.fr'"
+              aria-label="Envoyer un e-mail à Alexis ROUGEAULT"> <img class="svg-licences" src="img/mail1.svg"
+                alt="icone email">
+              alexis.rougeault@orange.fr</button>
+          </div>
+        </article>
+        <!-- Article Carte Licence Sénior Loisirs -->
+        <article class="card-club">
+          <div class="title">
+            <h3 class="h3-licence">Sénior compétitions</h3>
+          </div>
+          <div class="card-promo">
+            <p> 🏓 Découverte : 3 séances d'initiation gratuites !</p>
+          </div>
+          <div class="pricing">
+            <p>Cotisation annuelle : <strong>90€</strong></p>
+            <p>Deuxième membre de la famille : <strong>80€</strong></p>
+          </div>
+          <div class="contact-info">
+            <div>
+              <p><strong>Alexis ROUGEAULT</strong> <br> Contact principal
+              </p>
+            </div>
+          </div>
+
+          <div class="btn-container-licences">
+            <button class="btn-licences" onclick="window.location.href='tel:+33684708775'"
+              aria-label="Appeler Alexis ROUGEAULT"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
+              06 84 70 87 75</button>
+            <button class="btn-licences" onclick="window.location.href='mailto:alexis.rougeault@orange.fr'"
+              aria-label="Envoyer un e-mail à Alexis ROUGEAULT"> <img class="svg-licences" src="img/mail1.svg"
+                alt="icone email">
+              alexis.rougeault@orange.fr</button>
+          </div>
+        </article>
+
+
       </div>
       <p><a href="/inscription.html">Inscrivez-vous dès maintenant</a> pour rejoindre notre club !</p>
 
@@ -250,59 +302,63 @@
       </div>
       <p><i>Les entraînements n'auront pas lieu pendant les vacances scolaires.</i></p>
     </section>
-   <!-- PARTENAIRES Section -->
-<section id="partenaires" class="bloc-sponsors">
-  <h2 class="h2-partenaires">Nos partenaires</h2>
-  <div class="sponsor-cards">
-    <article class="sponsor-card">
-      <img class="img-sponsor" src="/img/solfa.webp" alt="Logo de Solfa Carburants, fournisseur de carburants" />
-      <h3 class="h3-partenaire">Solfa Carburants</h3>
-      <a href="https://www.solfa-carburants.fr/" target="_blank" class="bouton">Voir le site</a>
-    </article>
+    <!-- PARTENAIRES Section -->
+    <section id="partenaires" class="bloc-sponsors">
+      <h2 class="h2-partenaires">Nos partenaires</h2>
+      <div class="sponsor-cards">
+        <article class="sponsor-card">
+          <img class="img-sponsor" src="/img/solfa.webp" alt="Logo de Solfa Carburants, fournisseur de carburants" />
+          <h3 class="h3-partenaire">Solfa Carburants</h3>
+          <a href="https://www.solfa-carburants.fr/" target="_blank" class="bouton">Voir le site</a>
+        </article>
 
-    <article class="sponsor-card">
-      <img class="img-sponsor" src="/img/cassonnet.webp" alt="Logo du Garage Cassonnet, réparations automobiles" />
-      <h3 class="h3-partenaire">Garage Cassonnet</h3>
-      <a href="https://www.garage-cassonnet-cloyes.fr/" target="_blank" class="bouton">Voir le site</a>
-    </article>
+        <article class="sponsor-card">
+          <img class="img-sponsor" src="/img/cassonnet.webp" alt="Logo du Garage Cassonnet, réparations automobiles" />
+          <h3 class="h3-partenaire">Garage Cassonnet</h3>
+          <a href="https://www.garage-cassonnet-cloyes.fr/" target="_blank" class="bouton">Voir le site</a>
+        </article>
 
-    <article class="sponsor-card">
-      <img class="img-sponsor" src="/img/claveau.webp" alt="Logo de Claveau Styles, décoration intérieure" />
-      <h3 class="h3-partenaire">Claveau Styles</h3>
-      <a href="https://www.claveaustyles28.fr/" target="_blank" class="bouton">Voir le site</a>
-    </article>
+        <article class="sponsor-card">
+          <img class="img-sponsor" src="/img/claveau.webp" alt="Logo de Claveau Styles, décoration intérieure" />
+          <h3 class="h3-partenaire">Claveau Styles</h3>
+          <a href="https://www.claveaustyles28.fr/" target="_blank" class="bouton">Voir le site</a>
+        </article>
 
-    <article class="sponsor-card">
-      <img class="img-sponsor" src="/img/charron.webp" alt="Logo d'Électricité Charron Emery, entreprise d'électricité" />
-      <h3 class="h3-partenaire">Électricité Charron Emery</h3>
-      <a href="https://www.sarlece.fr/" target="_blank" class="bouton">Voir le site</a>
-    </article>
+        <article class="sponsor-card">
+          <img class="img-sponsor" src="/img/charron.webp"
+            alt="Logo d'Électricité Charron Emery, entreprise d'électricité" />
+          <h3 class="h3-partenaire">Électricité Charron Emery</h3>
+          <a href="https://www.sarlece.fr/" target="_blank" class="bouton">Voir le site</a>
+        </article>
 
-    <article class="sponsor-card">
-      <img class="img-sponsor" src="/img/auto.webp" alt="Logo de Auto Bilan Cloysien, centre de contrôle technique" />
-      <h3 class="h3-partenaire">Auto Bilan Cloysien</h3>
-      <a href="https://www.moncontroletechnique.fr/centre/auto-bilan-cloysien" target="_blank" class="bouton">Voir le site</a>
-    </article>
+        <article class="sponsor-card">
+          <img class="img-sponsor" src="/img/auto.webp"
+            alt="Logo de Auto Bilan Cloysien, centre de contrôle technique" />
+          <h3 class="h3-partenaire">Auto Bilan Cloysien</h3>
+          <a href="https://www.moncontroletechnique.fr/centre/auto-bilan-cloysien" target="_blank" class="bouton">Voir
+            le site</a>
+        </article>
 
-    <article class="sponsor-card">
-      <img class="img-sponsor" src="/img/platerie.webp" alt="Logo de EURL Thierry Christophe Platerie, entreprise de plâtrerie" />
-      <h3 class="h3-partenaire">EURL Thierry Christophe Platerie</h3>
-      <a href="https://eurlthierrychristophe-18.webselfsite.net/" target="_blank" class="bouton">Voir le site</a>
-    </article>
+        <article class="sponsor-card">
+          <img class="img-sponsor" src="/img/platerie.webp"
+            alt="Logo de EURL Thierry Christophe Platerie, entreprise de plâtrerie" />
+          <h3 class="h3-partenaire">EURL Thierry Christophe Platerie</h3>
+          <a href="https://eurlthierrychristophe-18.webselfsite.net/" target="_blank" class="bouton">Voir le site</a>
+        </article>
 
-    <article class="sponsor-card">
-      <img class="img-sponsor" src="/img/tom.webp" alt="Logo de Tom Off Road, vente d'accessoires tout terrain" />
-      <h3 class="h3-partenaire">Tom Off Road</h3>
-      <a href="http://shop.tomoffroad.com/" target="_blank" class="bouton">Voir le site</a>
-    </article>
+        <article class="sponsor-card">
+          <img class="img-sponsor" src="/img/tom.webp" alt="Logo de Tom Off Road, vente d'accessoires tout terrain" />
+          <h3 class="h3-partenaire">Tom Off Road</h3>
+          <a href="http://shop.tomoffroad.com/" target="_blank" class="bouton">Voir le site</a>
+        </article>
 
-    <article class="sponsor-card">
-      <img class="img-sponsor" src="/img/carrefour.webp" alt="Logo de Carrefour Contact Morée, supermarché local" />
-      <h3 class="h3-partenaire">Carrefour Contact Morée</h3>
-      <a href="https://www.carrefour.fr/magasin/contact-moree/" target="_blank" class="bouton">Voir le site</a>
-    </article>
-  </div>
-</section>
+        <article class="sponsor-card">
+          <img class="img-sponsor" src="/img/carrefour.webp" alt="Logo de Carrefour Contact Morée, supermarché local" />
+          <h3 class="h3-partenaire">Carrefour Contact Morée</h3>
+          <a href="https://www.carrefour.fr/magasin/contact-moree/" target="_blank" class="bouton">Voir le site</a>
+        </article>
+      </div>
+    </section>
 
   </main>
 
@@ -318,7 +374,7 @@
           <p>28220 Cloyes-les-Trois-Rivières</p>
         </address>
       </section>
-  
+
       <!-- Contact -->
       <section class="footer-contact">
         <h3 class="h2-footer">Nous contacter</h3>
@@ -332,7 +388,7 @@
         </p>
       </section>
     </div>
-  
+
     <!-- Copyright -->
     <div class="footer-copyright">
       <p>
@@ -341,7 +397,7 @@
       </p>
     </div>
   </footer>
-  
+
 
   <!-- Script JavaScript -->
   <script src="js/script.js" defer></script>

@@ -1,27 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
-/* fbf8f4 */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');/* fbf8f4 */
 * {
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  margin: 0;
 }
-/* h1{  position: absolute;
-  font-size: 5rem; 
-  top: 12%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-} */
+
 h2 {
   font-size: 2rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
+
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 body,
@@ -37,7 +32,7 @@ p,
 li,
 ul,
 a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   list-style-type: none;
 }
 
@@ -254,51 +249,129 @@ ul {
   padding-left: 20px;
 }
 
-/* cotisations */
+/*Licences*/
+
 .h2-cotisations {
-  padding-left: 20px;
+
+  margin: 40px 0 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ff9e40;}
+.bloc-licence {
+  width: 90%;
+  margin: 50px auto;
+
+}
+.card-club {
+  margin: 30px 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 10px;
+  width: 400px;
+  background-color: rgba(255, 235, 210, 0.5);
+}
+
+.title {
+  background-color: #ED5D0E;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.h3-license {
+  margin: 0;
+}
+
+.btn-licences {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid #ED5D0E;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 45px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.svg-licences {
+  padding-right: 5px;
+  width: 25px;
+}
+
+.btn-licences:hover {
+  background-color: #fce5d7;
+}
+
+.pricing p:nth-child(2) {
+  color: rgb(66, 62, 62);
+}
+
+.btn-container-licences {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-container-club {
   display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  gap: 70px;
+  justify-content: center;
 }
 
-.card-club {
+.pricing {
+  background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  text-align: center;
-  transition: transform 0.2s ease;
-  background-color: rgba(255, 235, 210, 0.5);
-  padding: 0 20px 0 20px;
+  padding: 10px;
+  margin: 15px;
 }
 
-.card-club:hover {
-  transform: scale(1.05);
+.pricing p {
+  margin: 5px 0;
 }
 
-.card-club h3,
-.card-phases h3 {
-  color: #ff9e40;
-  margin-bottom: 30px;
-}
-
-.card-club p {
-  color: #333;
-  line-height: 1.4;
-}
-
-.card-club a {
-  color: #ff7b1f;
-  text-decoration: none;
+.label {
   font-weight: bold;
 }
 
-.card-club a:hover {
-  color: #ff9e40;
+.pricing strong {
+  color: #ea580c;
+}
+
+.contact-info {
+  background-color: #fff7ed;
+  border: 1px solid #ffedd5;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 15px;
+}
+
+.contact-info strong {
+  font-weight: bolder;
+}
+
+.card-promo {
+  background-color: #ffedd5;
+  text-align: center;
+  font-weight: bold;
+  border-left: 4px solid #f97316;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px 5px;
+}
+
+.card-promo p {
+  margin: 10px 0;
 }
 
 /* Bloc Entrainement */
@@ -493,6 +566,7 @@ section .section-mentions {
   margin: 0 auto;
   padding: 0 20px;
 }
+
 .inscription-flex {
   display: flex;
   justify-content: space-between;
@@ -540,7 +614,7 @@ section .section-mentions {
   width: 100%;
   margin: 40px 0 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #ff9e40;;
+  border-bottom: 2px solid #ff9e40;
 }
 
 .section-subtitle {
@@ -560,32 +634,20 @@ section .section-mentions {
 
 }
 
-.btn-horaires {
-  display: inline-block;
-  padding: 12px 15px;
-  text-decoration: none;
-  border-radius: 5px;
-  border: 2px solid #ff9e40;;
-  text-align: center;
-  background-color: transparent;
-  font-size: 1rem;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 
 .btn-horaires:hover {
-  background-color: #ff9e40;;
+  background-color: #ff9e40;
+  ;
   color: white;
 }
 
 
 
-.img-index
-{
+.img-index {
   width: 100vw;
   object-fit: cover;
-  height: 500px; /* Ajuste la hauteur selon ton besoin */
+  height: 500px;
+  /* Ajuste la hauteur selon ton besoin */
 }
 
 
@@ -850,11 +912,10 @@ nav li {
 }
 
 nav a {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 
   text-decoration: none;
   color: black;
-  font-weight: bold;
 }
 
 .list-inner>li:hover .list-inner {
@@ -1053,6 +1114,7 @@ nav a {
     width: 30px;
     height: 30px;
   }
+
   .documents-section {
     flex-direction: column;
     width: 90%;
@@ -1062,10 +1124,13 @@ nav a {
 
   .inscription-flex {
     margin:
-0 auto;
+      0 auto;
   }
 
-  .btn-container{  margin: 0 auto;}
+  .btn-container {
+    margin: 0 auto;
+  }
+
   .popup-content {
     width: 80%;
     padding: 15px;
