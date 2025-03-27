@@ -158,10 +158,10 @@
         <!-- Article Carte Licence Jeune Loisirs -->
         <article class="card-club">
           <div class="title">
-            <h3 class="h3-licence">Jeune loisir</h3>
+            <h3 class="h3-licence">Jeune Loisir</h3>
           </div>
           <div class="card-promo">
-            <p> 🏓 Découverte : 3 séances d'initiation gratuites !</p>
+            <p> <span>🏓 Offre découverte :</span> <br> 3 séances d'initiation gratuites !</p>
           </div>
           <div class="pricing">
             <p>Cotisation annuelle : <strong>60€</strong></p>
@@ -181,15 +181,15 @@
             <button class="btn-licences" onclick="window.location.href='mailto:christopherougeault@gmail.com'"
               aria-label="Envoyer un e-mail à Christophe ROUGEAULT"> <img class="svg-licences" src="img/mail1.svg"
                 alt="icone email">
-                christopherougeault@gmail.com</button>
+              christopherougeault@gmail.com</button>
           </div>
         </article>
         <article class="card-club">
           <div class="title">
-            <h3 class="h3-licence">Sénior loisir</h3>
+            <h3 class="h3-licence">Sénior Loisir</h3>
           </div>
           <div class="card-promo">
-            <p> 🏓 Découverte : 3 séances d'initiation gratuites !</p>
+            <p> <span>🏓 Offre découverte :</span> <br> 3 séances d'initiation gratuites !</p>
           </div>
           <div class="pricing">
             <p>Cotisation annuelle : <strong>60€</strong></p>
@@ -215,10 +215,10 @@
         <!-- Article Carte Licence Sénior Loisirs -->
         <article class="card-club">
           <div class="title">
-            <h3 class="h3-licence">Sénior compétitions</h3>
+            <h3 class="h3-licence">Sénior Compétition</h3>
           </div>
           <div class="card-promo">
-            <p> 🏓 Découverte : 3 séances d'initiation gratuites !</p>
+            <p> <span>🏓 Offre découverte :</span> <br> 3 séances d'initiation gratuites !</p>
           </div>
           <div class="pricing">
             <p>Cotisation annuelle : <strong>90€</strong></p>
@@ -242,9 +242,11 @@
           </div>
         </article>
 
-
       </div>
-      <p><a href="/inscription.html">Inscrivez-vous dès maintenant</a> pour rejoindre notre club !</p>
+      <div class="cta-container">
+        <p>Inscrivez-vous dès maintenant pour rejoindre notre club !</p>
+        <a href="/inscription.html" class="btn-cta">Inscription </a>
+      </div>
 
     </section>
 
@@ -281,26 +283,59 @@
 
 
     <!-- SECTION ENTRAINEMENTS -->
-    <section id="entrainements" class="bloc-entrainement">
-      <h2 class="h2-entrainements">Horaires des Entraînements | Jeunes & Séniors</h2>
-      <p>Découvrez nos horaires d'entraînement pour tous les niveaux et âges. <br>Que vous soyez débutant ou
+   
+    <section class="container-training">
+      <h2 class="h2-entrainements">Horaires des entraînements | Jeunes & Séniors</h2>
+      <p class="p-training">Découvrez nos horaires d'entraînement pour tous les niveaux et âges. <br>Que vous soyez débutant ou
         compétiteur,
         venez vous entraîner avec nous !</p>
-      <div class="entrainement-details">
-        <p><strong>Jeunes :</strong></p>
-        <ul>
-          <li>Les mardis de 18h00 à 19h30</li>
-          <li>Les jeudis de 18h00 à 19h30</li>
-        </ul>
-        <p><strong>Séniors:</strong></p>
-        <ul>
-          <li>Les mardis de 19h30 à 23h00</li>
-          <li>Les jeudis de 19h30 à 22h00</li>
-          <li>Les vendredis de 20h00 à 00h00</li>
-          <li>Les dimanches de 8h30 à 14h30</li>
-        </ul>
+        <div class="card-container-club">
+      <article class="card-training">
+        <h3 class="card-header">
+          <img class="svg-training" src="img/user.svg" alt="icone utilisateur">
+
+          Jeunes
+        </h3>
+        <div class="card-content-training">
+          <div class="schedule-item">
+            <span class="day">Mardis</span>
+            <span class="time">18h00 - 19h30</span>
+          </div>
+          <div class="schedule-item">
+            <span class="day">Jeudis</span>
+            <span class="time">18h00 - 19h30</span>
+          </div>
+        </div>
+      </article>
+      <article class="card-training">
+        <h3 class="card-header">
+          <img class="svg-training" src="img/user.svg" alt="icone utilisateur">
+
+          Séniors
+        </h3>
+        <div class="card-content-training">
+          <div class="schedule-item">
+            <span class="day">Mardis</span>
+            <span class="time">19h30 - 23h00</span>
+          </div>
+          <div class="schedule-item">
+            <span class="day">Jeudis</span>
+            <span class="time">19h30 - 22h00</span>
+          </div>
+          <div class="schedule-item">
+            <span class="day">Vendredis</span>
+            <span class="time">20h00 - 00h00</span>
+          </div>
+          <div class="schedule-item">
+            <span class="day">Dimanches</span>
+            <span class="time">8h30 - 14h30</span>
+          </div>
+        </div>
+      </article>
+    </div>
+      <div class="warning">
+        <p>Pas d'entraînements pendant les vacances scolaires</p>
       </div>
-      <p><i>Les entraînements n'auront pas lieu pendant les vacances scolaires.</i></p>
     </section>
     <!-- PARTENAIRES Section -->
     <section id="partenaires" class="bloc-sponsors">

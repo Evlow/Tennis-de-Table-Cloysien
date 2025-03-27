@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');/* fbf8f4 */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* fbf8f4 */
 * {
   font-family: "Nunito", sans-serif;
   font-weight: 200;
@@ -8,19 +10,23 @@
 h2 {
   font-size: 2rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+
 }
 
 h3 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+
 
 }
 
 h4 {
   font-size: 1.2rem;
+
 }
 
 body,
 html {
+  background-color: #f4f7f9;
   margin: 0;
   min-height: 100vh;
   display: flex;
@@ -133,7 +139,7 @@ a {
 }
 
 header {
-  background: radial-gradient(circle, #ffcc80, #ff8c00);
+  background-color: #f4f7f9;
   /* Dégradé radial */
   display: flex;
   align-items: center;
@@ -252,27 +258,26 @@ ul {
 /*Licences*/
 
 .h2-cotisations {
-
-  margin: 40px 0 20px;
   padding-bottom: 5px;
-  border-bottom: 2px solid #ff9e40;}
+  border-bottom: 2px solid #ED5D0E;
+}
+
 .bloc-licence {
   width: 90%;
   margin: 50px auto;
 
 }
+
 .card-club {
-  margin: 30px 0;
-  background: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  border-radius: 10px;
   width: 400px;
   background-color: rgba(255, 235, 210, 0.5);
 }
 
 .title {
+  color: #f4f7f9;
   background-color: #ED5D0E;
   display: flex;
   justify-content: center;
@@ -285,7 +290,7 @@ ul {
 }
 
 .btn-licences {
-  width: 250px;
+  width: 280px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -298,6 +303,7 @@ ul {
   height: 45px;
   justify-content: center;
   margin: 0 auto;
+  font-size: 1rem;
 }
 
 .svg-licences {
@@ -306,7 +312,7 @@ ul {
 }
 
 .btn-licences:hover {
-  background-color: #fce5d7;
+  background-color: #f4f7f9;
 }
 
 .pricing p:nth-child(2) {
@@ -327,10 +333,11 @@ ul {
   display: flex;
   gap: 70px;
   justify-content: center;
+  margin: 50px 0;
 }
 
 .pricing {
-  background-color: white;
+  background-color: #f4f7f9;
   border-radius: 8px;
   padding: 10px;
   margin: 15px;
@@ -367,35 +374,129 @@ ul {
   border-left: 4px solid #f97316;
   border-radius: 10px;
   margin: 20px;
-  padding: 20px 5px;
+  padding: 5px;
 }
+
+.card-promo span {
+  font-weight: bold;
+}
+
+.card-promo p {
+  font-size: 1.1em;
+}
+
+
 
 .card-promo p {
   margin: 10px 0;
 }
 
-/* Bloc Entrainement */
-.bloc-entrainement {
-  padding: 10px 0 10px 0;
+.cta-container {
   text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px auto;
+  width: 400px;
+  border: 2px solid #ED5D0E;
+
+}
+
+.cta-container p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.btn-cta {
+  color: #f97316;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-cta:hover {
+  background-color: #ffedd5;
+  transform: scale(1.05);
+}
+
+/*ENTRAINEMENTS*/
+.h2-entrainements {
+padding-bottom: 5px;
+border-bottom: 2px solid #ED5D0E;}
+
+.p-training{
+  margin: 20px 0;
+}
+
+.svg-training{
+  height: 40px;
+  padding-right: 5px;
+}
+.container-training {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card-training {
   background-color: rgba(255, 235, 210, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px; /* Largeur fixe pour garder un bon alignement */
+}
+
+.card-header {
+  align-items: center;
+  color: #f4f7f9;
+  background-color: #ED5D0E;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.card-content-training {
+  padding: 20px;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #ffe0b3;
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
 }
 
 
-.entrainement-details strong {
-  color: #ff7b1f;
+
+.warning {
+  text-align: center;  
+  font-weight: bold;
+  color: #ff4d4d;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  width: 480px;  
+  margin: 20px  auto;  
 }
 
-.entrainement-details ul {
-  list-style-type: none;
-  margin-left: 20px;
-  padding-left: 0;
-}
 
-.entrainement-details ul li {
-  line-height: 1.6;
-  margin-bottom: 5px;
-}
+
+
 
 /*AIDES JEUNES*/
 
@@ -414,7 +515,6 @@ ul {
 .aides-container {
   display: flex;
   align-items: stretch;
-  /* Assure que les articles ont la même hauteur */
   justify-content: center;
 }
 
@@ -445,40 +545,27 @@ ul {
 .sponsor-cards {
   display: flex;
   flex-wrap: wrap;
-  /* Permet aux cartes de passer à la ligne */
   justify-content: center;
-  /* Espace égal entre les cartes */
   width: 80%;
-  /* Largeur du conteneur */
   margin: 0 auto;
-  /* Centre le conteneur */
 }
 
 .sponsor-card {
   width: 240px;
-  /* Largeur réduite des cartes */
   height: 200px;
-  /* Hauteur réduite des cartes */
   background-color: white;
   border-radius: 8px;
   margin: 10px;
-  /* Marges autour des cartes */
   text-align: center;
-  /* Centre le texte */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* Aligne les éléments en colonne */
   justify-content: space-between;
-  /* Espace entre les éléments */
   align-items: center;
-  /* Centre horizontalement */
   transition: transform 0.2s ease;
   width: 90%;
-  /* Ajustez pour éviter le débordement */
   max-width: 240px;
-  /* Limiter la taille maximale */
 }
 
 .sponsor-card:hover {
@@ -489,29 +576,23 @@ ul {
   overflow: hidden;
   object-fit: cover;
   padding-top: 10px;
-  /* Espacement en haut de l'image */
 }
 
 .sponsor-card h3 {
   font-size: 1.2rem;
   margin: 10px 0;
-  /* Espacement autour du titre */
   text-align: center;
 }
 
 .sponsor-card p {
-  /* Taille de la police pour le texte */
   color: #333;
   line-height: 1.4;
   text-align: center;
-  /* Centre le texte */
   margin: 0;
-  /* Réinitialiser les marges */
 }
 
 .sponsor-card a {
   text-decoration: none;
-  /* Pas de soulignement */
   margin-top: 10px;
 }
 
@@ -522,16 +603,11 @@ ul {
   text-decoration: none;
   color: black;
   width: 80px;
-  /* Largeur du bouton */
   height: 35px;
-  /* Hauteur du bouton */
   display: flex;
   align-items: center;
-  /* Centre verticalement */
   justify-content: center;
-  /* Centre horizontalement */
   margin: 15px auto;
-  /* Centre le bouton horizontalement */
 }
 
 
@@ -543,7 +619,6 @@ ul {
 .h2-mentions {
   text-align: center;
 }
-
 
 .h3-mentions {
   text-align: left;
@@ -598,6 +673,7 @@ section .section-mentions {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 300px;
+  height: 65px;
 }
 
 .pdf-container img {
@@ -606,7 +682,7 @@ section .section-mentions {
 }
 
 .pdf-container p {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .section-title {
@@ -614,14 +690,12 @@ section .section-mentions {
   width: 100%;
   margin: 40px 0 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #ff9e40;
+  border-bottom: 2px solid #ED5D0E;
 }
 
 .section-subtitle {
   text-align: left;
   width: 100%;
-  font-size: 1.3rem;
-  font-weight: 300;
   margin: 20px 0;
 }
 
@@ -634,10 +708,23 @@ section .section-mentions {
 
 }
 
+.btn-horaires {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid #ED5D0E;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 45px;
+  justify-content: center;
+}
 
 .btn-horaires:hover {
   background-color: #ff9e40;
-  ;
   color: white;
 }
 
@@ -646,8 +733,6 @@ section .section-mentions {
 .img-index {
   width: 100vw;
   object-fit: cover;
-  height: 500px;
-  /* Ajuste la hauteur selon ton besoin */
 }
 
 
@@ -682,7 +767,6 @@ footer {
 }
 
 /*BUREAU*/
-
 .img-bureau {
   padding: 50px;
   width: 60%;
@@ -704,7 +788,6 @@ footer {
 /* Hamburger Menu Icon */
 .menu-icon {
   display: none;
-  /* Hidden by default */
   flex-direction: column;
   cursor: pointer;
   margin: 10px;
@@ -714,7 +797,6 @@ footer {
 
 .section-button-competition {
   width: 100%;
-  /* Optional: make the container full width if desired */
 }
 
 .button-container-competition {
@@ -722,27 +804,17 @@ footer {
   justify-content: center;
   margin-top: 20px;
   gap: 20px;
-  /* Space between buttons */
 }
 
-.button-container a {
-  font-size: 1.2em;
-}
 
 .button-competition {
   background-color: rgba(255, 235, 210, 0.5);
   color: #000;
-  /* Text color */
   padding: 10px 20px;
-  /* Padding for the buttons */
   text-decoration: none;
-  /* Removes underline */
   border-radius: 5px;
-  /* Rounded corners */
   font-weight: bold;
-  /* Makes text bold */
   transition: background-color 0.3s ease;
-  /* Smooth transition */
 }
 
 .button-competition:hover {
@@ -754,68 +826,39 @@ footer {
 .section-button {
   position: relative;
   display: inline-block;
-  /* Ensures image behaves like a block element */
   width: 100%;
-  /* Optional: make the container full width if desired */
   text-align: center;
-  /* Center-aligns content */
 }
 
-.img-index {
-  width: 100%;
-  /* Ensures image fills the width of the container */
-  display: block;
-  /* Removes any gap under the image */
-}
 
 .button-container {
   position: absolute;
-  top: 20px;
-  /* Positions buttons at the top of the image */
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  /* Centers the buttons horizontally */
   display: flex;
   gap: 20px;
-  /* Space between buttons */
   z-index: 10;
-  /* Places buttons above the image */
-}
-
-.button-container a {
-  font-size: 1.2em;
 }
 
 .button {
   background-color: rgba(255, 235, 210, 0.5);
-  color: #000;
-  /* Text color */
-  padding: 10px 20px;
-  /* Padding for the buttons */
+  padding: 3px 16px;
   text-decoration: none;
-  /* Removes underline */
   border-radius: 5px;
-  /* Rounded corners */
-  font-weight: bold;
-  /* Makes text bold */
   transition: background-color 0.3s ease;
-  /* Smooth transition */
 }
 
 .button:hover {
   background-color: rgba(255, 255, 255, 1);
-  /* Solid white on hover */
 }
 
-/* Bars of the hamburger icon */
 .menu-icon .bar {
   height: 4px;
   width: 30px;
   background-color: black;
-  /* Change to your preferred color */
   margin: 4px 0;
   transition: 0.3s;
-  /* Smooth transition for the menu opening/closing */
 }
 
 /* MENU DEROULANT */
@@ -825,7 +868,6 @@ footer {
 
 .list-inner {
   display: none;
-  /* Masque les sous-menus par défaut */
   width: 210px;
   position: absolute;
   z-index: 1000;
@@ -886,13 +928,9 @@ nav>ul>li:hover .list-inner {
 /* Styles des liens dans le sous-menu */
 .list-inner a {
   display: block;
-  /* Affiche les liens en bloc */
   text-align: left;
-  /* Alignement à gauche */
   padding: 10px;
-  /* Padding autour du lien */
   color: black;
-  /* Couleur du texte */
 }
 
 /* MENU PRINCIPAL */
@@ -912,15 +950,13 @@ nav li {
 }
 
 nav a {
-  font-size: 1.3rem;
-
+  font-size: 1.2rem;
   text-decoration: none;
   color: black;
 }
 
 .list-inner>li:hover .list-inner {
   display: block;
-  /* Affiche le sous-sous-menu au survol */
 }
 
 /*DATES COMPETITIONS*/
@@ -931,9 +967,7 @@ nav a {
 .hr-date {
   border: none;
   height: 1px;
-  /* Épaisseur de la ligne */
   background-color: grey;
-  /* Couleur de la ligne */
   width: 70%;
   margin: 0 auto;
 }
@@ -947,7 +981,6 @@ nav a {
 
 /*ACTUALITÉ*/
 
-/* Styles de la section d'actualités */
 .actualite-section {
   margin: 0 auto;
   padding: 20px;
@@ -958,7 +991,6 @@ nav a {
   margin-bottom: 20px;
 }
 
-/* Style de la carte d'actualité */
 .article-actualite {
   width: 100%;
   max-width: 400px;
@@ -974,7 +1006,6 @@ nav a {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Lien contenant l'image et le texte */
 .actualite a {
   display: block;
   text-decoration: none;
@@ -1014,7 +1045,6 @@ nav a {
 }
 
 /* phases */
-
 .h2-phase {
   padding-left: 20px;
 
@@ -1110,6 +1140,32 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
+
+  .container-training {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-training {
+    width: 90%;
+  }
+
+  .bloc-licence {
+    margin: 20px auto;
+  }
+
+  .card-club {
+    width: 340px;
+  }
+
+  .card-container-club {
+    flex-direction: column;
+    gap: 5px;
+    gap: 40px;
+
+  }
+
+
   .pdf-container img {
     width: 30px;
     height: 30px;
@@ -1186,9 +1242,6 @@ nav a {
     width: 200px;
   }
 
-
-
-
   .team-column {
     width: 60%;
   }
@@ -1204,27 +1257,17 @@ nav a {
     flex-wrap: wrap;
   }
 
-  .button-competition a {
-    font-family: 1.2rem;
-  }
 
   .button-container {
     top: 5px;
-    /* Positions buttons at the top of the image */
     gap: 10px;
   }
 
-  .button-container a {
-    font-size: 1.2em;
-  }
 
   .button {
     width: 80%;
-    /* Make buttons occupy 80% of the container width */
     margin: 0 auto;
-    /* Center-align buttons in the mobile layout */
     padding: 5px;
-    /* Padding for the buttons */
   }
 
   .img-bureau,
@@ -1537,16 +1580,7 @@ nav a {
     height: 40px;
   }
 
-  /* Section cotisations et clubs */
-  .card-container-club {
-    gap: 15px;
-    justify-content: space-around;
-  }
 
-  .card-club {
-    width: 280px;
-    margin: 10px;
-  }
 
   /* Bloc entrainement */
   .bloc-entrainement h2 {
@@ -1559,14 +1593,12 @@ nav a {
 
   .list-inner {
     display: none;
-    /* Masque les sous-menus par défaut */
     width: 210px;
     position: absolute;
     z-index: 1000;
     border-radius: 5px;
     margin-top: 1px;
     padding: 0;
-    background: radial-gradient(circle, #ffcc80, #ff8c00);
   }
 
   nav {
