@@ -262,7 +262,7 @@ ul {
 }
 
 .bloc-licence {
-  width:80%;
+  width: 80%;
   margin: 50px auto;
 
 }
@@ -422,17 +422,19 @@ ul {
 
 /*ENTRAINEMENTS*/
 .h2-entrainements {
-padding-bottom: 5px;
-border-bottom: 2px solid #ED5D0E;}
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ED5D0E;
+}
 
-.p-training{
+.p-training {
   margin: 20px 0;
 }
 
-.svg-training{
+.svg-training {
   height: 40px;
   padding-right: 5px;
 }
+
 .container-training {
   width: 80%;
   margin: 50px auto;
@@ -444,7 +446,8 @@ border-bottom: 2px solid #ED5D0E;}
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   width: 100%;
-  max-width: 400px; /* Largeur fixe pour garder un bon alignement */
+  max-width: 400px;
+  /* Largeur fixe pour garder un bon alignement */
 }
 
 .card-header {
@@ -482,50 +485,52 @@ border-bottom: 2px solid #ED5D0E;}
 
 
 .warning {
-  text-align: center;  
+  text-align: center;
   font-weight: bold;
   color: #ff4d4d;
   background-color: #ffe6e6;
   padding: 10px;
   border-radius: 8px;
-  width:400px;
-  margin: 20px  auto;  
+  width: 400px;
+  margin: 20px auto;
 }
-
-
-
-
 
 /*AIDES JEUNES*/
 
-.section-aides {
+.h2-assistance {
+  
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ED5D0E;
+}
+.assistance-section{
   width: 80%;
-  margin: 50px auto;
-
+  margin: 50px auto;  
 }
-
-.h2-aides {
-  border-bottom: 2px solid #ff7b1f;
-
-}
-
-.h3-aides {
-  color: #ff7b1f;
-}
-
-.aides-container {
+.assistance-content {
   display: flex;
-  justify-content: center;
+  padding-bottom: 30px;
+
 }
 
-.article-aides {
-  padding: 20px;
-  text-align: center;
+.img-aides {
+  width: 400px; 
+  margin-right: 15px;
 }
 
-.article-aides img {
-  margin-top: 10px;
-  border-radius: 5px;
+.assistance-text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  width: 45%;
+}
+
+.age-range {
+  font-weight: bold;
+}
+
+.h3-assistance{
+  color: #ED5D0E;
+
 }
 
 /* PARTENAIRES */
@@ -739,7 +744,8 @@ section .section-mentions {
 footer {
   background: radial-gradient(circle, #ffcc80, #ff8c00);
   text-align: center;
-margin-top: 50px;}
+  margin-top: 50px;
+}
 
 .content-footer-flex {
   display: flex;
@@ -1139,13 +1145,15 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
-.warning{
-  width: 300px;}
+  .warning {
+    width: 300px;
+  }
+
   .container-training {
     flex-direction: column;
     align-items: center;
   }
- 
+
 
   .bloc-licence {
     margin: 20px auto;
