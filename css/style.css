@@ -40,6 +40,8 @@ ul,
 a {
   font-size: 1rem;
   list-style-type: none;
+  line-height: 1.4;
+
 }
 
 main {
@@ -263,7 +265,7 @@ ul {
 
 .bloc-licence {
   width: 80%;
-  margin: 50px auto;
+  margin: 100px auto;
 
 }
 
@@ -330,7 +332,7 @@ ul {
 
 .card-container-club {
   display: flex;
-  gap: 70px;
+  gap: 100px;
   justify-content: center;
   margin: 50px 0;
 }
@@ -392,26 +394,27 @@ ul {
 
 .cta-container {
   text-align: center;
-  padding: 20px;
   border-radius: 10px;
-  margin: 30px auto;
+  margin: 0 auto;
   width: 400px;
   border: 2px solid #ED5D0E;
+  padding: 20px;
+  margin-top: 50px;
 
 }
 
 .cta-container p {
-  font-size: 1.2em;
-  margin-bottom: 15px;
+  font-size: 1.5em;
+  margin-bottom: 25px;
 }
 
 .btn-cta {
   color: #f97316;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
+  padding: 10px;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -427,7 +430,7 @@ ul {
 }
 
 .p-training {
-  margin: 20px 0;
+  margin: 20px 0 40px 0;
 }
 
 .svg-training {
@@ -496,27 +499,28 @@ ul {
 }
 
 /*AIDES JEUNES*/
-.assistance-text .btn-horaires{
+.assistance-text .btn-horaires {
   margin-top: 20px;
 }
 
 .h2-assistance {
-  
+
   padding-bottom: 5px;
   border-bottom: 2px solid #ED5D0E;
 }
-.assistance-section{
+
+.assistance-section {
   width: 80%;
-  margin: 50px auto;  
+  margin: 100px auto 30px auto;
 }
+
+
 .assistance-content {
   display: flex;
-  padding-bottom: 30px;
-
 }
 
 .img-aides {
-  width: 400px; 
+  width: 400px;
   margin-right: 15px;
 }
 
@@ -531,30 +535,32 @@ ul {
   font-weight: bold;
 }
 
-.h3-assistance{
+.h3-assistance {
   color: #ED5D0E;
 
 }
 
 /* PARTENAIRES */
-.h3-partenaire {
-  font-size: 1.5rem;
+.h2-partenaires {
+  border-bottom: #ED5D0E solid 2px;
 }
 
+.bloc-sponsors {
+  width: 80%;
+  margin: 0 auto;
+}
 
 .sponsor-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 40px auto;
 }
 
 .sponsor-card {
-  width: 240px;
   height: 200px;
-  background-color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   margin: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -565,7 +571,7 @@ ul {
   align-items: center;
   transition: transform 0.2s ease;
   width: 90%;
-  max-width: 240px;
+  width: 240px;
 }
 
 .sponsor-card:hover {
@@ -576,6 +582,7 @@ ul {
   overflow: hidden;
   object-fit: cover;
   padding-top: 10px;
+  height: 250px;
 }
 
 .sponsor-card h3 {
@@ -585,8 +592,6 @@ ul {
 }
 
 .sponsor-card p {
-  color: #333;
-  line-height: 1.4;
   text-align: center;
   margin: 0;
 }
@@ -596,18 +601,22 @@ ul {
   margin-top: 10px;
 }
 
-.bouton {
-  border: gainsboro solid 1px;
-  border-radius: 5px;
-  font-size: 1.1em;
-  text-decoration: none;
-  color: black;
-  width: 80px;
-  height: 35px;
+.bouton {  margin: 15px auto;  width: 150px;
   display: flex;
   align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid #ED5D0E;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
   justify-content: center;
-  margin: 15px auto;
+  font-size: 1rem;
+}
+
+.bouton:hover {
+  background-color: #fff7ed;
 }
 
 
@@ -669,7 +678,7 @@ section .section-mentions {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color:#fff7ed;
+  background-color: #fff7ed;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 300px;
