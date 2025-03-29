@@ -496,6 +496,9 @@ ul {
 }
 
 /*AIDES JEUNES*/
+.assistance-text .btn-horaires{
+  margin-top: 20px;
+}
 
 .h2-assistance {
   
@@ -538,13 +541,6 @@ ul {
   font-size: 1.5rem;
 }
 
-.h2-partenaires {
-  padding-left: 20px;
-}
-
-.bloc-sponsors {
-  padding: 20px;
-}
 
 .sponsor-cards {
   display: flex;
@@ -673,7 +669,7 @@ section .section-mentions {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: rgba(246, 160, 49, 0.059);
+  background-color:#fff7ed;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 300px;
@@ -725,11 +721,11 @@ section .section-mentions {
   transition: background-color 0.3s ease, color 0.3s ease;
   height: 45px;
   justify-content: center;
+  font-size: 1rem;
 }
 
 .btn-horaires:hover {
-  background-color: #ff9e40;
-  color: white;
+  background-color: #fff7ed;
 }
 
 
