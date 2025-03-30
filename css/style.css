@@ -1150,6 +1150,60 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
+  .assistance-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .img-aides {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .assistance-text {
+    width: 100%;
+  }
+
+  .assistance-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .assistance-card {
+    max-width: 100%;
+  }
+.assistance-card .btn-horaires {
+    margin: 20px auto;
+
+  }
+
+  .actualite-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .actualite {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .img-actualite {
+    width: 100%;
+    height: auto;
+  }
+
+  .h3-actualite {
+    font-size: 1.5rem;
+  }
+
+  .h2-actualite {
+    font-size: 2rem;
+  }
+.cta-container {
+    width: 90%;
+    padding: 10px;
+  }
   .warning {
     width: 300px;
   }
