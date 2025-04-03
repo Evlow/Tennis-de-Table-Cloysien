@@ -5,6 +5,8 @@
   font-family: "Nunito", sans-serif;
   font-weight: 200;
   margin: 0;
+  box-sizing: border-box;
+
 }
 
 h2 {
@@ -15,6 +17,7 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 
 
 }
@@ -258,7 +261,7 @@ ul {
 
 /*Licences*/
 
-.h2-cotisations {
+.h2-cotisations, .h2-member {
   padding-bottom: 5px;
   border-bottom: 2px solid #ED5D0E;
 }
@@ -273,8 +276,9 @@ ul {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 400px;
-  background-color: rgba(255, 235, 210, 0.5);
+  width: 100%; /* Prend 100% de la largeur de son conteneur parent */
+  max-width: 400px;
+    background-color: rgba(255, 235, 210, 0.5);
 }
 
 .title {
@@ -429,7 +433,7 @@ ul {
   border-bottom: 2px solid #ED5D0E;
 }
 
-.p-training {
+.p-training,.contact-intro {
   margin: 20px 0 40px 0;
 }
 
@@ -777,23 +781,42 @@ footer {
 }
 
 /*BUREAU*/
-.img-bureau {
-  padding: 50px;
-  width: 60%;
-  margin: auto;
-  display: flex;
-}
-
-.img-planning {
-  padding: 50px;
+.container-members {
   width: 80%;
-  margin: auto;
+margin: 10px auto;
+}
+.member-flex {
+  margin: 0 auto;
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.member-function{
+  background-color: #f4f7f9;
+  padding: 15px;
+  font-weight: bold;
+  border-left: 4px solid #f97316;
+  border-radius: 10px;
+  margin: 20px 0;
+font-size: 1rem;
 }
 
-.planning-section {
-  text-align: center;
+.member-card h3{
+  font-size: 1.3rem;
+  border-bottom: 2px solid #ED5D0E;
 }
+.member-card {
+width: 300px; 
+ background-color: rgba(255, 235, 210, 0.5);  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+
 
 /* Hamburger Menu Icon */
 .menu-icon {
