@@ -8,6 +8,7 @@
 
   <!-- Titre spécifique à la page Bureau -->
   <title>Bureau - Tennis de Table Cloysien</title>
+  <link rel="icon" href="/img/favicon.ico?v=2" type="image/x-icon">
 
   <!-- Description spécifique à la page Bureau -->
   <meta name="description" content="Découvrez les différents contacts du Tennis de Table Cloysien.">
@@ -23,17 +24,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Tennis de Table Cloysien">
 
-  <!-- Préchargement du fichier CSS -->
-  <link rel="preload" href="css/style.css" as="style">
-
-  <!-- Préchargement du fichier JavaScript -->
-  <link rel="preload" href="js/script.js" as="script">
-
   <!-- Lien vers la feuille de style principale -->
   <link rel="stylesheet" href="css/style.css">
-
-  <link rel="preload" href="/img/favicon.ico" as="image"> <!-- Lien vers la feuille de style CSS -->
-
 </head>
 
 <body>
@@ -99,7 +91,7 @@
           </ul>
         </li>
 
-        <li><a href="/inscription.html" rel="noopener noreferrer">Documents</a></li>
+        <li><a href="/inscription.html" target="_blank" rel="noopener noreferrer">Documents</a></li>
         <li><a
             href="https://www.google.fr/maps/place/48%C2%B000'12.6%22N+1%C2%B014'08.8%22E/@48.002026,1.237721,1209m/data=!3m1!1e3!4m4!3m3!8m2!3d48.003505!4d1.23579?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D"
             target="_blank" rel="noopener noreferrer">Plan d'accès</a></li>
@@ -125,106 +117,120 @@
           Confidentialité</a>.</p>
 
       <div class="button-container-cookies">
-        <button role="button" id="accept-cookies" class="btn-accept">Accepter</button>
-        <button role="button" id="refuse-cookies" class="btn-refuse">Refuser</button>
+        <button id="accept-cookies" class="btn-accept">Accepter</button>
+        <button id="refuse-cookies" class="btn-refuse">Refuser</button>
       </div>
     </div>
   </div>
+
   <main>
-<section class="container-members">
-    <h2 class="h2-member">Contacts du club</h2>
-    <p class="contact-intro">
-      Une question ? Besoin d'informations ? N'hésitez pas à contacter l'un des membres du bureau !
-    </p>
-    <div class="member-flex">
+    <section class="container-members">
+      <h2 class="h2-member">Contacts du club</h2>
+      <p class="contact-intro">
+        Une question ? Besoin d'informations ? N'hésitez pas à contacter l'un des membres du bureau !
+      </p>
+      <div class="member-flex">
 
-      <div class="member-card">
-        <h3>Alexis ROUGEAULT</h3>
-        <h4 class="member-function">Président</h4>
-        <div class="btn-container-licences">
-          <button role="button" class="btn-licences" onclick="window.location.href='tel:+33684708775'"
-            aria-label="Appeler Alexis ROUGEAULT"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
-            06 84 70 87 75</button>
-          <button role="button" class="btn-licences" onclick="window.location.href='mailto:alexis.rougeault@orange.fr'"
-            aria-label="Envoyer un e-mail à Alexis ROUGEAULT"> <img class="svg-licences" src="img/mail1.svg"
-              alt="icone email">
-            alexis.rougeault@orange.fr</button>
+        <div class="member-card">
+          <div class="title-member">
+            <h3>Alexis ROUGEAULT</h3>
+          </div>
+          <h4 class="member-function">Président</h4>
+          <div class="btn-container-licences">
+            <button role="button" class="btn-licences" onclick="window.location.href='tel:+33684708775'"
+              aria-label="Appeler Alexis ROUGEAULT"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
+              06 84 70 87 75</button>
+            <button role="button" class="btn-licences"
+              onclick="window.location.href='mailto:alexis.rougeault@orange.fr'"
+              aria-label="Envoyer un e-mail à Alexis ROUGEAULT"> <img class="svg-licences" src="img/mail1.svg"
+                alt="icone email">
+              alexis.rougeault@orange.fr</button>
+          </div>
         </div>
-      </div>
 
-      <div class="member-card">
-        <h3>Christophe ROUGEAULT</h3>
-        <h4 class="member-function">Vice-Président</h4>
-        <div class="btn-container-licences">
-          <button role="button" class="btn-licences" onclick="window.location.href='tel:+33603586361'"
-            aria-label="Appeler Christophe ROUGEAULT"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
-            06 03 58 63 61</button>
-          <button role="button" class="btn-licences"
-            onclick="window.location.href='mailto:christopherougeault@gmail.com'"
-            aria-label="Envoyer un e-mail à Christophe ROUGEAULT"> <img class="svg-licences" src="img/mail1.svg"
-              alt="icone email">
-            christopherougeault@gmail.com</button>
+        <div class="member-card">
+          <div class="title-member">
+            <h3>Christophe ROUGEAULT</h3>
+          </div>
+          <h4 class="member-function">Vice-Président</h4>
+          <div class="btn-container-licences">
+            <button role="button" class="btn-licences" onclick="window.location.href='tel:+33603586361'"
+              aria-label="Appeler Christophe ROUGEAULT"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
+              06 03 58 63 61</button>
+            <button role="button" class="btn-licences"
+              onclick="window.location.href='mailto:christopherougeault@gmail.com'"
+              aria-label="Envoyer un e-mail à Christophe ROUGEAULT"> <img class="svg-licences" src="img/mail1.svg"
+                alt="icone email">
+              christopherougeault@gmail.com</button>
+          </div>
         </div>
-      </div>
 
-      <div class="member-card">
-        <h3>Éric DUBOIS</h3>
-        <h4 class="member-function">Secrétaire</h4>
-        <div class="btn-container-licences">
-          <button role="button" class="btn-licences" onclick="window.location.href='tel:+33686784342'"
-            aria-label="Appeler Eric DUBOIS"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
-            06 86 75 43 42</button>
-          <button role="button" class="btn-licences" onclick="window.location.href='mailto: ericdubois81@sfr.fr'"
-            aria-label="Envoyer un e-mail à Eric DUBOIS"> <img class="svg-licences" src="img/mail1.svg"
-              alt="icone email">
-            ericdubois81@sfr.fr</button>
+        <div class="member-card">
+          <div class="title-member">
+            <h3>Éric DUBOIS</h3>
+          </div>
+          <h4 class="member-function">Secrétaire</h4>
+          <div class="btn-container-licences">
+            <button role="button" class="btn-licences" onclick="window.location.href='tel:+33686784342'"
+              aria-label="Appeler Eric DUBOIS"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
+              06 86 75 43 42</button>
+            <button role="button" class="btn-licences" onclick="window.location.href='mailto: ericdubois81@sfr.fr'"
+              aria-label="Envoyer un e-mail à Eric DUBOIS"> <img class="svg-licences" src="img/mail1.svg"
+                alt="icone email">
+              ericdubois81@sfr.fr</button>
+          </div>
         </div>
-      </div>
 
-      <div class="member-card">
-        <h3>Bernard PEAUGER</h3>
-        <h4 class="member-function">Trésorier</h4>
-        <div class="btn-container-licences">
-          <button role="button" class="btn-licences" onclick="window.location.href='tel:+3755671041'"
-            aria-label="Appeler Bernard PEAUGER"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
-            07 55 67 10 41</button>
-          <button role="button" class="btn-licences" onclick="window.location.href='mailto:bernard.peauger28@gmail.com'"
-            aria-label="Envoyer un e-mail à Bernard PEAUGER"> <img class="svg-licences" src="img/mail1.svg"
-              alt="icone email">
-            bernard.peauger28@gmail.com</button>
+        <div class="member-card">
+          <div class="title-member">
+            <h3>Bernard PEAUGER</h3>
+          </div>
+          <h4 class="member-function">Trésorier</h4>
+          <div class="btn-container-licences">
+            <button role="button" class="btn-licences" onclick="window.location.href='tel:+3755671041'"
+              aria-label="Appeler Bernard PEAUGER"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
+              07 55 67 10 41</button>
+            <button role="button" class="btn-licences"
+              onclick="window.location.href='mailto:bernard.peauger28@gmail.com'"
+              aria-label="Envoyer un e-mail à Bernard PEAUGER"> <img class="svg-licences" src="img/mail1.svg"
+                alt="icone email">
+              bernard.peauger28@gmail.com</button>
+          </div>
         </div>
-      </div>
 
-      <div class="member-card">
-        <h3>Christophe ROUGEAULT</h3>
-        <h4 class="member-function">Responsable jeunes</h4>
-        <div class="btn-container-licences">
-          <button role="button" class="btn-licences" onclick="window.location.href='tel:+33603586361'"
-            aria-label="Appeler Christophe ROUGEAULT"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
-            06 03 58 63 61</button>
-          <button role="button" class="btn-licences"
-            onclick="window.location.href='mailto:christopherougeault@gmail.com'"
-            aria-label="Envoyer un e-mail à Christophe ROUGEAULT"> <img class="svg-licences" src="img/mail1.svg"
-              alt="icone email">
-            christopherougeault@gmail.com</button>
+        <div class="member-card">
+          <div class="title-member">
+            <h3>Christophe ROUGEAULT</h3>
+          </div>
+          <h4 class="member-function">Responsable jeunes</h4>
+          <div class="btn-container-licences">
+            <button role="button" class="btn-licences" onclick="window.location.href='tel:+33603586361'"
+              aria-label="Appeler Christophe ROUGEAULT"> <img class="svg-licences" src="img/tel1.svg" alt="icone appel">
+              06 03 58 63 61</button>
+            <button role="button" class="btn-licences"
+              onclick="window.location.href='mailto:christopherougeault@gmail.com'"
+              aria-label="Envoyer un e-mail à Christophe ROUGEAULT"> <img class="svg-licences" src="img/mail1.svg"
+                alt="icone email">
+              christopherougeault@gmail.com</button>
+          </div>
         </div>
-      </div>
 
-      <div class="member-card">
-        <h3>Contact général</h3>
-        <div class="btn-container-licences">
+        <div class="member-card">
+          <div class="title-member">
+            <h3>Contact général</h3>
+          </div>
           <h4 class="member-function">Envoyez un email au club</h4>
-
-          <button class="btn-licences" onclick="window.location.href='mailto:tt.cloysien@gmail.com'"
-            aria-label="Envoyer un e-mail à au club" role="button"> <img class="svg-licences" src="img/mail1.svg"
-              alt="icone email">
-            tt.cloysien@gmail.com</button>
+          <div class="btn-container-licences">
+            <button class="btn-licences" onclick="window.location.href='mailto:tt.cloysien@gmail.com'"
+              aria-label="Envoyer un e-mail à au club" role="button"> <img class="svg-licences" src="img/mail1.svg"
+                alt="icone email">
+              tt.cloysien@gmail.com</button>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+      </div>
+    </section>
   </main>
-
 
 
   <!-- FOOTER -->
@@ -233,11 +239,9 @@
       <!-- Lieu -->
       <section class="footer-lieu">
         <h3 class="h2-footer">Nous trouver</h3>
-        <address>
-          <p>Gymnase des trois rivières</p>
-          <p>9 route de Montigny</p>
-          <p>28220 Cloyes-les-Trois-Rivières</p>
-        </address>
+        <p>Gymnase des trois rivières</p>
+        <p>9 route de Montigny</p>
+        <p>28220 Cloyes-les-Trois-Rivières</p>
       </section>
 
       <!-- Contact -->
@@ -253,7 +257,6 @@
         </p>
       </section>
     </div>
-
     <!-- Copyright -->
     <div class="footer-copyright">
       <p>
@@ -262,7 +265,6 @@
       </p>
     </div>
   </footer>
-
   <!-- Script JavaScript -->
   <script src="js/script.js" defer></script>
 </body>
