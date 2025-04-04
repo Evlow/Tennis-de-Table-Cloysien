@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicon -->
-  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico?v=2" type="image/x-icon">
 
   <!-- Balises Meta pour le référencement et la description -->
-  <meta name="description"
-    content="Site officiel du Tennis de Table Cloysien. Découvrez notre club, nos équipes, nos compétitions et plus.">
+  <meta name="description" content="Bienvenue sur le site officiel du Tennis de Table Cloysien. Découvrez notre club, nos entraînements, nos équipes, nos participations aux compétitions et accédez aux documents d'inscription.">
+
   <meta name="robots" content="index, follow">
   <meta name="author" content="Tennis de Table Cloysien">
 
@@ -27,18 +27,8 @@
   <!-- Titre -->
   <title>Tennis de Table Cloysien</title>
 
-  <!-- Préchargement du fichier CSS -->
-  <link rel="preload" href="css/style.css" as="style">
-
-  <!-- Préchargement du fichier JavaScript -->
-  <link rel="preload" href="js/script.js" as="script">
-
   <!-- Lien vers la feuille de style principale -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-
-  <link rel="preload" href="/img/favicon.ico" as="image">
 
 </head>
 
@@ -143,10 +133,12 @@
 
     <div class="section-button">
       <img class="img-index" src="/img/fond-index.webp" alt="table tennis de table" loading="lazy">
+      <!-- <img class="img-index" src="/img/test.jpg" alt="table tennis de table" loading="lazy"> -->
+
       <div class="button-container">
         <a href="#tarifs" class="button">Tarifs</a>
-        <a href="#jeunes" class="button">Jeunes</a>
         <a href="#entrainements" class="button">Entraînements</a>
+        <a href="#jeunes" class="button">Jeunes</a>
         <a href="#partenaires" class="button">Partenaires</a>
       </div>
     </div>
@@ -250,7 +242,7 @@
 
 
     <!-- SECTION ENTRAINEMENTS -->
-    <section class="container-training">
+    <section id="entrainements" class="container-training">
       <h2 class="h2-entrainements">Horaires des entraînements | Jeunes & Séniors</h2>
       <p class="p-training">Découvrez nos horaires d'entraînement pour tous les niveaux et âges. <br>Que vous soyez
         débutant ou compétiteur, venez vous entraîner avec nous !</p>
@@ -308,7 +300,7 @@
     </section>
 
     <!-- SECTION AIDES -->
-    <section class="assistance-section">
+    <section id="jeunes" class="assistance-section">
       <h2 class="h2-assistance">Avantages Jeunes : Aides pour les Documents Sportifs</h2>
       <p class="p-training">Des aides financières sont disponibles pour faciliter l'inscription des jeunes à des
         activités sportives. <br> Découvrez les dispositifs qui peuvent aider à l'inscription au club.</p>
@@ -338,7 +330,7 @@
               <img src="/img/pass.png" alt="Logo Pass Sport" class="img-aides">
             </a>
             <div class="assistance-text">
-              <h3 class="h3-assistance">Le Pass Sport</h3>
+              <h3 class="h3-assistance">Pass Sport</h3>
               <p class="age-range">Âge : 6-30 ans</p>
               <p>Aide financière de l'État pour les jeunes de 6 à 30 ans permettant de réduire le coût d'inscription à
                 une activité sportive !</p>
@@ -351,7 +343,7 @@
     </section>
 
     <!-- PARTENAIRES Section -->
-    <section class="bloc-sponsors">
+    <section id="partenaires" class="bloc-sponsors">
       <h2 class="h2-partenaires">Nos partenaires</h2>
       <div class="sponsor-cards">
         <article class="sponsor-card">
@@ -440,7 +432,6 @@
         </p>
       </section>
     </div>
-
     <!-- Copyright -->
     <div class="footer-copyright">
       <p>
@@ -449,8 +440,6 @@
       </p>
     </div>
   </footer>
-
-
   <!-- Script JavaScript -->
   <script src="js/script.js" defer></script>
 </body>

@@ -301,7 +301,6 @@ ul {
 
 .btn-licences {
   width: 100%;
-
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -313,9 +312,10 @@ ul {
   transition: background-color 0.3s ease, color 0.3s ease;
   height: 45px;
   justify-content: center;
-  margin: 5px auto; /* Centrage correct */
+  margin: 0 auto;
   font-size: 1rem;
   color: black;
+
 }
 
 .svg-licences {
@@ -806,7 +806,7 @@ footer {
 
 .member-function {
   background-color: #f4f7f9;
-  padding: 20px;
+  padding: 15px;
   font-weight: bold;
   border-left: 4px solid #f97316;
   border-radius: 10px;
@@ -817,19 +817,16 @@ footer {
 .member-card h3 {
   font-size: 1.3rem;
   border-bottom: 2px solid #ED5D0E;
-  padding: 5px 0;
 }
 
 .member-card {
   overflow: hidden;
   width: 100%;
-  max-width: 350px;
-  background-color: rgba(255, 235, 210, 0.5);
+  max-width: 350px;  background-color: rgba(255, 235, 210, 0.5);
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   margin: 20px;
-  padding: 20px; 
-  box-sizing: border-box; 
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -1203,10 +1200,8 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
-
   .member-card {
     margin: 20px 0;
-    padding: 15px;
   }
 
   .footer-contact,
