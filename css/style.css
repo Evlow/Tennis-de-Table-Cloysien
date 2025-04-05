@@ -57,6 +57,10 @@ a {
   color: black;
 }
 
+.subtitle {
+  margin: 20px 0 40px 0;
+}
+
 /* COOKIES */
 
 /* Style pour le pop-up */
@@ -182,9 +186,6 @@ header {
   padding-left: 20px;
 }
 
-.intro-text {
-  padding-left: 20px;
-}
 
 ul {
   padding: 0px;
@@ -345,7 +346,7 @@ ul {
 
 .card-container-club {
   display: flex;
-  gap: 100px;
+  gap: 50px;
   justify-content: center;
   margin: 50px 0;
 }
@@ -409,7 +410,8 @@ ul {
   text-align: center;
   border-radius: 10px;
   margin: 0 auto;
-  max-width: 500px;  border: 2px solid #ED5D0E;
+  max-width: 500px;
+  border: 2px solid #ED5D0E;
   padding: 20px;
   margin-top: 50px;
   width: 100%;
@@ -442,15 +444,13 @@ ul {
   border-bottom: 2px solid #ED5D0E;
 }
 
-.p-training,
-.contact-intro {
-  margin: 20px 0 40px 0;
+.svg-training {
+  height: 35px;
+  padding-right: 8px;
+  width: auto;
+  /* Assure que la largeur est proportionnelle à la hauteur */
 }
 
-.svg-training {
-  height: 40px;
-  padding-right: 5px;
-}
 
 .container-training {
   width: 80%;
@@ -463,7 +463,10 @@ ul {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
+  /* Augmentez la taille maximale de la carte pour les écrans de bureau */
+  margin: 20px auto;
+  /* Ajoute un peu de marge pour un espacement plus large */
 }
 
 .card-header {
@@ -472,7 +475,8 @@ ul {
   background-color: #ED5D0E;
   display: flex;
   justify-content: center;
-  padding: 10px 0;
+  padding: 15px 0;
+  /* Augmente le padding pour plus d'espace */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -480,12 +484,29 @@ ul {
   padding: 20px;
 }
 
+.schedule-item .note {
+  font-size: 0.8rem;
+  color: #666;
+  /* Gris discret */
+  font-style: italic;
+  /* Italique pour différencier */
+  margin-left: 5px;
+  /* Un peu d'espace avant la note */
+}
+
 .schedule-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 15px 0;
   border-bottom: 2px solid #ffe0b3;
+}
+
+.schedule-item-sunday {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
 
 .schedule-item:last-child {
@@ -497,8 +518,6 @@ ul {
   align-items: center;
   font-weight: bold;
 }
-
-
 
 .warning {
   text-align: center;
@@ -840,19 +859,39 @@ footer {
   background-color: rgba(255, 235, 210, 0.5);
 }
 
-
-
-
-
-.img-planning {
-  padding: 50px;
-  width: 80%;
-  margin: auto;
-  display: flex;
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .planning-section {
+  width: 80%;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+
+.planning {
   text-align: center;
+}
+
+.img-planning {
+  width: 100%;
+  max-width: 1200px; /* Augmenté pour les écrans larges */
+  height: auto;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+
+.img-planning:hover {
+  transform: scale(1.02);
 }
 
 /* Hamburger Menu Icon */
@@ -1210,15 +1249,59 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
-  /* 
-  .member-card {
-    margin: 20px 0;
-  } */
 
+  /*ENTRAINEMENTS*/
+  .container-training {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-content-training {
+    padding: 10px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    /* Empile le SVG et le titre */
+    justify-content: flex-start;
+    /* Aligne les éléments à gauche */
+  }
+
+  .schedule-item {
+    flex-direction: column;
+    /* Les horaires passent en colonne sur mobile */
+    align-items: flex-start;
+    /* Aligne les éléments sur le côté gauche */
+  }
+
+  .schedule-item .day,
+  .schedule-item .time {
+    width: 100%;
+    /* Assure que chaque élément prend toute la largeur disponible */
+    text-align: left;
+    /* Alignement à gauche */
+  }
+
+  .schedule-item .time {
+    margin-top: 5px;
+    /* Ajoute un peu d'espace entre les horaires */
+  }
+
+  /*FOOTER*/
   .footer-contact,
   .footer-lieu {
     margin: 20px;
   }
+
+  .footer-copyright {
+    padding: 0 10px;
+  }
+
+  .content-footer-flex {
+    flex-direction: column;
+  }
+
+  /*AIDES JEUNES*/
 
   .assistance-content {
     flex-direction: column;
@@ -1249,12 +1332,14 @@ nav a {
 
   }
 
+  /* ACTUALITÉ */
   .actualite-section {
     flex-direction: column;
     align-items: center;
   }
 
   .actualite {
+
     width: 90%;
     margin-bottom: 20px;
   }
@@ -1272,6 +1357,7 @@ nav a {
     font-size: 2rem;
   }
 
+  /*BOUTON AIDES JEUNES*/
   .cta-container {
     width: 90%;
     padding: 10px;
@@ -1281,12 +1367,7 @@ nav a {
     width: 300px;
   }
 
-  .container-training {
-    flex-direction: column;
-    align-items: center;
-  }
-
-
+  /*TARIF LICENCE*/
   .bloc-licence {
     margin: 20px auto;
   }
@@ -1301,11 +1382,21 @@ nav a {
 
   .card-container-club {
     flex-direction: column;
-    gap: 5px;
-    gap: 40px;
+    margin: 0;
+    gap: 20px;
 
   }
 
+  /*DOCUMENTS*/
+  .inscription-flex {
+    flex-direction: column;
+    margin: 0 auto;
+
+  }
+
+  .intro-text-documents {
+    padding: 10px;
+  }
 
   .pdf-container img {
     width: 30px;
@@ -1319,21 +1410,16 @@ nav a {
     justify-self: center;
   }
 
-  .inscription-flex {
-    margin:
-      0 auto;
-  }
-
   .btn-container {
     flex-direction: column;
     margin: 0 auto;
   }
 
+  /*COOKIES*/
   .popup-content {
     width: 80%;
     padding: 15px;
   }
-
 
   .btn-accept,
   .btn-refuse {
@@ -1341,22 +1427,6 @@ nav a {
     /* Réduit la largeur des boutons sur mobile */
   }
 
-  .footer-copyright {
-    padding: 0 10px;
-  }
-
-  .content-footer-flex {
-    flex-direction: column;
-  }
-
-  .inscription-flex {
-    flex-direction: column;
-
-  }
-
-  .intro-text-documents {
-    padding: 10px;
-  }
 
   .card-phases {
     flex-direction: column;
@@ -1418,11 +1488,14 @@ nav a {
     width: 100%;
   }
 
-  .img-planning {
-    padding: 0;
-    width: 90%;
-  }
 
+    .img-planning {
+      max-width: 100%;
+    
+  }
+  .subtitle {
+    margin: 20px 0 15px 0;
+  }
   .titre-logo {
     display: flex;
     align-items: center;
@@ -1606,7 +1679,65 @@ nav a {
 }
 
 /* Requêtes de média pour les tablettes */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
+
+
+  .card-container-club {
+    flex-wrap: wrap;
+  
+  }
+
+
+  .card-header {
+    display: flex;
+    /* Utilisation de Flexbox pour une disposition flexible */
+    flex-direction: row;
+    /* Le titre et l'icône seront en ligne */
+    justify-content: flex-start;
+    /* Aligne à gauche */
+    align-items: center;
+    /* Aligne verticalement au centre */
+    padding: 15px 20px;
+    /* Un peu plus d'espace autour */
+  }
+
+  .card-content-training {
+    padding: 20px;
+    /* Augmente l'espace à l'intérieur du contenu */
+  }
+
+  .schedule-item {
+    display: flex;
+    /* Utilisation de Flexbox pour le programme */
+    justify-content: space-between;
+    /* Espacement entre le jour et l'heure */
+    align-items: center;
+    /* Alignement vertical */
+    padding: 10px 0;
+    /* Espacement vertical entre les éléments */
+  }
+
+  .svg-training {
+    height: 35px;
+    /* Ajuste la taille du SVG pour les tablettes */
+    padding-right: 10px;
+    /* Ajoute un peu d'espace à droite du SVG */
+  }
+
+  .schedule-item .day,
+  .schedule-item .time {
+    width: auto;
+    /* Permet à chaque élément de s'adapter à son contenu */
+    text-align: left;
+    /* Aligne le texte à gauche */
+  }
+
+  .schedule-item .time {
+    margin-left: 10px;
+    /* Espacement entre le jour et l'heure */
+  }
+
+
   .member-card {
     margin: 0;
   }
@@ -1691,14 +1822,14 @@ nav a {
 
   /* Taille des liens de navigation */
   nav ul li a {
-    font-size: 1rem;
+    font-size: 0.7rem;
     /* Taille réduite pour les liens */
   }
 
   /* Menu principal */
   nav ul {
     display: flex;
-    gap: 15px
+    gap: 10px
   }
 
   #nav-menu {
@@ -1706,6 +1837,7 @@ nav a {
   }
 
   nav a {
+    font-size: 0.7rem;
     text-align: center;
     color: black;
     font-weight: bold;
@@ -1816,4 +1948,5 @@ nav a {
     display: flex;
     justify-content: space-around;
   }
+
 }

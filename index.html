@@ -10,7 +10,8 @@
   <link rel="icon" href="/img/favicon.ico?v=2" type="image/x-icon">
 
   <!-- Balises Meta pour le référencement et la description -->
-  <meta name="description" content="Bienvenue sur le site officiel du Tennis de Table Cloysien. Découvrez notre club, nos entraînements, nos équipes, nos participations aux compétitions et accédez aux documents d'inscription.">
+  <meta name="description"
+    content="Bienvenue sur le site officiel du Tennis de Table Cloysien. Découvrez notre club, nos entraînements, nos équipes, nos participations aux compétitions et accédez aux documents d'inscription.">
 
   <meta name="robots" content="index, follow">
   <meta name="author" content="Tennis de Table Cloysien">
@@ -31,9 +32,6 @@
   <link rel="stylesheet" href="css/style.css">
 
 </head>
-
-
-
 
 <body>
 
@@ -146,7 +144,7 @@
 
     <section id="tarifs" class="bloc-licence">
       <h2 class="h2-cotisations">Tarif des licences</h2>
-      <p class="p-training">Du débutant au joueur confirmé, découvrez nos licences de tennis de table.</p>
+      <p class="subtitle">Du débutant au joueur confirmé, découvrez nos licences de tennis de table.</p>
       <div class="card-container-club">
         <!-- Article Carte Licence Jeune Loisirs -->
         <article class="card-club">
@@ -244,12 +242,12 @@
     <!-- SECTION ENTRAINEMENTS -->
     <section id="entrainements" class="container-training">
       <h2 class="h2-entrainements">Horaires des entraînements | Jeunes & Séniors</h2>
-      <p class="p-training">Découvrez nos horaires d'entraînement pour tous les niveaux et âges. <br>Que vous soyez
+      <p class="subtitle">Découvrez nos horaires d'entraînement pour tous les niveaux et âges. <br>Que vous soyez
         débutant ou compétiteur, venez vous entraîner avec nous !</p>
       <div class="card-container-club">
         <article class="card-training">
           <h3 class="card-header">
-            <img class="svg-training" src="img/user.svg" alt="icone utilisateur">
+            <img class="svg-training" src="img/junior.svg" alt="icone utilisateur">
 
             Jeunes
           </h3>
@@ -266,7 +264,7 @@
         </article>
         <article class="card-training">
           <h3 class="card-header">
-            <img class="svg-training" src="img/user.svg" alt="icone utilisateur">
+            <img class="svg-training" src="img/senior.svg" alt="icone utilisateur">
 
             Séniors
           </h3>
@@ -280,11 +278,33 @@
               <span class="time">19h30 - 22h00</span>
             </div>
             <div class="schedule-item">
-              <span class="day">Vendredis</span>
-              <span class="time">20h00 - 00h00</span>
+              <span class="day">Vendredis<span class="note"> (sauf si championnat)</span></span> <span
+                class="time">20h00 - 00h00</span>
             </div>
             <div class="schedule-item">
-              <span class="day">Dimanches</span>
+              <span class="day">Dimanches<span class="note"> (sauf si championnat)</span></span>
+              <span class="time">8h30 - 14h30</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-training">
+          <h3 class="card-header">
+            <img class="svg-training" src="img/trophy.svg" alt="icone trophée">
+
+            Championnats
+          </h3>
+          <div class="card-content-training">
+            <div class="schedule-item">
+              <span class="day">Vendredis<span class="note">(Séniors)</span><br></span> <span class="time">20h00 -
+                02h00</span>
+            </div>
+            <div class="schedule-item">
+              <span class="day">Samedis<span class="note">(Jeunes et Séniors)</span></span>
+              <span class="time">13h30 - 18h30</span>
+            </div>
+            <div class="schedule-item">
+              <span class="day">Dimanches<span class="note">(Séniors)</span></span>
               <span class="time">8h30 - 14h30</span>
             </div>
           </div>
@@ -302,7 +322,7 @@
     <!-- SECTION AIDES -->
     <section id="jeunes" class="assistance-section">
       <h2 class="h2-assistance">Avantages Jeunes : Aides pour les Documents Sportifs</h2>
-      <p class="p-training">Des aides financières sont disponibles pour faciliter l'inscription des jeunes à des
+      <p class="subtitle">Des aides financières sont disponibles pour faciliter l'inscription des jeunes à des
         activités sportives. <br> Découvrez les dispositifs qui peuvent aider à l'inscription au club.</p>
 
       <div class="assistance-container">
@@ -345,18 +365,22 @@
     <!-- PARTENAIRES Section -->
     <section id="partenaires" class="bloc-sponsors">
       <h2 class="h2-partenaires">Nos partenaires</h2>
+      <p class="subtitle">Merci à tous nos sponsors pour leur confiance et leur soutien.</p>
       <div class="sponsor-cards">
+
         <article class="sponsor-card">
           <img class="img-sponsor" src="/img/solfa.webp" alt="Logo de Solfa Carburants, fournisseur de carburants" />
           <h3 class="h3-partenaire">Solfa Carburants</h3>
 
-          <button onclick="window.open('https://www.solfa-carburants.fr' , '_blank')"  class="bouton">Voir le site</button>
+          <button onclick="window.open('https://www.solfa-carburants.fr' , '_blank')" class="bouton">Voir le
+            site</button>
         </article>
 
         <article class="sponsor-card">
           <img class="img-sponsor" src="/img/cassonnet.webp" alt="Logo du Garage Cassonnet, réparations automobiles" />
           <h3 class="h3-partenaire">Garage Cassonnet</h3>
-          <button onclick="window.open('https://www.garage-cassonnet-cloyes.fr/', '_blank')"  class="bouton">Voir le site</button>
+          <button onclick="window.open('https://www.garage-cassonnet-cloyes.fr/', '_blank')" class="bouton">Voir le
+            site</button>
         </article>
 
         <article class="sponsor-card">
