@@ -634,6 +634,7 @@ ul {
   transform: scale(1.05);
 }
 
+
 .img-sponsor {
   overflow: hidden;
   object-fit: cover;
@@ -641,8 +642,11 @@ ul {
   height: 250px;
 }
 
+
+
 .sponsor-card h3 {
-  font-size: 1.2rem;}
+  font-size: 1.2rem;
+}
 
 .sponsor-card p {
   text-align: center;
@@ -653,10 +657,12 @@ ul {
   text-decoration: none;
   margin-top: 10px;
 }
+
 .sponsor-card .title {
   width: 100%;
   padding: 10px 0;
 }
+
 .bouton {
   margin: 15px auto;
   width: 150px;
