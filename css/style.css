@@ -596,7 +596,6 @@ ul {
 
 }
 
-/* PARTENAIRES */
 .h2-partenaires {
   border-bottom: #ED5D0E solid 2px;
 }
@@ -617,7 +616,7 @@ ul {
 .sponsor-card {
   height: 250px;
   border-radius: 10px;
-  margin: 10px;
+  margin: 20px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -625,21 +624,18 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: transform 0.2s ease;
   width: 90%;
-  width: 240px;
+  width: 250px;
 }
 
-.sponsor-card:hover {
-  transform: scale(1.05);
-}
 
 
 .img-sponsor {
   overflow: hidden;
-  object-fit: cover;
+  object-fit: contain;
   padding-top: 10px;
-  height: 250px;
+  height:100px;
+  width: 200px;
 }
 
 
@@ -665,7 +661,8 @@ ul {
 
 .bouton {
   margin: 15px auto;
-  width: 150px;
+  width: 120px;
+  height: 40px;
   display: flex;
   align-items: center;
   text-decoration: none;
