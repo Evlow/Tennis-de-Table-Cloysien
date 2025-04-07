@@ -58,34 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", closeMenuOnClickOutside);
 });
 
-// // Récupère les éléments de la bannière et des boutons
-// const cookieBanner = document.getElementById("cookie-banner");
-// const acceptButton = document.getElementById("accept-cookies");
-// const refuseButton = document.getElementById("refuse-cookies");
-
-// // Vérifie si l'utilisateur a déjà pris une décision
-// if (localStorage.getItem("cookiesAccepted") === "true") {
-//   // Si accepté, cache la bannière
-//   cookieBanner.classList.add("hidden");
-// } else if (localStorage.getItem("cookiesAccepted") === "false") {
-//   // Si refusé, cache aussi la bannière
-//   cookieBanner.classList.add("hidden");
-// } else {
-//   // Si aucune décision n'a été prise, afficher la bannière
-//   cookieBanner.classList.remove("hidden");
-// }
-
-// // Fonction pour cacher la bannière après acceptation
-// acceptButton.addEventListener("click", () => {
-//   localStorage.setItem("cookiesAccepted", "true");
-//   cookieBanner.classList.add("hidden");
-// });
-
-// // Fonction pour cacher la bannière après refus
-// refuseButton.addEventListener("click", () => {
-//   localStorage.setItem("cookiesAccepted", "false");
-//   cookieBanner.classList.add("hidden");
-// });
 
 /// Récupère les éléments de la bannière et des boutons
 const cookieBanner = document.getElementById('cookie-banner');
@@ -134,6 +106,18 @@ function loadGoogleAnalytics() {
     };
   }
 }
+
+const arrow = document.querySelector('.container-arrow');
+
+arrow.addEventListener('click', ()=>{
+window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+
+
+})
 
 
 

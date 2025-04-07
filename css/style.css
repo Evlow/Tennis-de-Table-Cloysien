@@ -1,11 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-/* fbf8f4 */
+
 * {
   font-family: "Nunito", sans-serif;
   font-weight: 200;
   margin: 0;
   box-sizing: border-box;
+}
+
+/*FLECHE*/
+
+.container-arrow {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  background-color: rgba(248, 205, 153, 0.241);
+  /* Fond orangé semi-transparent */
+}
+
+.arrow {
+  width: 40px;
 }
 
 h2 {
@@ -154,6 +175,7 @@ header {
   background: radial-gradient(circle, #ffcc80, #ff8c00);
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -593,7 +615,7 @@ ul {
 }
 
 .sponsor-card {
-  height: 200px;
+  height: 250px;
   border-radius: 10px;
   margin: 10px;
   text-align: center;
@@ -620,10 +642,7 @@ ul {
 }
 
 .sponsor-card h3 {
-  font-size: 1.2rem;
-  margin: 10px 0;
-  text-align: center;
-}
+  font-size: 1.2rem;}
 
 .sponsor-card p {
   text-align: center;
@@ -634,7 +653,10 @@ ul {
   text-decoration: none;
   margin-top: 10px;
 }
-
+.sponsor-card .title {
+  width: 100%;
+  padding: 10px 0;
+}
 .bouton {
   margin: 15px auto;
   width: 150px;
@@ -881,7 +903,8 @@ footer {
 
 .img-planning {
   width: 100%;
-  max-width: 1200px; /* Augmenté pour les écrans larges */
+  max-width: 1200px;
+  /* Augmenté pour les écrans larges */
   height: auto;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -1250,6 +1273,17 @@ nav a {
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
 
+  /*FLECHE*/
+  .arrow {
+    width: 35px;
+  }
+
+  .container-arrow {
+    height: 40px;
+    width: 40px;
+    right: 10px;
+  }
+
   /*ENTRAINEMENTS*/
   .container-training {
     flex-direction: column;
@@ -1489,13 +1523,15 @@ nav a {
   }
 
 
-    .img-planning {
-      max-width: 100%;
-    
+  .img-planning {
+    max-width: 100%;
+
   }
+
   .subtitle {
     margin: 20px 0 15px 0;
   }
+
   .titre-logo {
     display: flex;
     align-items: center;
@@ -1684,7 +1720,7 @@ nav a {
 
   .card-container-club {
     flex-wrap: wrap;
-  
+
   }
 
 
