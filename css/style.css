@@ -22,24 +22,29 @@
   bottom: 20px;
   cursor: pointer;
   background-color: rgba(248, 205, 153, 0.241);
-  /* Fond orangé semi-transparent */
 }
 
 .arrow {
   width: 40px;
 }
 
+h1 {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 3rem;
+}
+
 h2 {
   font-size: 2rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid #ED5D0E;
+
 
 }
 
 h3 {
   font-size: 1.5rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-
-
 
 }
 
@@ -81,6 +86,8 @@ a {
 .subtitle {
   margin: 20px 0 40px 0;
 }
+
+
 
 /* COOKIES */
 
@@ -198,6 +205,35 @@ header {
 .titre-logo h1 {
   display: none;
 }
+
+.section-home {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.subtitle-home {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+
+/*HISTORIQUE*/
+
+.section-historic {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.img-historic {
+  margin: 10px;
+}
+
+.article-historic {
+  display: flex;
+  margin-top: 30px;
+
+}
+
 
 /*CARD COMPETITIONS*/
 .h3-competition {
@@ -433,30 +469,33 @@ ul {
   border-radius: 10px;
   margin: 0 auto;
   max-width: 500px;
-  border: 2px solid #ED5D0E;
-  padding: 20px;
-  margin-top: 50px;
+  background-color: rgba(255, 235, 210, 0.5);
+  height: 180px;
   width: 100%;
 
 }
 
 .cta-container p {
   font-size: 1.5em;
-  margin-bottom: 25px;
+  padding: 20px 10px 15px 10px;
 }
 
 .btn-cta {
-  color: #f97316;
+  width: 40%;
   font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 10px;
-  text-decoration: none;
-  padding: 10px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  border-radius: 5px;
+  border: 2px solid #ED5D0E;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 50px;
+  font-size: 1.2rem;
+  color: black;
 }
 
 .btn-cta:hover {
-  background-color: #ffedd5;
+  background-color: #f4f7f9;
   transform: scale(1.05);
 }
 
@@ -634,7 +673,7 @@ ul {
   overflow: hidden;
   object-fit: contain;
   padding-top: 10px;
-  height:100px;
+  height: 100px;
   width: 200px;
 }
 
@@ -1276,6 +1315,16 @@ nav a {
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
 
+  h1 {
+    font-size: 2rem;
+  }
+
+  /*HISTORIQUE*/
+  .article-home {
+    flex-direction: column;
+
+  }
+
   /*FLECHE*/
   .arrow {
     width: 35px;
@@ -1388,10 +1437,6 @@ nav a {
 
   .h3-actualite {
     font-size: 1.5rem;
-  }
-
-  .h2-actualite {
-    font-size: 2rem;
   }
 
   /*BOUTON AIDES JEUNES*/
