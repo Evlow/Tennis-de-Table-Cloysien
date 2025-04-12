@@ -38,18 +38,24 @@ h2 {
   font-size: 2rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid #ED5D0E;
+  padding-bottom: 5px;
 
 
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+
+}
+
+h4 {
+  font-size: 1.3rem;
 
 }
 
@@ -206,6 +212,8 @@ header {
   display: none;
 }
 
+/*WELCOME*/
+
 .section-home {
   width: 80%;
   margin: 30px auto;
@@ -215,7 +223,32 @@ header {
   text-align: center;
   font-size: 1.1rem;
   margin: 20px 0;
+} 
+.location-banner {
+  background-color: #fff7ed;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-left: 6px solid #ED5D0E;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 65%;
 }
+
+
+.map-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-left: 0.3rem;
+  transition: transform 0.2s ease;
+}
+
+.map-link:hover {
+  transform: scale(1.2);
+}
+
+
+
 
 /*HISTORIQUE*/
 .section-historic {
@@ -305,7 +338,7 @@ header {
 .quote {
   background-color:  #f4f7f9;
   padding: 1.5rem;
-  border-left: 4px solid #ED5D0E;
+  border-left: 6px solid #ED5D0E;
   border-radius: 4px;
   font-style: italic;
   margin: 1.5rem 0;
@@ -316,15 +349,35 @@ header {
   font-weight: 600;
 }
 
-/*CARD COMPETITIONS*/
-.h3-competition {
-  text-align: left;
-  font-size: 2rem;
-  margin: 5px;
-  padding-bottom: 20px;
-  padding-left: 20px;
+.member-list{
+  background-color:  #f4f7f9;
+  border-left: 6px solid #ED5D0E;
+  border-radius: 4px;
+}
+.member-item {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+.member-name {
+  font-weight: bold;
+}
+.member-role {
+  font-style: italic;
+  color: #555;
 }
 
+/*CARD COMPETITIONS*/
+
+.main-competition {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.h3-competition {
+  text-align: left;
+  padding-left: 20px;
+}
 
 ul {
   padding: 0px;
@@ -334,7 +387,7 @@ ul {
 }
 
 .team-column h5 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin: 0 0 20px 0;
 }
 
@@ -381,9 +434,7 @@ ul {
 }
 
 .h4-phase {
-  font-size: 1.5rem;
-  /* Taille de police légèrement augmentée */
-  color: #ff7b1f;
+padding: 20px;  color: #ff7b1f;
 }
 
 .card-content a:hover {
@@ -391,16 +442,6 @@ ul {
   font-weight: bold;
 }
 
-.h3-championnat {
-  text-align: center;
-  font-size: 2rem;
-  margin: 5px;
-  padding-bottom: 20px;
-}
-
-.h2-competitions {
-  padding-left: 20px;
-}
 
 /*Licences*/
 
@@ -525,7 +566,7 @@ ul {
   background-color: #ffedd5;
   text-align: center;
   font-weight: bold;
-  border-left: 4px solid #f97316;
+  border-left: 6px solid #ED5D0E;
   border-radius: 10px;
   margin: 20px;
   padding: 5px;
@@ -550,19 +591,17 @@ ul {
   border-radius: 10px;
   margin: 0 auto;
   max-width: 500px;
-  background-color: rgba(255, 235, 210, 0.5);
-  height: 180px;
-  width: 100%;
-
+max-height: 250px;
+padding: 20px;
 }
 
 .cta-container p {
   font-size: 1.5em;
-  padding: 20px 10px 15px 10px;
+  padding-bottom: 20px;
 }
 
 .btn-cta {
-  width: 40%;
+  width: 50%;
   font-weight: bold;
   border-radius: 5px;
   border: 2px solid #ED5D0E;
@@ -829,7 +868,7 @@ section .section-mentions {
 
 /*INSCRIPTION*/
 .documents-section {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -976,7 +1015,7 @@ footer {
   background-color: #f4f7f9;
   padding: 20px;
   font-weight: bold;
-  border-left: 4px solid #f97316;
+  border-left: 6px solid #ED5D0E;
   border-radius: 10px;
   margin: 15px;
   font-size: 1rem;
@@ -1014,7 +1053,6 @@ footer {
 
 .planning-section {
   width: 80%;
-  max-width: 1000px;
   margin: 30px auto;
   padding: 0 15px;
 }
@@ -1026,7 +1064,6 @@ footer {
 
 .img-planning {
   width: 100%;
-  max-width: 1200px;
   /* Augmenté pour les écrans larges */
   height: auto;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.1);
@@ -1298,22 +1335,17 @@ nav a {
 .img-equipe {
   width: 70%;
 }
-
-/* phases */
-.h2-phase {
-  padding-left: 20px;
-
-}
-
+.h2-phase{margin-bottom: 60px;}
 .card-phases li {
   padding: 10px 0;
 }
-
+.container-phases {
+padding: 50px 0;
+}
 .container-phases h3 {
   text-align: center;
   color: #ff9e40;
-  margin-bottom: 30px 0 10px 0;
-}
+padding-bottom: 30px;}
 
 /* Conteneur des cartes des journées */
 .card-phases {
@@ -1334,7 +1366,10 @@ nav a {
   padding: 10px;
 } */
 
-
+.section-phases{
+  width: 80%;
+  margin: 0 auto;
+}
 .card-journee1 {
   width: 170px;
   border-radius: 8px;
@@ -1395,6 +1430,10 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
+
+  .location-banner{
+    width:auto;
+  }
   /*HISTORIQUE*/
 
   .img-historic img {
@@ -1524,16 +1563,25 @@ nav a {
     height: auto;
   }
 
-  .h3-actualite {
-    font-size: 1.5rem;
-  }
+ 
+h3 {
+  font-size: 1.5rem;
+
+}
 
   /*BOUTON AIDES JEUNES*/
+  .btn-cta {
+    width: 80%;
+  }
   .cta-container {
-    width: 90%;
-    padding: 10px;
+    padding: 10px 10px 20px 10px;
   }
 
+  .cta-container p {
+    font-size: 1.3em;
+    padding: 5px 5px 10px 5px;
+  }
+  
   .warning {
     width: 300px;
   }
