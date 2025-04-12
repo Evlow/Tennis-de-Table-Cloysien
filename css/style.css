@@ -218,22 +218,103 @@ header {
 }
 
 /*HISTORIQUE*/
-
 .section-historic {
   width: 80%;
   margin: 30px auto;
 }
 
-.img-historic {
-  margin: 10px;
+
+.section-historic h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100px;
+  height: 4px;
+  background-color: #ED5D0E;
+  border-radius: 2px;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  margin: 50px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #ED5D0E;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 2px;
 }
 
 .article-historic {
+  width: 80%;
+  background:  #fff7ed;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  position: relative;
   display: flex;
-  margin-top: 30px;
-
+  flex-direction: column;
+  overflow: hidden;
+  margin: 50px auto;
+  
 }
 
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-container h3 {
+  padding: 50px 0 0 0;
+}
+
+.img-historic {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.img-historic img {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
+
+.year-badge {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  background-color: #ED5D0E;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.quote {
+  background-color:  #f4f7f9;
+  padding: 1.5rem;
+  border-left: 4px solid #ED5D0E;
+  border-radius: 4px;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.highlight {
+  color: #ED5D0E;
+  font-weight: 600;
+}
 
 /*CARD COMPETITIONS*/
 .h3-competition {
@@ -1314,12 +1395,21 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
+  /*HISTORIQUE*/
+
+  .img-historic img {
+    width: 100%;
+  }
+
+  .article-historic {
+    width: 100%;
+  }
 
   h1 {
     font-size: 2rem;
   }
 
-  /*HISTORIQUE*/
+  /*BIENVENU*/
   .article-home {
     flex-direction: column;
 
@@ -1425,7 +1515,6 @@ nav a {
   }
 
   .actualite {
-
     width: 90%;
     margin-bottom: 20px;
   }
