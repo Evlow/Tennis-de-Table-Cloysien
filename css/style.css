@@ -83,7 +83,10 @@ a {
   line-height: 1.4;
 
 }
-
+.actualite-card{
+  text-align: center ;
+  margin: 30px;
+}
 main {
   flex-grow: 1;
 }
