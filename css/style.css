@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+.infos-card {
+  margin: 50px auto;
+  background-color: #ED5D0E;
+  border-radius: 8px;
+  width: 40%;
+text-align: center;}
 
+.bloc-infos {
+  width: 80%;
+  margin: 0 auto;
+}
 
 * {
   font-family: "Nunito", sans-serif;
