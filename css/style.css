@@ -8,6 +8,8 @@
 .infos-card {
   margin: 0 auto;
   border-radius: 8px;
+  position: relative;
+
 }
 
 .img-infos {
@@ -19,6 +21,35 @@
   width: 80%;
   margin: 20px auto;
   text-align: center;
+  position: relative;
+
+}
+
+.corner-decoration {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(237, 93, 14, 0.3);
+}
+
+.corner-decoration {
+  position: absolute;
+  top: 6px;
+  left: 400px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(255, 247, 237, 0.9), rgba(255, 255, 255, 0.9));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(237, 93, 14, 0.2);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.corner-decoration::before {
+  content: '📢';
+  font-size: 1.5rem;
+  animation: bounce 2s ease-in-out infinite;
 }
 
 * {
@@ -1471,6 +1502,10 @@ nav a {
 
 /* Pour les écrans de petite taille */
 @media (max-width: 768px) {
+  .corner-decoration {
+    top: 5px;
+    left: -6px;
+  }
 
   .img-infos {
     width: 90%;
